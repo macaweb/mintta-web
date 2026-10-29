@@ -3608,3 +3608,66 @@ button:hover, .btn-outline:hover, .btn-agregar:hover, .volver:hover, .ver-todo:h
     letter-spacing: .02rem;
   }
 }
+
+
+/* Accesos flotantes: carrito solo con icono y contador tipo notificación */
+.cart-label,
+.cart-float-label { display:none !important; }
+.cart-float.is-visible {
+  position:fixed;
+  z-index:500;
+  right:22px;
+  bottom:22px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:54px;
+  height:54px;
+  min-height:54px;
+  padding:0;
+  border:1px solid var(--line);
+  border-radius:50%;
+  background:var(--text);
+  color:var(--bg);
+  box-shadow:0 6px 22px rgba(33,30,27,.22);
+  text-decoration:none;
+}
+.cart-float .cart-icon { width:25px; height:25px; }
+.cart-float .cart-count {
+  position:absolute;
+  top:-5px;
+  right:-4px;
+  min-width:21px;
+  height:21px;
+  padding:0 5px;
+  border:2px solid var(--bg);
+  background:#b52d2d;
+  color:#fff;
+  font-size:.68rem;
+  font-weight:600;
+}
+.cart-float.is-visible:hover { transform:translateY(-3px) scale(1.03); }
+.cart-float.is-visible:active { transform:translateY(1px) scale(.96); }
+.whatsapp-btn {
+  left:22px;
+  right:auto;
+  bottom:22px;
+}
+.pagina-carrito .cart-float { display:none !important; }
+@media (max-width:768px) {
+  .cart-float.is-visible {
+    right:16px;
+    bottom:calc(16px + env(safe-area-inset-bottom,0px));
+    width:50px;
+    height:50px;
+    min-height:50px;
+  }
+  .whatsapp-btn {
+    left:16px;
+    right:auto;
+    bottom:calc(16px + env(safe-area-inset-bottom,0px));
+    width:50px;
+    height:50px;
+    border-radius:50%;
+  }
+}
