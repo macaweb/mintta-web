@@ -3504,3 +3504,76 @@ a.categoria{padding-bottom:24px}.categoria-contenedor span{font-size:1.05rem;let
     padding:7px 9px;
   }
 }
+
+
+/* Ficha de producto: foto, nombre centrado en recuadro y precio */
+.producto-foto-wrap { overflow:hidden; }
+.producto-foto-wrap .nombre-producto-overlay { display:none !important; }
+.nombre-producto-boton {
+  display:block;
+  width:fit-content;
+  max-width:100%;
+  margin:10px auto 8px;
+  padding:7px 13px;
+  border:1px solid var(--line);
+  border-radius:2px;
+  background:transparent;
+  color:var(--text);
+  font-family:'Cormorant Garamond',serif;
+  font-size:.98rem;
+  font-weight:500;
+  line-height:1.25;
+  letter-spacing:.035rem;
+  text-align:center;
+  cursor:pointer;
+  transition:transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.nombre-producto-boton:hover,
+.nombre-producto-boton:focus-visible,
+.nombre-producto-boton.nombre-seleccionado {
+  background:var(--text);
+  color:#fff;
+  border-color:var(--text);
+  box-shadow:0 5px 13px rgba(33,30,27,.13);
+}
+.nombre-producto-boton:active { transform:translateY(2px) scale(.97); }
+.producto-nuevo-card .precio,
+.grid-productos .producto .precio {
+  display:block;
+  width:100%;
+  margin:0 auto 11px;
+  color:var(--text);
+  font-weight:600;
+  text-align:center;
+  font-size:.92rem;
+}
+.producto-nuevo-card .nombre-producto-boton { font-size:.95rem; }
+.grid-productos .producto .nombre-producto-boton { font-size:.95rem; }
+@media(max-width:768px) {
+  .nombre-producto-boton { margin:9px auto 7px; padding:7px 9px; font-size:.88rem; }
+  .producto-nuevo-card .nombre-producto-boton,
+  .grid-productos .producto .nombre-producto-boton { font-size:.86rem; }
+  .producto-nuevo-card .precio,
+  .grid-productos .producto .precio { font-size:.85rem; font-weight:600; }
+}
+
+/* Feedback interactivo consistente para botones táctiles y con mouse */
+button, .btn-outline, .btn-agregar, .volver, .ver-todo, .cart-float, .cart-top-link, .menu-links a {
+  -webkit-tap-highlight-color:transparent;
+  transition:transform .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+button:active, .btn-outline:active, .btn-agregar:active, .volver:active, .ver-todo:active, .cart-float:active {
+  transform:translateY(2px) scale(.97);
+  box-shadow:0 2px 5px rgba(33,30,27,.12);
+}
+button:hover, .btn-outline:hover, .btn-agregar:hover, .volver:hover, .ver-todo:hover, .cart-float:hover {
+  box-shadow:0 5px 13px rgba(33,30,27,.12);
+}
+.talla {
+  transition:transform .18s ease, background-color .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.talla:active { transform:translateY(2px) scale(.93); }
+.talla:hover { transform:translateY(-1px); }
+.talla.selected { box-shadow:0 4px 10px rgba(33,30,27,.13); }
+.menu-links a:active { transform:translateX(3px); }
