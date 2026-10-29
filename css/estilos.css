@@ -3334,3 +3334,24 @@ a.categoria{padding-bottom:24px}.categoria-contenedor span{font-size:1.05rem;let
   .hero-text { max-width: 83%; }
   .hero .btn-outline { padding: 13px 15px; font-size: .72rem; }
 }
+
+
+/* Tarjetas comprables de Lo Nuevo */
+.productos-nuevos-comprables { align-items: stretch; }
+.producto-nuevo-card { display:flex; flex-direction:column; align-items:stretch; min-width:0; }
+.producto-nuevo-card .producto-imagen { display:block; width:100%; aspect-ratio:3/4; object-fit:cover; margin-bottom:12px; }
+.producto-nuevo-card h3 { font-size:1.15rem; line-height:1.3; margin:0 0 6px; font-weight:500; }
+.producto-nuevo-card .precio { margin:0 0 10px; font-size:.9rem; }
+.producto-nuevo-card .precio-pendiente { color:var(--text-muted); font-style:italic; }
+.producto-nuevo-card .tallas { display:flex; gap:7px; margin:0 0 12px; }
+.producto-nuevo-card .talla { border:1px solid var(--line); background:transparent; color:var(--text); cursor:pointer; }
+.producto-nuevo-card .talla.selected { background:var(--text); border-color:var(--text); color:var(--bg); }
+.producto-nuevo-card .btn-agregar { width:100%; margin-top:auto; cursor:pointer; }
+@media(max-width:768px) {
+  .productos-nuevos-comprables { grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 12px; padding:0 12px; }
+  .producto-nuevo-card h3 { font-size:.98rem; }
+  .producto-nuevo-card .precio { font-size:.8rem; }
+  .producto-nuevo-card .tallas { gap:6px; }
+  .producto-nuevo-card .talla { width:32px; height:32px; }
+  .producto-nuevo-card .btn-agregar { padding:11px 7px; font-size:.68rem; }
+}
