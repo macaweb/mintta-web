@@ -567,17 +567,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     carrito.forEach(function (item) {
 
-      const subtotal = item.precio * item.cantidad;
-
-      total += subtotal;
+      const precioPendiente = item.precio === null || item.precio === undefined || item.precio === "" || !Number.isFinite(Number(item.precio));
+      const subtotal = precioPendiente ? null : Number(item.precio) * item.cantidad;
+      if (subtotal !== null) total += subtotal;
 
       productosTexto +=
         "• " + item.nombre + "\n" +
         "  Talla: " + item.talla + "\n" +
         "  Cantidad: " + item.cantidad + "\n" +
-        "  Precio: $ " + item.precio.toLocaleString("es-CO") + "\n" +
-        "  Subtotal: $ " + subtotal.toLocaleString("es-CO") + "\n\n";
-
+        "  Precio: " + (precioPendiente ? "Por confirmar" : "$ " + Number(item.precio).toLocaleString("es-CO")) + "\n" +
+        "  Subtotal: " + (subtotal === null ? "Por confirmar" : "$ " + subtotal.toLocaleString("es-CO")) + "\n\n";
     });
 
 
