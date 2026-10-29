@@ -687,7 +687,15 @@ document.addEventListener("pointerdown", function (event) {
 
 document.addEventListener("click", function (event) {
   const cta = event.target.closest(".hero a.btn-outline");
-  if (cta) cta.classList.add("is-pressed");
+  if (cta) {
+    cta.classList.add("is-pressed");
+    if (!cta.dataset.navigating) {
+      event.preventDefault();
+      cta.dataset.navigating = "true";
+      const destino = cta.href;
+      window.setTimeout(function () { window.location.href = destino; }, 180);
+    }
+  }
 
   const botonAgregar = event.target.closest(".btn-agregar");
   if (botonAgregar) {
