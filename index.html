@@ -47,9 +47,13 @@
           Catálogo
           
         </a>
-        <a href="carrito.html" id="enlace-carrito">
-          Carrito (<span id="contador-carrito">0</span>)
-        </a>
+        <a href="carrito.html" class="cart-top-link" id="enlace-carrito" aria-label="Ver carrito">
+  <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+  </svg>
+  <span class="cart-label">Carrito</span><span class="cart-count" data-cart-count>0</span>
+</a>
 
 
         <!-- MENÚ -->
@@ -69,6 +73,15 @@
     </div>
 
   </header>
+
+<a href="carrito.html" class="cart-float" aria-label="Ir al carrito de compras">
+  <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+  </svg>
+  <span class="cart-float-label">Ver carrito</span><span class="cart-count" data-cart-count>0</span>
+</a>
+
 
 
 <!-- =========================
