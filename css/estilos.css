@@ -4683,3 +4683,31 @@ body.pagina-carrito .carrito-producto-info {
     min-width: 0;
   }
 }
+
+
+/* Prueba de pie de página centrado en vista móvil */
+@media (max-width: 700px) {
+  .footer-inner {
+    text-align: center;
+  }
+
+  .footer-col {
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .footer-col h3,
+  .footer-col h4,
+  .footer-col p,
+  .footer-col a {
+    text-align: center;
+  }
+
+  .footer-col a {
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
