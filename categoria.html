@@ -15,11 +15,26 @@
       <div class="main-nav">
         <a href="index.html#novedades">Nuevo</a>
         <a href="catalogo.html">Catálogo</a>
-        <a href="carrito.html" id="enlace-carrito">Carrito (<span id="contador-carrito">0</span>)</a>
+        <a href="carrito.html" class="cart-top-link" id="enlace-carrito" aria-label="Ver carrito">
+  <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+  </svg>
+  <span class="cart-label">Carrito</span><span class="cart-count" data-cart-count>0</span>
+</a>
         <button class="menu-btn" aria-label="Abrir menú" type="button"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
+
+<a href="carrito.html" class="cart-float" aria-label="Ir al carrito de compras">
+  <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+  </svg>
+  <span class="cart-float-label">Ver carrito</span><span class="cart-count" data-cart-count>0</span>
+</a>
+
   <div class="menu-overlay"></div>
   <aside class="menu-panel">
     <div class="menu-panel-header"><span class="menu-brand">MINTTA</span><button class="menu-close" aria-label="Cerrar menú" type="button">×</button></div>
@@ -103,7 +118,7 @@
         else carrito.push({nombre:boton.dataset.producto,precio:Number(boton.dataset.precio),talla:talla.dataset.talla,imagen:boton.dataset.imagen,cantidad:1});
         localStorage.setItem("minttaCarrito", JSON.stringify(carrito));
         if (typeof actualizarContadorCarrito === "function") actualizarContadorCarrito();
-        alert("Producto agregado al carrito.");
+        // El icono flotante confirma que el producto quedó agregado.
         talla.classList.remove("selected");
       });
     } catch (error) {
