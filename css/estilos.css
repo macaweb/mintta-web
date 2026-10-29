@@ -3825,3 +3825,27 @@ button:active,
     transition: none !important;
   }
 }
+
+
+/* Corrección prioritaria: el enlace Volver al catálogo siempre contrasta al tocarse */
+body.pagina-carrito #carrito-vacio a,
+body.pagina-carrito #carrito-vacio a:link,
+body.pagina-carrito #carrito-vacio a:visited {
+  background: transparent !important;
+  color: var(--text) !important;
+  border-color: var(--text) !important;
+}
+body.pagina-carrito #carrito-vacio a:hover,
+body.pagina-carrito #carrito-vacio a:focus,
+body.pagina-carrito #carrito-vacio a:focus-visible,
+body.pagina-carrito #carrito-vacio a:active,
+body.pagina-carrito #carrito-vacio a:active:focus {
+  background: #000 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border-color: #000 !important;
+  box-shadow: 0 7px 18px rgba(0,0,0,.24) !important;
+}
+body.pagina-carrito #carrito-vacio a:active {
+  transform: translateY(1px) scale(.97) !important;
+}
