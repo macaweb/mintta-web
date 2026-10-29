@@ -4743,3 +4743,14 @@ a.ver-todo:visited:active {
   -webkit-text-fill-color: #FFFFFF !important;
   border-color: #000000 !important;
 }
+
+
+/* Botón volver al inicio debajo del catálogo completo */
+.volver-inicio-wrap {
+  text-align: center;
+  padding: 0 16px 60px;
+}
+
+.volver-inicio-wrap .ver-todo {
+  margin-top: 0;
+}
