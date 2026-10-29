@@ -4782,3 +4782,25 @@ a.ver-todo:visited:active {
   color: #211E1B !important;
   -webkit-text-fill-color: #211E1B !important;
 }
+
+
+/* Ajuste final menú lateral: quitar líneas sobre el texto y conservar separadores limpios */
+.menu-links a {
+  padding: 17px 12px !important;
+  margin: 0 -12px !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-clip: padding-box;
+}
+.menu-links a:hover,
+.menu-links a:focus,
+.menu-links a:focus-visible {
+  outline: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+.menu-links a:active {
+  outline: none !important;
+  text-decoration: none !important;
+}
