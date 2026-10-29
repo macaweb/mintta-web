@@ -84,6 +84,8 @@
       filtrados.forEach(p => {
         const card = document.createElement("article");
         card.className = "producto";
+        const slugProducto = p.nombre.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        card.id = "producto-" + slugProducto;
         const imagen = "img/" + slug + ".png";
         const precio = Number(p.precio || 0);
         card.innerHTML = '<div class="producto-img"><img src="' + imagen + '" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>' +
@@ -106,6 +108,20 @@
         agregar.dataset.imagen = imagen;
         grid.appendChild(card);
       });
+      // Si llegamos desde el carrito, desplaza la vista a la prenda exacta.
+      const productoBuscado = new URLSearchParams(window.location.search).get("producto");
+      if (productoBuscado) {
+        const slugBuscado = productoBuscado.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        const tarjetaBuscada = document.getElementById("producto-" + slugBuscado);
+        if (tarjetaBuscada) {
+          window.setTimeout(() => {
+            tarjetaBuscada.scrollIntoView({ behavior: "smooth", block: "center" });
+            tarjetaBuscada.classList.add("producto-destacado-desde-carrito");
+            window.setTimeout(() => tarjetaBuscada.classList.remove("producto-destacado-desde-carrito"), 2400);
+          }, 120);
+        }
+      }
+
       // Activar la lógica de carrito para los productos creados dinámicamente.
       grid.addEventListener("click", e => {
         const boton = e.target.closest(".btn-agregar");
