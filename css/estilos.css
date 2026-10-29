@@ -3239,7 +3239,7 @@ font-size: 1.5rem;
 .cart-float{display:none}
 @media(max-width:768px){
 .header-inner{padding:13px 16px;gap:10px}.logo{font-size:1.55rem;letter-spacing:.22rem}.main-nav{gap:14px;margin-left:auto}
-.main-nav>a:not(.cart-top-link){display:none}.cart-top-link{gap:5px;padding:4px 0}.cart-label{display:none}.cart-icon{width:24px;height:24px}
+.main-nav>a:not(.cart-top-link){display:inline-flex;align-items:center}.cart-top-link{gap:5px;padding:4px 0}.cart-label{display:none}.cart-icon{width:24px;height:24px}
 .grid-categorias{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}.categorias{padding:44px 16px}.categorias h2{font-size:1.8rem;margin-bottom:28px}
 a.categoria{padding-bottom:24px}.categoria-contenedor span{font-size:1.05rem;letter-spacing:.04rem;margin-top:10px}
 .productos-nuevos{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px;padding:0 12px}
