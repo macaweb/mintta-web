@@ -3577,3 +3577,34 @@ button:hover, .btn-outline:hover, .btn-agregar:hover, .volver:hover, .ver-todo:h
 .talla:hover { transform:translateY(-1px); }
 .talla.selected { box-shadow:0 4px 10px rgba(33,30,27,.13); }
 .menu-links a:active { transform:translateX(3px); }
+
+
+/* Ajuste fino de tipografía: nombres proporcionados al tamaño de las fotos */
+.producto-nuevo-card .nombre-producto-boton,
+.grid-productos .producto .nombre-producto-boton {
+  font-size: .9rem;
+  line-height: 1.25;
+  letter-spacing: .025rem;
+  padding: 7px 11px;
+  margin: 9px auto 8px;
+}
+.producto-nuevo-card h3,
+.grid-productos .producto h3 {
+  font-size: .9rem;
+  line-height: 1.25;
+  letter-spacing: .025rem;
+}
+@media (max-width: 768px) {
+  .producto-nuevo-card .nombre-producto-boton,
+  .grid-productos .producto .nombre-producto-boton {
+    font-size: .82rem;
+    padding: 7px 8px;
+    letter-spacing: .02rem;
+  }
+  .producto-nuevo-card h3,
+  .grid-productos .producto h3 {
+    font-size: .82rem;
+    line-height: 1.25;
+    letter-spacing: .02rem;
+  }
+}
