@@ -4754,3 +4754,31 @@ a.ver-todo:visited:active {
 .volver-inicio-wrap .ver-todo {
   margin-top: 0;
 }
+
+
+/* Menú lateral: al tocar una opción, fondo cálido claro y texto oscuro legible */
+.menu-links a {
+  display: block;
+  padding: 10px 12px;
+  margin: -10px -12px;
+  border-radius: 3px;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  background: transparent !important;
+  transition: background-color .18s ease, color .18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.menu-links a:hover,
+.menu-links a:focus,
+.menu-links a:focus-visible {
+  background: #F1EAE0 !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  outline: 1px solid #D8CCB8;
+  outline-offset: 0;
+}
+.menu-links a:active {
+  background: #E5D6C3 !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+}
