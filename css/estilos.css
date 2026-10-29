@@ -391,7 +391,7 @@ a.logo:visited {
       rgba(250, 246, 240, 0) 65%
     ),
 
-    url(/img/portada.png);
+    url('../img/portada.png');
 
 
   background-size: cover;
