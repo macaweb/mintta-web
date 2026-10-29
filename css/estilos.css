@@ -3458,3 +3458,49 @@ a.categoria{padding-bottom:24px}.categoria-contenedor span{font-size:1.05rem;let
   .tallas { gap:11px; }
   .volver-contenedor { padding-top:28px; }
 }
+
+
+/* Nombre de cada prenda centrado sobre su fotografía */
+.producto-foto-wrap {
+  position:relative;
+  width:100%;
+  overflow:hidden;
+}
+.producto-foto-wrap .producto-imagen {
+  width:100%;
+  aspect-ratio:3/4;
+  height:auto;
+  object-fit:cover;
+}
+.nombre-producto-overlay {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:max-content;
+  max-width:88%;
+  margin:0 !important;
+  padding:8px 12px;
+  background:rgba(250,246,240,.88);
+  color:var(--text);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;
+  font-weight:600;
+  letter-spacing:.06rem;
+  line-height:1.2;
+  text-align:center;
+  text-transform:uppercase;
+  box-shadow:0 2px 12px rgba(33,30,27,.08);
+}
+.grid-productos .producto-img { position:relative; }
+.grid-productos .producto-img .nombre-producto-overlay {
+  font-size:1.15rem;
+}
+@media(max-width:768px) {
+  .producto-foto-wrap .producto-imagen { width:100%; }
+  .producto-foto-wrap .nombre-producto-overlay,
+  .grid-productos .producto-img .nombre-producto-overlay {
+    font-size:1rem;
+    padding:7px 9px;
+  }
+}
