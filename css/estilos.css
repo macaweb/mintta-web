@@ -3254,3 +3254,83 @@ a.categoria{padding-bottom:24px}.categoria-contenedor span{font-size:1.05rem;let
 .cart-float.is-visible:focus-visible,.cart-top-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 }
 @media(max-width:360px){.header-inner{padding-left:12px;padding-right:12px}.logo{font-size:1.35rem;letter-spacing:.15rem}.main-nav{gap:10px}.grid-productos,.grid-catalogo{gap:16px 9px}.cart-float.is-visible{right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px))}}
+
+
+/* Refinamiento visual móvil Mintta */
+@media (max-width: 768px) {
+  .header-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+  .logo { justify-self: start; font-size: 1.55rem; letter-spacing: .18rem; white-space: nowrap; }
+  .main-nav {
+    justify-content: flex-end;
+    gap: clamp(9px, 2.7vw, 18px);
+    min-width: 0;
+    margin-left: 0;
+  }
+  .main-nav > a:not(.cart-top-link) {
+    display: inline-flex;
+    align-items: center;
+    font-size: clamp(.65rem, 2.7vw, .78rem);
+    letter-spacing: .025rem;
+    white-space: nowrap;
+    padding: 8px 0;
+  }
+  .cart-top-link { display: inline-flex; align-items: center; gap: 5px; padding: 6px 0; }
+  .cart-label { display: inline; font-size: clamp(.62rem, 2.5vw, .75rem); letter-spacing: 0; }
+  .cart-top-link .cart-icon { width: 20px; height: 20px; }
+  .cart-top-link .cart-count { min-width: 17px; height: 17px; padding: 0 4px; font-size: .65rem; }
+  .menu-btn { width: 27px; height: 25px; margin-left: 0; flex: 0 0 27px; }
+  .menu-btn span { height: 2px; border-radius: 2px; }
+  .menu-btn:hover span { background: var(--accent); }
+  .menu-panel { width: min(86vw, 360px); padding: 24px 24px; }
+  .menu-panel-header { display: flex; justify-content: flex-end; align-items: center; min-height: 42px; }
+  .menu-close {
+    width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center;
+    border: 1px solid var(--line); border-radius: 50%; background: var(--bg-alt);
+    font-family: 'Jost', sans-serif; font-size: 1.65rem; line-height: 1;
+    box-shadow: 0 3px 10px rgba(33,30,27,.08);
+    transition: transform .22s ease, background .22s ease, color .22s ease, border-color .22s ease;
+  }
+  .menu-close:hover, .menu-close:focus-visible {
+    transform: rotate(90deg); background: var(--text); color: var(--bg); border-color: var(--text);
+  }
+  .hero {
+    min-height: 0;
+    height: min(590px, 68svh);
+    padding: 30px 22px;
+    background-position: 58% center;
+    background-image: linear-gradient(90deg, rgba(250,246,240,.97) 0%, rgba(250,246,240,.88) 40%, rgba(250,246,240,.34) 100%), url('../img/portada.png');
+  }
+  .hero-text { max-width: 78%; }
+  .hero h1 { font-size: clamp(2rem, 8vw, 2.5rem); line-height: 1.04; margin-bottom: 13px; }
+  .hero-subtitle { color: #33271e; font-size: .98rem; font-weight: 500; line-height: 1.45; text-shadow: 0 1px 7px rgba(250,246,240,.9); margin-bottom: 24px; }
+  .hero .btn-outline { padding: 15px 20px; font-size: .78rem; letter-spacing: .06rem; font-weight: 500; min-height: 48px; }
+  .novedades { padding-top: 35px; padding-bottom: 28px; }
+  .novedades h2 { margin-top: 6px; }
+  .page-header { padding: 36px 18px 18px; }
+  .volver {
+    margin-top: 18px; padding: 11px 17px; border: 1px solid var(--text);
+    background: var(--bg-alt); color: var(--text); border-radius: 4px;
+    font-size: .78rem; font-weight: 500; letter-spacing: .025rem;
+    box-shadow: 0 3px 10px rgba(33,30,27,.06);
+  }
+  .volver:hover, .volver:focus-visible { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .categoria-contenedor { cursor: pointer; }
+  .categoria-contenedor span { display: block; width: 100%; padding: 7px 4px; cursor: pointer; }
+}
+@media (max-width: 390px) {
+  .header-inner { padding-left: 10px; padding-right: 10px; gap: 8px; }
+  .logo { font-size: 1.34rem; letter-spacing: .1rem; }
+  .main-nav { gap: 8px; }
+  .main-nav > a:not(.cart-top-link) { font-size: .63rem; }
+  .cart-label { font-size: .6rem; }
+  .menu-btn { width: 23px; flex-basis: 23px; }
+  .hero { height: 62svh; min-height: 390px; padding-left: 18px; padding-right: 14px; }
+  .hero-text { max-width: 83%; }
+  .hero .btn-outline { padding: 13px 15px; font-size: .72rem; }
+}
