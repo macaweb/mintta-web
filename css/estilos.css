@@ -4070,38 +4070,39 @@ body:not(.pagina-carrito) .hero .btn-outline:active {
 }
 
 
-/* Nombres de prendas: botón destacado en tono caramelo/dorado de la paleta Mintta */
+/* Nombres de prendas: recuadro blanco, letras negras y borde cálido */
 .nombre-producto-boton,
 .producto-nuevo-card .nombre-producto-boton,
 .grid-productos .producto .nombre-producto-boton {
   padding: 9px 16px !important;
-  border: 1px solid #A9825A !important;
+  border: 1px solid #D8CCB8 !important;
   border-radius: 3px !important;
-  background: #A9825A !important;
-  color: #FFFFFF !important;
-  -webkit-text-fill-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
   font-size: 1.12rem !important;
   font-weight: 500 !important;
   letter-spacing: .015rem;
   line-height: 1.25;
-  box-shadow: 0 2px 6px rgba(88, 61, 35, .12);
+  box-shadow: 0 2px 6px rgba(88, 61, 35, .08);
 }
 .nombre-producto-boton:hover,
 .nombre-producto-boton:focus-visible,
 .nombre-producto-boton.nombre-seleccionado {
-  background: #8F6D49 !important;
-  background-color: #8F6D49 !important;
-  border-color: #8F6D49 !important;
-  color: #FFFFFF !important;
-  -webkit-text-fill-color: #FFFFFF !important;
-  box-shadow: 0 5px 12px rgba(88, 61, 35, .2);
+  background: #F1EAE0 !important;
+  background-color: #F1EAE0 !important;
+  border-color: #A9825A !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  box-shadow: 0 4px 10px rgba(88, 61, 35, .13);
 }
 .nombre-producto-boton:active {
-  background: #7B5C3C !important;
-  background-color: #7B5C3C !important;
-  border-color: #7B5C3C !important;
-  color: #FFFFFF !important;
-  -webkit-text-fill-color: #FFFFFF !important;
+  background: #E9DFD1 !important;
+  background-color: #E9DFD1 !important;
+  border-color: #A9825A !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
 }
 @media (max-width: 768px) {
   .nombre-producto-boton,
