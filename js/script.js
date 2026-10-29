@@ -645,3 +645,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+// Resalte táctil/clic en el nombre de la prenda.
+document.addEventListener("click", function (event) {
+  const nombre = event.target.closest(".nombre-producto-boton");
+  if (!nombre) return;
+  const activo = nombre.classList.toggle("nombre-seleccionado");
+  nombre.setAttribute("aria-pressed", activo ? "true" : "false");
+});
