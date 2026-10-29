@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mintta — Elegancia Atemporal</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/estilos.css?v=2">
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+       ========================= -->
+
+  <header class="header">
+
+    <div class="header-inner">
+
+      <!-- LOGO -->
+
+      <a href="/" class="logo">
+        MINTTA
+      </a>
+
+
+      <!-- NAVEGACIÓN PRINCIPAL -->
+
+      <div class="main-nav">
+
+        <a href="#novedades">
+          Nuevo
+        </a>
+
+        <a href="catalogo.html">
+          Catálogo
+          
+        </a>
+        <a href="/carrito" id="enlace-carrito">
+          Carrito (<span id="contador-carrito">0</span>)
+        </a>
+
+
+        <!-- MENÚ -->
+
+        <button
+          class="menu-btn"
+          aria-label="Abrir menú"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+<!-- =========================
+     MENÚ LATERAL
+     ========================= -->
+
+<div class="menu-overlay"></div>
+
+
+<aside class="menu-panel">
+
+  <div class="menu-panel-header">
+
+  <button
+    class="menu-close"
+    aria-label="Cerrar menú"
+    type="button"
+  >
+    ×
+  </button>
+
+</div>
+
+
+
+  <nav class="menu-links">
+
+
+    <a href="#novedades">
+      Nuevas piezas
+    </a>
+
+
+    <a href="#coleccion">
+      Lo Más Vendido
+    </a>
+
+
+   <a href="#" class="menu-link-login">
+      Iniciar sesión
+    </a>
+
+   <a href="#" class="menu-link-registro">REGISTRARSE</a>
+
+
+
+  </nav>
+
+
+</aside>
+
+
+  <!-- =========================
+       HERO
+       ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <h1>
+        Elegancia Atemporal,<br>
+        Estilo Que Perdura
+      </h1>
+
+      <p class="hero-subtitle">
+        Piezas que trascienden, mujeres que inspiran.
+      </p>
+
+      <a
+        href="catalogo.html"
+        class="btn-outline"
+      >
+        Descubrir la Colección
+      </a>
+
+    </div>
+
+  </section>
+
+
+     <!-- =========================
+     PRODUCTOS NUEVOS
+     ========================= -->
+     <section class="novedades" id="novedades">
+    <p class="eyebrow center">Lo Nuevo</p>
+    <h2>Nuevas Llegadas</h2>
+    <p class="page-sub">Descubre nuestras piezas más recientes.</p>
+    <div class="productos-nuevos">
+    </div>
+  </section>  
+
+  <div class="productos-nuevos">
+
+  <!-- SET AVELINE -->
+
+  <div class="producto-nuevo">
+
+    <img 
+      src="img/novedades/set_aveline.png"
+      alt="Set Aveline"
+      class="producto-imagen"
+    >
+
+    <span>
+      Set Aveline
+    </span>
+
+  </div>
+
+
+
+  <!-- FALDA TERRACOTA -->
+
+  <div class="producto-nuevo">
+
+    <img 
+      src="img/novedades/falda_terracota.png"
+      alt="Falda Terracota"
+      class="producto-imagen"
+    >
+
+    <span>
+      Falda Terracota
+    </span>
+
+  </div>
+
+
+
+  <!-- BLUSA MARCELINE -->
+
+  <div class="producto-nuevo">
+
+    <img 
+      src="img/novedades/blusa_marceline.png"
+      alt="Blusa Marceline"
+      class="producto-imagen"
+    >
+
+    <span>
+      Blusa Marceline
+    </span>
+
+  </div>
+
+
+
+  <!-- CONJUNTO REEVE -->
+
+  <div class="producto-nuevo">
+
+    <img 
+      src="img/novedades/conjunto_reeve.png"
+      alt="Conjunto Reeve"
+      class="producto-imagen"
+    >
+
+    <span>
+      Conjunto Reeve
+    </span>
+
+  </div>
+
+
+</div>
+
+  <!-- =========================
+       CATEGORÍAS DESTACADAS
+       ========================= -->
+
+  <section
+    class="categorias"
+    id="coleccion"
+  >
+
+    <p class="eyebrow center">
+      Explora
+    </p>
+
+    <h2>
+      Lo Más Vendido
+    </h2>
+
+
+    <div class="grid-categorias">
+
+
+      <!-- VESTIDOS -->
+
+      <div class="categoria-contenedor">
+
+        <a
+          href="/categoria/vestidos"
+          class="categoria vestidos"
+        ></a>
+
+        <span>
+          Vestidos
+        </span>
+
+      </div>
+
+
+
+      <!-- GABANES -->
+
+      <div class="categoria-contenedor">
+
+        <a
+          href="/categoria/gabanes"
+          class="categoria gabanes"
+        ></a>
+
+        <span>
+          Gabanes
+        </span>
+
+      </div>
+
+
+
+      <!-- CONJUNTOS -->
+
+      <div class="categoria-contenedor">
+
+        <a
+          href="/categoria/conjuntos"
+          class="categoria conjuntos"
+        ></a>
+
+        <span>
+          Conjuntos
+        </span>
+
+      </div>
+
+
+
+      <!-- BODIES -->
+
+      <div class="categoria-contenedor">
+
+        <a
+          href="/categoria/bodies"
+          class="categoria bodies"
+        ></a>
+
+        <span>
+          Bodies
+        </span>
+
+      </div>
+
+
+
+    </div>
+
+
+    <a
+      href="catalogo.html"
+      class="ver-todo"
+    >
+      Ver catálogo completo
+    </a>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+      
+
+  <footer class="footer">
+
+    <div class="footer-inner">
+
+
+      <!-- MARCA -->
+
+      <div class="footer-col">
+
+        <h3>
+          MINTTA
+        </h3>
+
+        <p>
+          Donde tu esencia cobra estilo.
+        </p>
+
+      </div>
+
+
+
+      <!-- SERVICIO AL CLIENTE -->
+
+<div class="footer-col">
+
+  <h4>
+    Servicio al Cliente
+  </h4>
+
+  <a href="/politicas-envio.html">
+    Políticas de envío
+  </a>
+
+  <a href="/politicas-devolucion.html">
+    Políticas de devolución
+  </a>
+
+  <a href="/terminos-condiciones.html">
+    Términos y condiciones
+  </a>
+
+</div>
+
+      <!-- CONTACTO -->
+
+      <div class="footer-col">
+
+        <h4>
+          Contacto
+        </h4>
+
+        <p>
+          +57 302 206 1132
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+    <p class="copy">
+      &copy; 2026 Mintta. Todos los derechos reservados.
+    </p>
+
+  </footer>
+
+
+
+  <!-- =========================
+       WHATSAPP
+       ========================= -->
+
+  <a
+    href="https://wa.me/573022061132"
+    class="whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+  </a>
+
+<!-- =========================
+     AVISO FLOTANTE - REGISTRO
+     ========================= -->
+
+<div class="registro-flotante">
+
+  <button
+    class="registro-flotante-cerrar"
+    type="button"
+    aria-label="Cerrar aviso"
+  >
+    ×
+  </button>
+
+  <p class="registro-flotante-eyebrow">
+    Bienvenida a Mintta
+  </p>
+
+  <h2>
+    Recibe un 5% de descuento
+  </h2>
+
+  <p class="registro-flotante-texto">
+    Regístrate y recibe novedades, promociones y beneficios exclusivos.
+  </p>
+
+  <button
+  type="button"
+  class="registro-flotante-btn"
+>
+  Registrarme
+</button>
+
+  <button
+    class="registro-flotante-no"
+    type="button"
+  >
+    Ahora no
+  </button>
+
+</div>
+
+<!-- =========================
+     FORMULARIO DE REGISTRO
+     ========================= -->
+
+<div class="registro-modal">
+
+  <div class="registro-modal-contenido">
+
+    <button
+      class="registro-modal-cerrar"
+      type="button"
+      aria-label="Cerrar registro"
+    >
+      ×
+    </button>
+
+    <p class="registro-flotante-eyebrow">
+      Únete a Mintta
+    </p>
+
+    <h2>
+      Crea tu cuenta
+    </h2>
+
+    <p class="registro-modal-texto">
+      Regístrate y disfruta de un 5% de descuento en tu primera compra.
+    </p>
+
+    <form class="registro-form">
+
+      <div class="registro-campos">
+
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Nombre"
+          required
+        >
+
+        <input
+          type="text"
+          name="apellido"
+          placeholder="Apellido"
+          required
+        >
+
+        <input
+          type="email"
+          name="correo"
+          placeholder="Correo electrónico"
+          required
+        >
+
+        <input
+          type="tel"
+          name="celular"
+          placeholder="Celular"
+          required
+        >
+<input
+  type="password"
+  name="contrasena"
+  placeholder="Contraseña"
+  required
+>
+      </div>
+
+      <button
+        type="submit"
+        class="registro-form-btn"
+      >
+        Crear mi cuenta
+      </button>
+
+    </form>
+
+    <p class="registro-modal-nota">
+      Al registrarte aceptas recibir información sobre novedades y promociones de Mintta.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- =========================
+     MENSAJE DE REGISTRO EXITOSO
+     ========================= -->
+
+<div class="registro-exito">
+
+  <div class="registro-exito-contenido">
+
+    <button
+      class="registro-exito-cerrar"
+      type="button"
+      aria-label="Cerrar"
+    >
+      ×
+    </button>
+
+    <p class="registro-exito-marca">
+      M I N T T A
+    </p>
+
+    <div class="registro-exito-icono">
+      ✓
+    </div>
+
+    <p class="registro-exito-titulo">
+      ¡Registro exitoso!
+    </p>
+
+    <p class="registro-exito-mensaje">
+      Has obtenido un
+      <strong>5% de descuento</strong>
+      en tu primera compra.
+    </p>
+
+    <div class="registro-exito-detalle">
+      <span></span>
+      <small>♥</small>
+      <span></span>
+    </div>
+
+    <button
+      type="button"
+      class="registro-exito-continuar"
+    >
+      Continuar
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     MODAL - INICIAR SESIÓN
+     ========================= -->
+
+<div class="login-modal">
+
+  <div class="login-modal-contenido">
+
+    <button
+      class="login-modal-cerrar"
+      type="button"
+      aria-label="Cerrar inicio de sesión"
+    >
+      ×
+    </button>
+
+    <p class="registro-flotante-eyebrow">
+      Bienvenida a Mintta
+    </p>
+
+    <h2>Iniciar sesión</h2>
+
+    <p class="login-modal-texto">
+      Ingresa a tu cuenta para continuar.
+    </p>
+
+    <form class="login-form">
+
+      <div class="login-campos">
+
+        <input
+          type="email"
+          name="correo"
+          placeholder="Correo electrónico"
+          required
+        >
+
+        <input
+          type="password"
+          name="contrasena"
+          placeholder="Contraseña"
+          required
+        >
+
+      </div>
+
+      <button
+        type="submit"
+        class="login-form-btn"
+      >
+        Iniciar sesión
+      </button>
+
+    </form>
+
+    <button
+      type="button"
+      class="login-olvido"
+    >
+      ¿Olvidaste tu contraseña?
+    </button>
+
+    <p class="login-registro">
+      ¿No tienes una cuenta?
+      <button type="button" class="login-ir-registro">
+        Regístrate
+      </button>
+    </p>
+
+  </div>
+
+</div>
+
+<!-- =========================
+     MODAL - RECUPERAR CONTRASEÑA
+     ========================= -->
+
+<div class="recuperar-modal">
+
+  <div class="recuperar-modal-contenido">
+
+    <button
+      class="recuperar-modal-cerrar"
+      type="button"
+      aria-label="Cerrar recuperación de contraseña"
+    >
+      ×
+    </button>
+
+    <p class="registro-flotante-eyebrow">
+      Recupera tu cuenta
+    </p>
+
+    <h2>¿Olvidaste tu contraseña?</h2>
+
+    <p class="recuperar-modal-texto">
+      Ingresa el correo electrónico con el que te registraste
+      y te ayudaremos a recuperar tu cuenta.
+    </p>
+
+    <form class="recuperar-form">
+
+      <div class="recuperar-campos">
+
+        <input
+          type="email"
+          name="correo"
+          placeholder="Correo electrónico"
+          required
+        >
+
+      </div>
+
+      <button
+        type="submit"
+        class="recuperar-form-btn"
+      >
+        Continuar
+      </button>
+
+    </form>
+
+    <button
+      type="button"
+      class="recuperar-volver-login"
+    >
+      Volver a iniciar sesión
+    </button>
+
+  </div>
+
+</div>
+
+<script src="/js/script.js"></script>
+
+</body>
+
+</html>

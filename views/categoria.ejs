@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= nombreCategoria %> — Mintta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+
+<header class="header">
+
+  <div class="header-inner">
+
+    <a href="/" class="logo">
+      MINTTA
+    </a>
+
+
+    <div class="main-nav">
+
+      <a href="/#novedades">
+        Nuevo
+      </a>
+
+      <a href="/catalogo.html">
+        Catálogo
+      </a>
+
+      <a href="/carrito" id="enlace-carrito">
+        Carrito (<span id="contador-carrito">0</span>)
+      </a>
+
+
+      <button
+        class="menu-btn"
+        aria-label="Abrir menú"
+        type="button"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<div class="menu-overlay"></div>
+
+
+<aside class="menu-panel">
+
+  <div class="menu-panel-header">
+
+    <span>
+      MENÚ
+    </span>
+
+    <button
+      class="menu-close"
+      aria-label="Cerrar menú"
+      type="button"
+    >
+      ×
+    </button>
+
+  </div>
+
+
+  <nav class="menu-links">
+
+    <a href="/#novedades">
+      Nuevas piezas
+    </a>
+
+    <a href="/#coleccion">
+      Lo Más Vendido
+    </a>
+
+    <a href="#">
+      Iniciar sesión
+    </a>
+
+    <a href="#">
+      Registrarse
+    </a>
+
+    <a href="#">
+      Guía de tallas
+    </a>
+
+    <a href="#">
+      Preguntas frecuentes
+    </a>
+
+  </nav>
+
+</aside>
+
+<section class="page-header">
+    <p class="eyebrow center">Colección</p>
+    <h1><%= nombreCategoria %></h1>
+    <a href="/catalogo.html" class="volver"> Volver al catálogo </a>
+  </section>
+
+  <section class="productos">
+    <div class="grid-productos">
+      <% productos.forEach(function(producto) { %>
+        <div class="producto">
+          <div class="producto-img"></div>
+          <h3><%= producto.nombre %></h3>
+          <p class="precio">$ <%= producto.precio.toLocaleString('es-CO') %></p>
+          <div class="tallas">
+          <% producto.tallas.forEach(function(talla) { %>
+            <button
+              class="talla"
+              type="button"
+              data-talla="<%= talla %>"
+            >
+              <%= talla %>
+            </button>
+          <% }); %>
+          </div>
+          <button
+          class="btn-agregar"
+          type="button"
+          data-producto="<%= producto.nombre %>"
+          data-precio="<%= producto.precio %>"
+          data-imagen="<%= producto.imagen %>"
+        >
+          Agregar al Carrito
+        </button>
+        </div>
+      <% }); %>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>MINTTA</h3>
+        <p>Donde tu esencia cobra estilo.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Servicio al Cliente</h4>
+        <a href="#">Políticas de envío</a>
+        <a href="#">Políticas de devolución</a>
+        <a href="#">Términos y condiciones</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>+57 302 206 11 32</p>
+      </div>
+    </div>
+    <p class="copy">&copy; 2026 Mintta. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/js/script.js"></script>
+
+</body>
+</html>
