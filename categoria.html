@@ -86,9 +86,9 @@
         card.className = "producto";
         const imagen = "img/" + slug + ".png";
         const precio = Number(p.precio || 0);
-        card.innerHTML = '<div class="producto-img"><img src="' + imagen + '" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>' +
-          '<h3></h3><p class="precio"></p><div class="tallas"></div><button class="btn-agregar" type="button">Agregar al carrito</button>';
-        card.querySelector("h3").textContent = p.nombre;
+        card.innerHTML = '<div class="producto-img"><img src="' + imagen + '" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"><h3 class="nombre-producto-overlay"></h3></div>' +
+          '<p class="precio"></p><div class="tallas"></div><button class="btn-agregar" type="button">Agregar al carrito</button>';
+        card.querySelector(".nombre-producto-overlay").textContent = p.nombre;
         card.querySelector(".precio").textContent = "$ " + precio.toLocaleString("es-CO");
         const tallas = Array.isArray(p.tallas) && p.tallas.length ? p.tallas : ["Única"];
         tallas.forEach(t => {
