@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Carrito — Mintta</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<header class="header">
+
+  <div class="header-inner">
+
+    <a href="index.html" class="logo">
+      MINTTA
+    </a>
+
+    <div class="main-nav">
+
+      <a href="index.html#novedades">
+        Nuevo
+      </a>
+
+      <a href="catalogo.html">
+        Catálogo
+      </a>
+
+      <a href="carrito.html" id="enlace-carrito">
+        Carrito (<span id="contador-carrito">0</span>)
+      </a>
+
+      <button
+        class="menu-btn"
+        aria-label="Abrir menú"
+        type="button"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<div class="menu-overlay"></div>
+
+
+<aside class="menu-panel">
+
+  <div class="menu-panel-header">
+
+    <span>
+      MENÚ
+    </span>
+
+    <button
+      class="menu-close"
+      aria-label="Cerrar menú"
+      type="button"
+    >
+      ×
+    </button>
+
+  </div>
+
+
+  <nav class="menu-links">
+
+    <a href="/#novedades">
+      Nuevas piezas
+    </a>
+
+    <a href="index.html#coleccion">
+      Lo Más Vendido
+    </a>
+<a href="#">
+      Guía de tallas
+    </a>
+
+    <a href="#">
+      Preguntas frecuentes
+    </a>
+
+  </nav>
+
+</aside>
+
+
+<section class="page-header">
+
+  <p class="eyebrow center">
+    Tu selección
+  </p>
+
+  <h1>
+    Carrito
+  </h1>
+
+</section>
+
+
+<section class="carrito">
+
+  <div id="carrito-contenido"></div>
+
+  <div id="carrito-vacio" style="display: none;">
+
+    <p>
+      Tu carrito está vacío.
+    </p>
+
+    <a href="/catalogo.html">
+      Volver al catálogo
+    </a>
+
+  </div>
+
+
+  <div id="carrito-resumen" style="display: none;">
+
+    <div class="carrito-total">
+
+      <span>
+        Total
+      </span>
+
+      <strong id="carrito-total">
+        $ 0
+      </strong>
+
+    </div>
+
+    <button
+      type="button"
+      id="btn-continuar-pedido"
+      class="btn-agregar"
+    >
+      Continuar con el pedido
+    </button>
+
+  </div>
+
+
+  <!-- ========================================
+       FORMULARIO DEL PEDIDO
+       ======================================== -->
+
+  <div id="formulario-pedido" class="formulario-pedido" style="display: none;">
+
+    <div class="formulario-pedido-header">
+
+      <p class="eyebrow">
+        Datos de entrega
+      </p>
+
+      <h2>
+        Completa tu pedido
+      </h2>
+
+      <p>
+        Déjanos tus datos para preparar tu pedido.
+      </p>
+
+    </div>
+
+
+    <form id="pedido-form">
+
+      <div class="campo-pedido">
+
+        <label for="pedido-nombre">
+          Nombre completo
+        </label>
+
+        <input
+          type="text"
+          id="pedido-nombre"
+          name="nombre"
+          placeholder="Tu nombre"
+          required
+        >
+
+      </div>
+
+
+      <div class="campo-pedido">
+
+        <label for="pedido-celular">
+          Celular
+        </label>
+
+        <input
+          type="tel"
+          id="pedido-celular"
+          name="celular"
+          placeholder="Tu número de celular"
+          required
+        >
+
+      </div>
+
+
+      <div class="campo-pedido">
+
+        <label for="pedido-ciudad">
+          Ciudad
+        </label>
+
+        <input
+          type="text"
+          id="pedido-ciudad"
+          name="ciudad"
+          placeholder="Ciudad de entrega"
+          required
+        >
+
+      </div>
+
+
+      <div class="campo-pedido">
+
+        <label for="pedido-direccion">
+          Dirección
+        </label>
+
+        <input
+          type="text"
+          id="pedido-direccion"
+          name="direccion"
+          placeholder="Dirección de entrega"
+          required
+        >
+
+      </div>
+
+
+      <div class="campo-pedido">
+
+        <label for="pedido-barrio">
+          Barrio
+        </label>
+
+        <input
+          type="text"
+          id="pedido-barrio"
+          name="barrio"
+          placeholder="Barrio"
+          required
+        >
+
+      </div>
+
+
+      <div class="campo-pedido">
+
+        <label for="pedido-observaciones">
+          Observaciones
+        </label>
+
+        <textarea
+          id="pedido-observaciones"
+          name="observaciones"
+          rows="4"
+          placeholder="¿Alguna indicación especial para la entrega?"
+        ></textarea>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="btn-continuar-pago"
+      >
+        Continuar
+      </button>
+
+    </form>
+
+  </div>
+
+  <!-- ========================================
+     MEDIO DE PAGO
+     ======================================== -->
+
+<div id="medio-pago" class="medio-pago" style="display: none;">
+
+  <div class="medio-pago-header">
+
+    <p class="eyebrow">
+      Forma de pago
+    </p>
+
+    <h2>
+      ¿Cómo deseas pagar?
+    </h2>
+
+    <p>
+      El pago se realiza manualmente después de enviar el pedido.
+    </p>
+
+  </div>
+
+
+  <div class="opciones-pago">
+
+    <label class="opcion-pago">
+
+      <input
+        type="radio"
+        name="medioPago"
+        value="Llave / Bre-B"
+      >
+
+      <span>
+        Llave / Bre-B
+      </span>
+
+    </label>
+
+
+    <label class="opcion-pago">
+
+      <input
+        type="radio"
+        name="medioPago"
+        value="Nequi"
+      >
+
+      <span>
+        Nequi
+      </span>
+
+    </label>
+
+
+    <label class="opcion-pago">
+
+      <input
+        type="radio"
+        name="medioPago"
+        value="Bancolombia"
+      >
+
+      <span>
+        Bancolombia
+      </span>
+
+    </label>
+
+
+    <label class="opcion-pago">
+
+      <input
+        type="radio"
+        name="medioPago"
+        value="Davivienda"
+      >
+
+      <span>
+        Davivienda
+      </span>
+
+    </label>
+
+  </div>
+
+
+  <button
+    type="button"
+    id="btn-enviar-whatsapp"
+    class="btn-enviar-whatsapp"
+  >
+    Enviar pedido por WhatsApp
+  </button>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <div class="footer-col">
+
+      <h3>
+        MINTTA
+      </h3>
+
+      <p>
+        Donde tu esencia cobra estilo.
+      </p>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h4>
+        Servicio al Cliente
+      </h4>
+
+      <a href="politicas-envio.html">
+        Políticas de envío
+      </a>
+
+      <a href="politicas-devolucion.html">
+        Políticas de devolución
+      </a>
+
+      <a href="terminos-condiciones.html">
+        Términos y condiciones
+      </a>
+
+    </div>
+
+
+    <div class="footer-col">
+
+      <h4>
+        Contacto
+      </h4>
+
+      <p>
+        +57 302 206 11 32
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <p class="copy">
+    &copy; 2026 Mintta. Todos los derechos reservados.
+  </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
