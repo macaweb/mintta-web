@@ -3896,3 +3896,34 @@ a.volver:active,
 #carrito-vacio a[href*="catalogo"]:active {
   transform: translateY(1px) scale(.97) !important;
 }
+
+
+/* Último ajuste: negro sólido inmediato al tocar "Volver al catálogo" */
+a.volver,
+#carrito-vacio a[href*="catalogo"] {
+  background-color: transparent !important;
+  background-image: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+a.volver:hover,
+a.volver:focus,
+a.volver:focus-visible,
+a.volver:active,
+a.volver:active:hover,
+#carrito-vacio a[href*="catalogo"]:hover,
+#carrito-vacio a[href*="catalogo"]:focus,
+#carrito-vacio a[href*="catalogo"]:focus-visible,
+#carrito-vacio a[href*="catalogo"]:active,
+#carrito-vacio a[href*="catalogo"]:active:hover,
+#carrito-vacio a[href*="catalogo"]:active:focus {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border-color: #000000 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transition: none !important;
+}
