@@ -634,3 +634,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+// Permite abrir una categoría tocando también su nombre, no solo la imagen.
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".categoria-contenedor").forEach(function (contenedor) {
+    contenedor.addEventListener("click", function (evento) {
+      if (evento.target.closest("a")) return;
+      const enlace = contenedor.querySelector("a.categoria");
+      if (enlace && enlace.href) window.location.href = enlace.href;
+    });
+  });
+});
