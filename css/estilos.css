@@ -3790,3 +3790,38 @@ button:active,
   box-shadow: 0 8px 18px rgba(33, 30, 27, .24);
   transform: translateY(-2px) scale(1.04);
 }
+
+
+/* Sistema unificado de interacción para todos los controles de Mintta */
+:where(button, input[type="button"], input[type="submit"], input[type="reset"], select, .btn-outline, .btn-agregar, .volver, .ver-todo, .cart-float, .cart-top-link, .menu-links a, #carrito-vacio a, #carrito-resumen button, .btn-eliminar, .btn-cantidad, .nombre-producto-boton, .talla, a.categoria, .categoria-contenedor) {
+  -webkit-tap-highlight-color: transparent;
+  transform-origin: center;
+  transition: transform .2s ease, background-color .2s ease, color .2s ease,
+    border-color .2s ease, box-shadow .2s ease, opacity .2s ease;
+}
+:where(button, input[type="button"], input[type="submit"], input[type="reset"], .btn-outline, .btn-agregar, .volver, .ver-todo, .cart-float, .cart-top-link, .menu-links a, #carrito-vacio a, #carrito-resumen button, .btn-eliminar, .btn-cantidad, .nombre-producto-boton, .talla):hover,
+:where(button, input[type="button"], input[type="submit"], input[type="reset"], .btn-outline, .btn-agregar, .volver, .ver-todo, .cart-float, .cart-top-link, .menu-links a, #carrito-vacio a, #carrito-resumen button, .btn-eliminar, .btn-cantidad, .nombre-producto-boton, .talla):focus-visible {
+  background-color: #171411;
+  color: #fff;
+  border-color: #171411;
+  box-shadow: 0 6px 15px rgba(33, 30, 27, .18);
+}
+:where(button, input[type="button"], input[type="submit"], input[type="reset"], .btn-outline, .btn-agregar, .volver, .ver-todo, .cart-float, .cart-top-link, .menu-links a, #carrito-vacio a, #carrito-resumen button, .btn-eliminar, .btn-cantidad, .nombre-producto-boton, .talla):hover {
+  transform: translateY(-2px) scale(1.02);
+}
+:where(button, input[type="button"], input[type="submit"], input[type="reset"], .btn-outline, .btn-agregar, .volver, .ver-todo, .cart-float, .cart-top-link, .menu-links a, #carrito-vacio a, #carrito-resumen button, .btn-eliminar, .btn-cantidad, .nombre-producto-boton, .talla):active {
+  background-color: #171411;
+  color: #fff;
+  border-color: #171411;
+  box-shadow: 0 7px 17px rgba(33, 30, 27, .22);
+  transform: translateY(1px) scale(.97);
+}
+:where(button, input[type="button"], input[type="submit"], input[type="reset"], .btn-outline, .btn-agregar, .volver, .ver-todo, .cart-float, .cart-top-link, .menu-links a, #carrito-vacio a, #carrito-resumen button, .btn-eliminar, .btn-cantidad, .nombre-producto-boton, .talla):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  :where(button, input[type="button"], input[type="submit"], input[type="reset"], select, .btn-outline, .btn-agregar, .volver, .ver-todo, .cart-float, .cart-top-link, .menu-links a, #carrito-vacio a, #carrito-resumen button, .btn-eliminar, .btn-cantidad, .nombre-producto-boton, .talla, a.categoria, .categoria-contenedor) {
+    transition: none !important;
+  }
+}
