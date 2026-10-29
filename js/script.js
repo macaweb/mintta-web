@@ -199,6 +199,29 @@ document.addEventListener("DOMContentLoaded", function () {
   actualizarContadorCarrito();
 });
 
+// Calcula el destino de una prenda según dónde aparece en la tienda.
+function obtenerEnlaceProducto(item) {
+  const nombre = String(item.nombre || "");
+  const imagen = String(item.imagen || "");
+  const normalizar = texto => texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const slugNombre = normalizar(nombre);
+  const novedades = {
+    "set-aveline": "producto-set-aveline",
+    "falda-terracota": "producto-falda-terracota",
+    "blusa-marceline": "producto-blusa-marceline",
+    "conjunto-reeve": "producto-conjunto-reeve"
+  };
+  if (novedades[slugNombre] || imagen.includes("/novedades/")) {
+    return "index.html#" + (novedades[slugNombre] || ("producto-" + slugNombre));
+  }
+  let categoria = item.categoria || "";
+  const rutaProducto = imagen.match(/\/productos\/([^/]+)\//i);
+  const rutaCategoria = imagen.match(/(?:^|\/)img\/([a-z-]+)\.(?:png|jpe?g|webp)$/i);
+  if (!categoria && rutaProducto) categoria = rutaProducto[1];
+  if (!categoria && rutaCategoria && rutaCategoria[1] !== "novedades") categoria = rutaCategoria[1];
+  if (categoria) return "categoria.html?slug=" + encodeURIComponent(categoria) + "&producto=" + encodeURIComponent(nombre);
+  return "catalogo.html";
+}
 // ========================================
 // MOSTRAR PRODUCTOS DEL CARRITO
 // ========================================
@@ -242,21 +265,21 @@ function mostrarCarrito() {
 
     if (subtotal !== null) total += subtotal;
 
-    // Se crea el elemento del producto (antes faltaba esta línea)
+    // Enlace a la ubicación original de la prenda.
     const productoHTML = document.createElement("div");
     productoHTML.classList.add("carrito-producto");
+    const enlaceProducto = obtenerEnlaceProducto(item);
 
     productoHTML.innerHTML = `
       <div class="carrito-producto-imagen">
-        <img
-          src="${item.imagen || ''}"
-          alt="${item.nombre}"
-        >
+        <a class="carrito-producto-enlace" href="${enlaceProducto}" aria-label="Ver ${item.nombre} en la tienda">
+          <img src="${item.imagen || ''}" alt="${item.nombre}">
+        </a>
       </div>
 
       <div class="carrito-producto-info">
 
-        <h3>${item.nombre}</h3>
+        <h3><a class="carrito-producto-nombre" href="${enlaceProducto}">${item.nombre}</a></h3>
 
         <p>
           Talla: ${item.talla}
