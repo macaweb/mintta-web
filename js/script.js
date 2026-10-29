@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Quitar el resaltado de la talla después de agregar
       tallaSeleccionada.classList.remove("selected");
 
-      alert("Producto agregado al carrito.");
+      // El contador y el acceso flotante al carrito se actualizan automáticamente.
 
     });
 
@@ -183,23 +183,16 @@ document.addEventListener("DOMContentLoaded", function () {
 // los botones +, -, y Eliminar.
 
 function actualizarContadorCarrito() {
-
-  const contador =
-    document.getElementById("contador-carrito");
-
-  if (!contador) {
-    return;
-  }
-
-  const carrito =
-    JSON.parse(localStorage.getItem("minttaCarrito")) || [];
-
+  const carrito = JSON.parse(localStorage.getItem("minttaCarrito")) || [];
   const cantidadTotal = carrito.reduce(function (total, item) {
-    return total + item.cantidad;
+    return total + Number(item.cantidad || 0);
   }, 0);
-
-  contador.textContent = cantidadTotal;
-
+  document.querySelectorAll("[data-cart-count]").forEach(function (contador) {
+    contador.textContent = cantidadTotal;
+  });
+  document.querySelectorAll(".cart-float").forEach(function (enlace) {
+    enlace.classList.toggle("is-visible", cantidadTotal > 0);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
