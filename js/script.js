@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const nombre = boton.dataset.producto;
-      const precio = Number(boton.dataset.precio);
+      const precio = boton.dataset.precio === "" ? null : Number(boton.dataset.precio);
       const talla = tallaSeleccionada.dataset.talla;
       const imagen = boton.dataset.imagen;
 
@@ -237,9 +237,10 @@ function mostrarCarrito() {
 
   carrito.forEach(function (item, indice) {
 
-    const subtotal = item.precio * item.cantidad;
+    const precioPendiente = item.precio === null || item.precio === undefined || item.precio === "" || !Number.isFinite(Number(item.precio));
+    const subtotal = precioPendiente ? null : Number(item.precio) * item.cantidad;
 
-    total += subtotal;
+    if (subtotal !== null) total += subtotal;
 
     // Se crea el elemento del producto (antes faltaba esta línea)
     const productoHTML = document.createElement("div");
@@ -262,7 +263,7 @@ function mostrarCarrito() {
         </p>
 
         <p>
-          $ ${item.precio.toLocaleString("es-CO")}
+          $ ${precioPendiente ? "Por confirmar" : Number(item.precio).toLocaleString("es-CO")}
         </p>
 
       </div>
@@ -296,7 +297,7 @@ function mostrarCarrito() {
       <div class="carrito-subtotal">
 
         <strong>
-          $ ${subtotal.toLocaleString("es-CO")}
+          ${subtotal === null ? "Por confirmar" : "$ " + subtotal.toLocaleString("es-CO")}
         </strong>
 
         <button
@@ -314,8 +315,8 @@ function mostrarCarrito() {
 
   });
 
-  totalElemento.textContent =
-    "$ " + total.toLocaleString("es-CO");
+  const hayPreciosPendientes = carrito.some(function (item) { return item.precio === null || item.precio === undefined || item.precio === "" || !Number.isFinite(Number(item.precio)); });
+  totalElemento.textContent = hayPreciosPendientes ? "Por confirmar" : "$ " + total.toLocaleString("es-CO");
 
 }
 
