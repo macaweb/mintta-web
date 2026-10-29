@@ -4112,3 +4112,34 @@ body:not(.pagina-carrito) .hero .btn-outline:active {
     font-size: 1rem !important;
   }
 }
+
+
+/* Descubrir colección: negro puro al tocar o enfocar, nunca gris */
+body:not(.pagina-carrito) .hero a.btn-outline,
+body:not(.pagina-carrito) .hero a.btn-outline:link,
+body:not(.pagina-carrito) .hero a.btn-outline:visited {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  border-color: #211E1B !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+body:not(.pagina-carrito) .hero a.btn-outline:hover,
+body:not(.pagina-carrito) .hero a.btn-outline:focus,
+body:not(.pagina-carrito) .hero a.btn-outline:focus-visible,
+body:not(.pagina-carrito) .hero a.btn-outline:active,
+body:not(.pagina-carrito) .hero a.btn-outline:active:hover,
+body:not(.pagina-carrito) .hero a.btn-outline:active:focus {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border-color: #000000 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: 0 7px 18px rgba(0,0,0,.24) !important;
+}
