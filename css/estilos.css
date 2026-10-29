@@ -4232,3 +4232,215 @@ body:not(.pagina-carrito) .hero a.btn-outline:active:focus {
     height: 34px;
   }
 }
+
+
+/* MINTTA: nombres de prendas limpios, sin recuadro blanco */
+.nombre-producto-boton,
+.producto-nuevo-card .nombre-producto-boton,
+.grid-productos .producto .nombre-producto-boton {
+  display: block;
+  width: 100%;
+  margin: 13px auto 8px;
+  padding: 0 4px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  line-height: 1.15;
+  letter-spacing: .015em;
+  text-align: center;
+  text-transform: none;
+  cursor: pointer;
+  transition: color .2s ease, transform .2s ease, text-decoration-color .2s ease;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+}
+.nombre-producto-boton:hover,
+.nombre-producto-boton:focus-visible,
+.nombre-producto-boton.nombre-seleccionado {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: #8A6544 !important;
+  -webkit-text-fill-color: #8A6544 !important;
+  text-decoration-color: #A9825A;
+  transform: translateY(-1px);
+}
+.nombre-producto-boton:active {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  box-shadow: none !important;
+  transform: scale(.98);
+}
+
+/* Tallas más grandes y con selección claramente visible */
+.tallas {
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+.talla,
+.producto-nuevo-card .talla,
+.grid-productos .producto .talla {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #B9A58D !important;
+  border-radius: 3px;
+  background: #FFFFFF !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  font-family: "Jost", sans-serif;
+  font-size: .86rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+}
+.talla:hover,
+.talla:focus-visible {
+  background: #F1EAE0 !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  border-color: #8A6544 !important;
+  box-shadow: 0 3px 8px rgba(33,30,27,.1);
+  transform: translateY(-2px);
+}
+.talla.selected,
+.producto-nuevo-card .talla.selected,
+.grid-productos .producto .talla.selected {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border-color: #000000 !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,.18);
+  transform: translateY(-1px);
+}
+.talla:active {
+  transform: scale(.94) !important;
+}
+
+/* Botón principal: contraste fuerte y respuesta táctil evidente */
+.btn-agregar,
+.producto-nuevo-card .btn-agregar,
+.grid-productos .producto .btn-agregar {
+  position: relative;
+  min-height: 46px;
+  padding: 13px 16px;
+  border: 1px solid #000000 !important;
+  border-radius: 2px;
+  background: #000000 !important;
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-family: "Jost", sans-serif;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .075rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,.1);
+  transition: background-color .18s ease, transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+}
+.btn-agregar:hover,
+.btn-agregar:focus-visible {
+  background: #292929 !important;
+  background-color: #292929 !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border-color: #292929 !important;
+  box-shadow: 0 7px 16px rgba(0,0,0,.2);
+  transform: translateY(-2px);
+}
+.btn-agregar:active,
+.btn-agregar.agregado-confirmado {
+  background: #A9825A !important;
+  background-color: #A9825A !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border-color: #A9825A !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,.14);
+  transform: scale(.97);
+}
+.btn-agregar.agregado-confirmado {
+  background: #211E1B !important;
+  background-color: #211E1B !important;
+  border-color: #211E1B !important;
+}
+
+/* El CTA principal se vuelve negro de forma inequívoca al tocarlo */
+body:not(.pagina-carrito) .hero a.btn-outline:hover,
+body:not(.pagina-carrito) .hero a.btn-outline:focus,
+body:not(.pagina-carrito) .hero a.btn-outline:focus-visible,
+body:not(.pagina-carrito) .hero a.btn-outline:active,
+body:not(.pagina-carrito) .hero a.btn-outline.is-pressed {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  background-image: none !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border: 1px solid #000000 !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: 0 7px 18px rgba(0,0,0,.24) !important;
+  transform: translateY(1px) scale(.98);
+}
+#mintta-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 12000;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  padding: 14px 20px;
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-size: .9rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,.22);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 12px);
+  transition: opacity .2s ease, transform .2s ease;
+}
+#mintta-toast.visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+@media (max-width: 768px) {
+  .nombre-producto-boton,
+  .producto-nuevo-card .nombre-producto-boton,
+  .grid-productos .producto .nombre-producto-boton {
+    font-size: 1.16rem !important;
+    margin-top: 11px;
+  }
+  .talla,
+  .producto-nuevo-card .talla,
+  .grid-productos .producto .talla {
+    width: 40px;
+    height: 40px;
+  }
+  .btn-agregar,
+  .producto-nuevo-card .btn-agregar,
+  .grid-productos .producto .btn-agregar {
+    min-height: 44px;
+    font-size: .74rem;
+  }
+}
