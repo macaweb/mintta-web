@@ -4804,3 +4804,64 @@ a.ver-todo:visited:active {
   outline: none !important;
   text-decoration: none !important;
 }
+
+
+/* Ajustes táctiles finales: menú y carrito superior con tonos suaves */
+.menu-btn {
+  width: 34px !important;
+  height: 34px !important;
+  padding: 7px 5px !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+.menu-btn:hover,
+.menu-btn:focus,
+.menu-btn:focus-visible,
+.menu-btn:active {
+  background: #F1EAE0 !important;
+  color: #5C4634 !important;
+  border-color: #D8CCB8 !important;
+  box-shadow: 0 2px 8px rgba(92, 70, 52, .10) !important;
+  transform: none !important;
+  outline: none !important;
+}
+.menu-btn span,
+.menu-btn:hover span,
+.menu-btn:focus span,
+.menu-btn:focus-visible span,
+.menu-btn:active span {
+  background: #6F523A !important;
+}
+
+/* El carrito superior conserva un efecto suave al tocarlo.
+   No se modifica el carrito flotante de la parte inferior. */
+.cart-top-link:hover,
+.cart-top-link:focus,
+.cart-top-link:focus-visible,
+.cart-top-link:active {
+  background: #F1EAE0 !important;
+  background-color: #F1EAE0 !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  border-color: #D8CCB8 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(92, 70, 52, .10) !important;
+  transform: none !important;
+  outline: none !important;
+}
+.cart-top-link:hover .cart-icon,
+.cart-top-link:focus .cart-icon,
+.cart-top-link:focus-visible .cart-icon,
+.cart-top-link:active .cart-icon {
+  color: #211E1B !important;
+}
+
+/* Portada más compacta en celulares, sin deformar la imagen */
+@media (max-width: 768px) {
+  body:not(.pagina-carrito) .hero {
+    height: clamp(350px, 48svh, 420px) !important;
+    min-height: 0 !important;
+  }
+}
