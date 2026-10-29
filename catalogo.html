@@ -6,31 +6,39 @@
   <title>Catálogo — Mintta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos.css?v=24">
 </head>
 <body>
 
  <header class="header">
   <div class="header-inner">
 
-    <a href="/" class="logo">MINTTA</a>
+    <a href="index.html" class="logo">MINTTA</a>
 
     <div class="main-nav">
-      <a href="/">Inicio</a>
+      <a href="index.html">Inicio</a>
       <a href="catalogo.html">Catálogo</a>
-      <a href="/carrito" id="enlace-carrito">
-      Carrito (<span id="contador-carrito">0</span>)
-    </a>
-
-      <button class="menu-btn" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <a href="carrito.html" class="cart-top-link" id="enlace-carrito" aria-label="Ver carrito">
+        <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+        </svg>
+        <span class="cart-label">Carrito</span><span class="cart-count" data-cart-count>0</span>
+      </a>
+      <button class="menu-btn" aria-label="Abrir menú" type="button"><span></span><span></span><span></span></button>
     </div>
 
   </div>
 </header>
+
+<a href="carrito.html" class="cart-float" aria-label="Ir al carrito de compras">
+  <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+  </svg>
+  <span class="cart-float-label">Ver carrito</span><span class="cart-count" data-cart-count>0</span>
+</a>
+
 
 
 <!-- =========================
@@ -41,48 +49,19 @@
 
 <aside class="menu-panel">
 
-  <div class="menu-panel-header">
-
-    <span class="menu-brand">
-      MINTTA
-    </span>
-
-    <button
+  <div class="menu-panel-header"><a class="menu-panel-logo" href="index.html">MINTTA</a><button
       class="menu-close"
       aria-label="Cerrar menú"
       type="button"
     >
       ×
-    </button>
-
-  </div>
+    </button></div>
 
   <nav class="menu-links">
-
-    <a href="/#novedades">
-    Nuevas piezas
-    </a>
-
-    <a href="/">
-      Lo Más Vendido
-    </a>
-
-    <a href="#">
-      Iniciar sesión
-    </a>
-
-    <a href="#" class="menu-link-registro">
-      REGISTRARSE
-    </a>
-
-    <a href="#">
-      Guía de tallas
-    </a>
-
-    <a href="#">
-      Preguntas frecuentes
-    </a>
-
+    <a href="index.html#novedades">Nuevas piezas</a>
+    <a href="index.html#coleccion">Lo Más Vendido</a>
+    <a href="index.html#guia-tallas">Guía de tallas</a>
+    <a href="index.html#preguntas-frecuentes">Preguntas frecuentes</a>
   </nav>
 
 </aside>
@@ -97,82 +76,86 @@
   <div class="grid-categorias">
 
     <div class="categoria-contenedor">
-      <a href="/categoria/conjuntos" class="categoria conjuntos"></a>
+      <a href="categoria.html?slug=conjuntos" class="categoria conjuntos"></a>
       <span>Conjuntos</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/blusas" class="categoria blusas"></a>
+      <a href="categoria.html?slug=blusas" class="categoria blusas"></a>
       <span>Blusas</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/tops" class="categoria tops"></a>
+      <a href="categoria.html?slug=tops" class="categoria tops"></a>
       <span>Tops</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/bodies" class="categoria bodies"></a>
+      <a href="categoria.html?slug=bodies" class="categoria bodies"></a>
       <span>Bodies</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/camisas" class="categoria camisas"></a>
+      <a href="categoria.html?slug=camisas" class="categoria camisas"></a>
       <span>Camisas</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/corsets" class="categoria corsets"></a>
+      <a href="categoria.html?slug=corsets" class="categoria corsets"></a>
       <span>Corsets</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/blazers" class="categoria blazers"></a>
+      <a href="categoria.html?slug=blazers" class="categoria blazers"></a>
       <span>Blazers</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/tejidos" class="categoria tejidos"></a>
+      <a href="categoria.html?slug=tejidos" class="categoria tejidos"></a>
       <span>Tejido</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/gabanes" class="categoria gabanes"></a>
+      <a href="categoria.html?slug=gabanes" class="categoria gabanes"></a>
       <span>Gabanes</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/deportivo" class="categoria deportivo"></a>
+      <a href="categoria.html?slug=deportivo" class="categoria deportivo"></a>
       <span>Deportivo</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/faldas" class="categoria faldas"></a>
+      <a href="categoria.html?slug=faldas" class="categoria faldas"></a>
       <span>Faldas</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/shorts" class="categoria shorts"></a>
+      <a href="categoria.html?slug=shorts" class="categoria shorts"></a>
       <span>Shorts</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/vestidos" class="categoria vestidos"></a>
+      <a href="categoria.html?slug=vestidos" class="categoria vestidos"></a>
       <span>Vestidos</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/playa" class="categoria playa"></a>
+      <a href="categoria.html?slug=playa" class="categoria playa"></a>
       <span>Playa</span>
     </div>
 
     <div class="categoria-contenedor">
-      <a href="/categoria/accesorios" class="categoria accesorios"></a>
+      <a href="categoria.html?slug=accesorios" class="categoria accesorios"></a>
       <span>Accesorios</span>
     </div>
 
   </div>
 </section>
+
+  <div class="volver-inicio-wrap">
+    <a href="index.html" class="ver-todo">Volver al inicio</a>
+  </div>
 
   <footer class="footer">
     <div class="footer-inner">
@@ -182,9 +165,9 @@
       </div>
       <div class="footer-col">
         <h4>Servicio al Cliente</h4>
-        <a href="#">Políticas de envío</a>
-        <a href="#">Políticas de devolución</a>
-        <a href="#">Términos y condiciones</a>
+        <a href="politicas-envio.html">Políticas de envío</a>
+        <a href="politicas-devolucion.html">Políticas de devolución</a>
+        <a href="terminos-condiciones.html">Términos y condiciones</a>
       </div>
       <div class="footer-col">
         <h4>Contacto</h4>
@@ -194,7 +177,7 @@
     <p class="copy">&copy; 2026 Mintta. Todos los derechos reservados.</p>
   </footer>
 
-<script src="/js/script.js"></script>
+<script src="js/script.js?v=4"></script>
 
 </body>
 </html>

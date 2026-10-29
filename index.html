@@ -13,7 +13,7 @@
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <link rel="stylesheet" href="css/estilos.css?v=2">
+  <link rel="stylesheet" href="css/estilos.css?v=24">
 </head>
 
 
@@ -30,7 +30,7 @@
 
       <!-- LOGO -->
 
-      <a href="/" class="logo">
+      <a href="index.html" class="logo">
         MINTTA
       </a>
 
@@ -38,37 +38,30 @@
       <!-- NAVEGACIÓN PRINCIPAL -->
 
       <div class="main-nav">
-
-        <a href="#novedades">
-          Nuevo
-        </a>
-
-        <a href="catalogo.html">
-          Catálogo
-          
-        </a>
-        <a href="/carrito" id="enlace-carrito">
-          Carrito (<span id="contador-carrito">0</span>)
-        </a>
-
-
-        <!-- MENÚ -->
-
-        <button
-          class="menu-btn"
-          aria-label="Abrir menú"
-          type="button"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-      </div>
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="carrito.html" class="cart-top-link" id="enlace-carrito" aria-label="Ver carrito">
+        <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+        </svg>
+        <span class="cart-label">Carrito</span><span class="cart-count" data-cart-count>0</span>
+      </a>
+      <button class="menu-btn" aria-label="Abrir menú" type="button"><span></span><span></span><span></span></button>
+    </div>
 
     </div>
 
   </header>
+
+<a href="carrito.html" class="cart-float" aria-label="Ir al carrito de compras">
+  <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+  </svg>
+  <span class="cart-float-label">Ver carrito</span><span class="cart-count" data-cart-count>0</span>
+</a>
+
 
 
 <!-- =========================
@@ -80,41 +73,21 @@
 
 <aside class="menu-panel">
 
-  <div class="menu-panel-header">
-
-  <button
+  <div class="menu-panel-header"><a class="menu-panel-logo" href="index.html">MINTTA</a><button
     class="menu-close"
     aria-label="Cerrar menú"
     type="button"
   >
     ×
-  </button>
-
-</div>
+  </button></div>
 
 
 
   <nav class="menu-links">
-
-
-    <a href="#novedades">
-      Nuevas piezas
-    </a>
-
-
-    <a href="#coleccion">
-      Lo Más Vendido
-    </a>
-
-
-   <a href="#" class="menu-link-login">
-      Iniciar sesión
-    </a>
-
-   <a href="#" class="menu-link-registro">REGISTRARSE</a>
-
-
-
+    <a href="index.html#novedades">Nuevas piezas</a>
+    <a href="index.html#coleccion">Lo Más Vendido</a>
+    <a href="index.html#guia-tallas">Guía de tallas</a>
+    <a href="index.html#preguntas-frecuentes">Preguntas frecuentes</a>
   </nav>
 
 
@@ -157,84 +130,32 @@
     <p class="eyebrow center">Lo Nuevo</p>
     <h2>Nuevas Llegadas</h2>
     <p class="page-sub">Descubre nuestras piezas más recientes.</p>
-    <div class="productos-nuevos">
+    <div class="productos-nuevos productos-nuevos-comprables">
+    <div class="producto-nuevo producto producto-nuevo-card" id="producto-set-aveline">
+      <div class="producto-foto-wrap"><img src="img/novedades/set_aveline.png" alt="Set Aveline" class="producto-imagen"></div><button type="button" class="nombre-producto-boton" aria-pressed="false">Set Aveline</button><p class="precio">$ 159.900</p>
+      <div class="tallas" aria-label="Selecciona la talla de Set Aveline">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div><button type="button" class="btn-agregar" data-producto="Set Aveline" data-precio="159900" data-imagen="img/novedades/set_aveline.png">Agregar al carrito</button>
     </div>
-  </section>  
-
-  <div class="productos-nuevos">
-
-  <!-- SET AVELINE -->
-
-  <div class="producto-nuevo">
-
-    <img 
-      src="img/novedades/set_aveline.png"
-      alt="Set Aveline"
-      class="producto-imagen"
-    >
-
-    <span>
-      Set Aveline
-    </span>
-
+    <div class="producto-nuevo producto producto-nuevo-card" id="producto-falda-terracota">
+      <div class="producto-foto-wrap"><img src="img/novedades/falda_terracota.png" alt="Falda Terracota" class="producto-imagen"></div><button type="button" class="nombre-producto-boton" aria-pressed="false">Falda Terracota</button><p class="precio">$ 129.900</p>
+      <div class="tallas" aria-label="Selecciona la talla de Falda Terracota">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div><button type="button" class="btn-agregar" data-producto="Falda Terracota" data-precio="129900" data-imagen="img/novedades/falda_terracota.png">Agregar al carrito</button>
+    </div>
+    <div class="producto-nuevo producto producto-nuevo-card" id="producto-blusa-marceline">
+      <div class="producto-foto-wrap"><img src="img/novedades/blusa_marceline.png" alt="Blusa Marceline" class="producto-imagen"></div><button type="button" class="nombre-producto-boton" aria-pressed="false">Blusa Marceline</button><p class="precio">$ 89.900</p>
+      <div class="tallas" aria-label="Selecciona la talla de Blusa Marceline">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div><button type="button" class="btn-agregar" data-producto="Blusa Marceline" data-precio="89900" data-imagen="img/novedades/blusa_marceline.png">Agregar al carrito</button>
+    </div>
+    <div class="producto-nuevo producto producto-nuevo-card" id="producto-conjunto-reeve">
+      <div class="producto-foto-wrap"><img src="img/novedades/conjunto_reeve.png" alt="Conjunto Reeve" class="producto-imagen"></div><button type="button" class="nombre-producto-boton" aria-pressed="false">Conjunto Reeve</button><p class="precio">$ 179.900</p>
+      <div class="tallas" aria-label="Selecciona la talla de Conjunto Reeve">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div><button type="button" class="btn-agregar" data-producto="Conjunto Reeve" data-precio="179900" data-imagen="img/novedades/conjunto_reeve.png">Agregar al carrito</button>
+    </div>
   </div>
-
-
-
-  <!-- FALDA TERRACOTA -->
-
-  <div class="producto-nuevo">
-
-    <img 
-      src="img/novedades/falda_terracota.png"
-      alt="Falda Terracota"
-      class="producto-imagen"
-    >
-
-    <span>
-      Falda Terracota
-    </span>
-
-  </div>
-
-
-
-  <!-- BLUSA MARCELINE -->
-
-  <div class="producto-nuevo">
-
-    <img 
-      src="img/novedades/blusa_marceline.png"
-      alt="Blusa Marceline"
-      class="producto-imagen"
-    >
-
-    <span>
-      Blusa Marceline
-    </span>
-
-  </div>
-
-
-
-  <!-- CONJUNTO REEVE -->
-
-  <div class="producto-nuevo">
-
-    <img 
-      src="img/novedades/conjunto_reeve.png"
-      alt="Conjunto Reeve"
-      class="producto-imagen"
-    >
-
-    <span>
-      Conjunto Reeve
-    </span>
-
-  </div>
-
-
-</div>
 
   <!-- =========================
        CATEGORÍAS DESTACADAS
@@ -262,7 +183,7 @@
       <div class="categoria-contenedor">
 
         <a
-          href="/categoria/vestidos"
+          href="categoria.html?slug=vestidos"
           class="categoria vestidos"
         ></a>
 
@@ -279,7 +200,7 @@
       <div class="categoria-contenedor">
 
         <a
-          href="/categoria/gabanes"
+          href="categoria.html?slug=gabanes"
           class="categoria gabanes"
         ></a>
 
@@ -296,7 +217,7 @@
       <div class="categoria-contenedor">
 
         <a
-          href="/categoria/conjuntos"
+          href="categoria.html?slug=conjuntos"
           class="categoria conjuntos"
         ></a>
 
@@ -313,7 +234,7 @@
       <div class="categoria-contenedor">
 
         <a
-          href="/categoria/bodies"
+          href="categoria.html?slug=bodies"
           class="categoria bodies"
         ></a>
 
@@ -371,15 +292,15 @@
     Servicio al Cliente
   </h4>
 
-  <a href="/politicas-envio.html">
+  <a href="politicas-envio.html">
     Políticas de envío
   </a>
 
-  <a href="/politicas-devolucion.html">
+  <a href="politicas-devolucion.html">
     Políticas de devolución
   </a>
 
-  <a href="/terminos-condiciones.html">
+  <a href="terminos-condiciones.html">
     Términos y condiciones
   </a>
 
@@ -427,318 +348,7 @@
 
   </a>
 
-<!-- =========================
-     AVISO FLOTANTE - REGISTRO
-     ========================= -->
-
-<div class="registro-flotante">
-
-  <button
-    class="registro-flotante-cerrar"
-    type="button"
-    aria-label="Cerrar aviso"
-  >
-    ×
-  </button>
-
-  <p class="registro-flotante-eyebrow">
-    Bienvenida a Mintta
-  </p>
-
-  <h2>
-    Recibe un 5% de descuento
-  </h2>
-
-  <p class="registro-flotante-texto">
-    Regístrate y recibe novedades, promociones y beneficios exclusivos.
-  </p>
-
-  <button
-  type="button"
-  class="registro-flotante-btn"
->
-  Registrarme
-</button>
-
-  <button
-    class="registro-flotante-no"
-    type="button"
-  >
-    Ahora no
-  </button>
-
-</div>
-
-<!-- =========================
-     FORMULARIO DE REGISTRO
-     ========================= -->
-
-<div class="registro-modal">
-
-  <div class="registro-modal-contenido">
-
-    <button
-      class="registro-modal-cerrar"
-      type="button"
-      aria-label="Cerrar registro"
-    >
-      ×
-    </button>
-
-    <p class="registro-flotante-eyebrow">
-      Únete a Mintta
-    </p>
-
-    <h2>
-      Crea tu cuenta
-    </h2>
-
-    <p class="registro-modal-texto">
-      Regístrate y disfruta de un 5% de descuento en tu primera compra.
-    </p>
-
-    <form class="registro-form">
-
-      <div class="registro-campos">
-
-        <input
-          type="text"
-          name="nombre"
-          placeholder="Nombre"
-          required
-        >
-
-        <input
-          type="text"
-          name="apellido"
-          placeholder="Apellido"
-          required
-        >
-
-        <input
-          type="email"
-          name="correo"
-          placeholder="Correo electrónico"
-          required
-        >
-
-        <input
-          type="tel"
-          name="celular"
-          placeholder="Celular"
-          required
-        >
-<input
-  type="password"
-  name="contrasena"
-  placeholder="Contraseña"
-  required
->
-      </div>
-
-      <button
-        type="submit"
-        class="registro-form-btn"
-      >
-        Crear mi cuenta
-      </button>
-
-    </form>
-
-    <p class="registro-modal-nota">
-      Al registrarte aceptas recibir información sobre novedades y promociones de Mintta.
-    </p>
-
-  </div>
-
-</div>
-
-<!-- =========================
-     MENSAJE DE REGISTRO EXITOSO
-     ========================= -->
-
-<div class="registro-exito">
-
-  <div class="registro-exito-contenido">
-
-    <button
-      class="registro-exito-cerrar"
-      type="button"
-      aria-label="Cerrar"
-    >
-      ×
-    </button>
-
-    <p class="registro-exito-marca">
-      M I N T T A
-    </p>
-
-    <div class="registro-exito-icono">
-      ✓
-    </div>
-
-    <p class="registro-exito-titulo">
-      ¡Registro exitoso!
-    </p>
-
-    <p class="registro-exito-mensaje">
-      Has obtenido un
-      <strong>5% de descuento</strong>
-      en tu primera compra.
-    </p>
-
-    <div class="registro-exito-detalle">
-      <span></span>
-      <small>♥</small>
-      <span></span>
-    </div>
-
-    <button
-      type="button"
-      class="registro-exito-continuar"
-    >
-      Continuar
-    </button>
-
-  </div>
-
-</div>
-
-
-<!-- =========================
-     MODAL - INICIAR SESIÓN
-     ========================= -->
-
-<div class="login-modal">
-
-  <div class="login-modal-contenido">
-
-    <button
-      class="login-modal-cerrar"
-      type="button"
-      aria-label="Cerrar inicio de sesión"
-    >
-      ×
-    </button>
-
-    <p class="registro-flotante-eyebrow">
-      Bienvenida a Mintta
-    </p>
-
-    <h2>Iniciar sesión</h2>
-
-    <p class="login-modal-texto">
-      Ingresa a tu cuenta para continuar.
-    </p>
-
-    <form class="login-form">
-
-      <div class="login-campos">
-
-        <input
-          type="email"
-          name="correo"
-          placeholder="Correo electrónico"
-          required
-        >
-
-        <input
-          type="password"
-          name="contrasena"
-          placeholder="Contraseña"
-          required
-        >
-
-      </div>
-
-      <button
-        type="submit"
-        class="login-form-btn"
-      >
-        Iniciar sesión
-      </button>
-
-    </form>
-
-    <button
-      type="button"
-      class="login-olvido"
-    >
-      ¿Olvidaste tu contraseña?
-    </button>
-
-    <p class="login-registro">
-      ¿No tienes una cuenta?
-      <button type="button" class="login-ir-registro">
-        Regístrate
-      </button>
-    </p>
-
-  </div>
-
-</div>
-
-<!-- =========================
-     MODAL - RECUPERAR CONTRASEÑA
-     ========================= -->
-
-<div class="recuperar-modal">
-
-  <div class="recuperar-modal-contenido">
-
-    <button
-      class="recuperar-modal-cerrar"
-      type="button"
-      aria-label="Cerrar recuperación de contraseña"
-    >
-      ×
-    </button>
-
-    <p class="registro-flotante-eyebrow">
-      Recupera tu cuenta
-    </p>
-
-    <h2>¿Olvidaste tu contraseña?</h2>
-
-    <p class="recuperar-modal-texto">
-      Ingresa el correo electrónico con el que te registraste
-      y te ayudaremos a recuperar tu cuenta.
-    </p>
-
-    <form class="recuperar-form">
-
-      <div class="recuperar-campos">
-
-        <input
-          type="email"
-          name="correo"
-          placeholder="Correo electrónico"
-          required
-        >
-
-      </div>
-
-      <button
-        type="submit"
-        class="recuperar-form-btn"
-      >
-        Continuar
-      </button>
-
-    </form>
-
-    <button
-      type="button"
-      class="recuperar-volver-login"
-    >
-      Volver a iniciar sesión
-    </button>
-
-  </div>
-
-</div>
-
-<script src="/js/script.js"></script>
+<script src="js/script.js?v=4"></script>
 
 </body>
 

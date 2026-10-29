@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo por categoría — Mintta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css?v=24">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">MINTTA</a>
+      <div class="main-nav">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="carrito.html" class="cart-top-link" id="enlace-carrito" aria-label="Ver carrito">
+        <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+        </svg>
+        <span class="cart-label">Carrito</span><span class="cart-count" data-cart-count>0</span>
+      </a>
+      <button class="menu-btn" aria-label="Abrir menú" type="button"><span></span><span></span><span></span></button>
+    </div>
+    </div>
+  </header>
+
+<a href="carrito.html" class="cart-float" aria-label="Ir al carrito de compras">
+  <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+  </svg>
+  <span class="cart-float-label">Ver carrito</span><span class="cart-count" data-cart-count>0</span>
+</a>
+
+  <div class="menu-overlay"></div>
+  <aside class="menu-panel">
+    <div class="menu-panel-header"><a class="menu-panel-logo" href="index.html">MINTTA</a><button class="menu-close" aria-label="Cerrar menú" type="button">×</button></div>
+    <nav class="menu-links">
+    <a href="index.html#novedades">Nuevas piezas</a>
+    <a href="index.html#coleccion">Lo Más Vendido</a>
+    <a href="index.html#guia-tallas">Guía de tallas</a>
+    <a href="index.html#preguntas-frecuentes">Preguntas frecuentes</a>
+  </nav>
+  </aside>
+  <section class="page-header">
+    <p class="eyebrow center">Colección</p>
+    <h1 id="titulo-categoria">Catálogo</h1>
+    <p class="page-sub" id="subtitulo-categoria">Explora nuestras piezas</p>
+  </section>
+  <section class="productos">
+    <div class="grid-productos" id="grid-productos">
+      <p>Cargando productos…</p>
+    </div>
+    <div class="volver-contenedor"><a href="catalogo.html" class="volver">Volver al catálogo</a></div>
+  </section>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col"><h3>MINTTA</h3><p>Donde tu esencia cobra estilo.</p></div>
+      <div class="footer-col"><h4>Servicio al Cliente</h4><a href="politicas-envio.html">Políticas de envío</a><a href="politicas-devolucion.html">Políticas de devolución</a><a href="terminos-condiciones.html">Términos y condiciones</a></div>
+      <div class="footer-col"><h4>Contacto</h4><p>+57 302 206 1132</p></div>
+    </div>
+    <p class="copy">&copy; 2026 Mintta. Todos los derechos reservados.</p>
+  </footer>
+  <script src="js/script.js?v=4"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    const nombres = {conjuntos:"Conjuntos",blusas:"Blusas",tops:"Tops",bodies:"Bodies",camisas:"Camisas",corsets:"Corsets",blazers:"Blazers",tejidos:"Tejidos",gabanes:"Gabanes",deportivo:"Deportivo",faldas:"Faldas",shorts:"Shorts",vestidos:"Vestidos",playa:"Playa",accesorios:"Accesorios"};
+    const slug = new URLSearchParams(window.location.search).get("slug") || "conjuntos";
+    const nombre = nombres[slug] || "Catálogo";
+    document.title = nombre + " — Mintta";
+    document.getElementById("titulo-categoria").textContent = nombre;
+    document.getElementById("subtitulo-categoria").textContent = "Explora nuestra colección de " + nombre.toLowerCase() + ".";
+    const grid = document.getElementById("grid-productos");
+    try {
+      const respuesta = await fetch("data/productos.json");
+      if (!respuesta.ok) throw new Error("No se pudo cargar el catálogo");
+      const productos = await respuesta.json();
+      const filtrados = productos.filter(p => p.categoria === slug);
+      if (!filtrados.length) { grid.innerHTML = "<p>Pronto agregaremos productos a esta categoría.</p>"; return; }
+      grid.innerHTML = "";
+      filtrados.forEach(p => {
+        const card = document.createElement("article");
+        card.className = "producto";
+        const slugProducto = p.nombre.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        card.id = "producto-" + slugProducto;
+        const imagen = "img/" + slug + ".png";
+        const precio = Number(p.precio || 0);
+        card.innerHTML = '<div class="producto-img"><img src="' + imagen + '" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>' +
+          '<button type="button" class="nombre-producto-boton" aria-pressed="false"></button><p class="precio"></p><div class="tallas"></div><button class="btn-agregar" type="button">Agregar al carrito</button>';
+        card.querySelector(".nombre-producto-boton").textContent = p.nombre;
+        card.querySelector(".precio").textContent = "$ " + precio.toLocaleString("es-CO");
+        const tallas = Array.isArray(p.tallas) && p.tallas.length ? p.tallas : ["Única"];
+        tallas.forEach(t => {
+          const btn = document.createElement("button");
+          btn.type = "button"; btn.className = "talla"; btn.dataset.talla = t; btn.textContent = t;
+          btn.addEventListener("click", () => {
+            card.querySelectorAll(".talla").forEach(b => b.classList.remove("selected"));
+            btn.classList.add("selected");
+          });
+          card.querySelector(".tallas").appendChild(btn);
+        });
+        const agregar = card.querySelector(".btn-agregar");
+        agregar.dataset.producto = p.nombre;
+        agregar.dataset.precio = String(precio);
+        agregar.dataset.imagen = imagen;
+        grid.appendChild(card);
+      });
+      // Si llegamos desde el carrito, desplaza la vista a la prenda exacta.
+      const productoBuscado = new URLSearchParams(window.location.search).get("producto");
+      if (productoBuscado) {
+        const slugBuscado = productoBuscado.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        const tarjetaBuscada = document.getElementById("producto-" + slugBuscado);
+        if (tarjetaBuscada) {
+          window.setTimeout(() => {
+            tarjetaBuscada.scrollIntoView({ behavior: "smooth", block: "center" });
+            tarjetaBuscada.classList.add("producto-destacado-desde-carrito");
+            window.setTimeout(() => tarjetaBuscada.classList.remove("producto-destacado-desde-carrito"), 2400);
+          }, 120);
+        }
+      }
+
+      // Activar la lógica de carrito para los productos creados dinámicamente.
+      grid.addEventListener("click", e => {
+        const boton = e.target.closest(".btn-agregar");
+        if (!boton) return;
+        const card = boton.closest(".producto");
+        const talla = card.querySelector(".talla.selected");
+        if (!talla) { alert("Por favor selecciona una talla."); return; }
+        const carrito = JSON.parse(localStorage.getItem("minttaCarrito") || "[]");
+        const existente = carrito.find(i => i.nombre === boton.dataset.producto && i.talla === talla.dataset.talla);
+        if (existente) existente.cantidad += 1;
+        else carrito.push({nombre:boton.dataset.producto,precio:Number(boton.dataset.precio),talla:talla.dataset.talla,imagen:boton.dataset.imagen,cantidad:1});
+        localStorage.setItem("minttaCarrito", JSON.stringify(carrito));
+        if (typeof actualizarContadorCarrito === "function") actualizarContadorCarrito();
+        // El icono flotante confirma que el producto quedó agregado.
+        talla.classList.remove("selected");
+      });
+    } catch (error) {
+      grid.innerHTML = "<p>No pudimos cargar los productos. Actualiza la página e inténtalo de nuevo.</p>";
+      console.error(error);
+    }
+  });
+  </script>
+</body>
+</html>

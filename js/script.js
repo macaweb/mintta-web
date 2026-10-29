@@ -77,409 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/* =========================
-   AVISO FLOTANTE - REGISTRO
-   ========================= */
-
-const registroFlotante = document.querySelector(".registro-flotante");
-const registroCerrar = document.querySelector(".registro-flotante-cerrar");
-const registroAhoraNo = document.querySelector(".registro-flotante-no");
-
-// Mostrar el aviso únicamente en la página de Inicio
-const esInicio =
-  window.location.pathname === "/" ||
-  window.location.pathname === "/index.html";
-
-const vieneDeNuevasPiezas =
-  window.location.hash === "#novedades";
-
-// Ocultar el aviso si venimos desde "Nuevas piezas"
-if (registroFlotante && esInicio && vieneDeNuevasPiezas) {
-  registroFlotante.style.display = "none";
-}
-
-// Cerrar el aviso con la X
-if (registroCerrar && registroFlotante) {
-  registroCerrar.addEventListener("click", () => {
-    registroFlotante.style.display = "none";
-  });
-}
-
-// Cerrar el aviso con "Ahora no"
-if (registroAhoraNo && registroFlotante) {
-  registroAhoraNo.addEventListener("click", () => {
-    registroFlotante.style.display = "none";
-  });
-}
-/* =========================
-   FORMULARIO DE REGISTRO
-   ========================= */
-
-const registroFlotanteBtn = document.querySelector(".registro-flotante-btn");
-const registroModal = document.querySelector(".registro-modal");
-const registroModalCerrar = document.querySelector(".registro-modal-cerrar");
-
-if (registroFlotanteBtn && registroModal) {
-
-  registroFlotanteBtn.addEventListener("click", (e) => {
-
-    e.preventDefault();
-
-    if (registroFlotante) {
-      registroFlotante.style.display = "none";
-    }
-
-    registroModal.classList.add("activo");
-
-  });
-
-}
-
-if (registroModalCerrar && registroModal) {
-
-  registroModalCerrar.addEventListener("click", () => {
-
-    registroModal.classList.remove("activo");
-
-  });
-
-}
-/* =========================
-   REGISTRARSE DESDE EL MENÚ
-   ========================= */
-
-const menuLinkRegistro = document.querySelector(".menu-link-registro");
-
-if (menuLinkRegistro && registroModal) {
-
-  menuLinkRegistro.addEventListener("click", (e) => {
-
-    e.preventDefault();
-
-    if (registroFlotante) {
-      registroFlotante.style.display = "none";
-    }
-
-    registroModal.classList.add("activo");
-
-  });
-
-}
-/* =========================
-   CREAR CUENTA
-   ========================= */
-
-const registroForm = document.querySelector(".registro-form");
-const registroExito = document.querySelector(".registro-exito");
-const registroExitoCerrar = document.querySelector(".registro-exito-cerrar");
-const registroExitoContinuar = document.querySelector(".registro-exito-continuar");
-
-if (registroForm) {
-
-  registroForm.addEventListener("submit", async (e) => {
-
-    e.preventDefault();
-
-  const datos = {
-  nombre: registroForm.nombre.value,
-  apellido: registroForm.apellido.value,
-  correo: registroForm.correo.value,
-  celular: registroForm.celular.value,
-  contrasena: registroForm.contrasena.value
-};
-
-    try {
-
-      const respuesta = await fetch("/registro", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(datos)
-      });
-
-      const resultado = await respuesta.json();
-
-      if (resultado.ok) {
-
-        registroForm.reset();
-
-        registroModal.classList.remove("activo");
-
-        registroExito.classList.add("activo");
-
-      } else {
-
-        alert(resultado.mensaje);
-
-      }
-
-    } catch (error) {
-
-      console.error("Error al registrar:", error);
-
-      alert(
-        "No fue posible completar el registro. Inténtalo nuevamente."
-      );
-
-    }
-
-  });
-
-}
-
-/* =========================
-   REGISTRO EXITOSO
-   ========================= */
-
-if (registroExito) {
-
-  registroExitoCerrar.addEventListener("click", () => {
-
-    registroExito.classList.remove("activo");
-
-  });
-
-  registroExitoContinuar.addEventListener("click", () => {
-
-    registroExito.classList.remove("activo");
-
-  });
-
-}
-
- /* =========================
-    INICIAR SESIÓN
-    ========================= */
-
-const menuLinkLogin = document.querySelector(".menu-link-login");
-const loginModal = document.querySelector(".login-modal");
-const loginModalCerrar = document.querySelector(".login-modal-cerrar");
-
-if (menuLinkLogin && loginModal) {
-
-  menuLinkLogin.addEventListener("click", (e) => {
-
-    e.preventDefault();
-
-    loginModal.classList.add("activo");
-
-  });
-
-}
-
-if (loginModalCerrar && loginModal) {
-
-  loginModalCerrar.addEventListener("click", () => {
-
-    loginModal.classList.remove("activo");
-
-  });
-
-}
-
-/* =========================
-   RECUPERAR CONTRASEÑA
-   ========================= */
-
-const loginOlvido =
-  document.querySelector(".login-olvido");
-
-const recuperarModal =
-  document.querySelector(".recuperar-modal");
-
-const recuperarModalCerrar =
-  document.querySelector(".recuperar-modal-cerrar");
-
-const recuperarVolverLogin =
-  document.querySelector(".recuperar-volver-login");
-
-
-/* Abrir recuperación desde el login */
-
-if (loginOlvido && loginModal && recuperarModal) {
-
-  loginOlvido.addEventListener("click", () => {
-
-    loginModal.classList.remove("activo");
-
-    recuperarModal.classList.add("activo");
-
-  });
-
-}
-
-
-/* Cerrar recuperación con la X */
-
-if (recuperarModalCerrar && recuperarModal) {
-
-  recuperarModalCerrar.addEventListener("click", () => {
-
-    recuperarModal.classList.remove("activo");
-
-  });
-
-}
-
-
-/* Volver al inicio de sesión */
-
-if (
-  recuperarVolverLogin &&
-  recuperarModal &&
-  loginModal
-) {
-
-  recuperarVolverLogin.addEventListener("click", () => {
-
-    recuperarModal.classList.remove("activo");
-
-    loginModal.classList.add("activo");
-
-  });
-
-}
-
-/* =========================
-   FORMULARIO - RECUPERAR CONTRASEÑA
-   ========================= */
-
-const recuperarForm =
-  document.querySelector(".recuperar-form");
-
-if (recuperarForm) {
-
-  recuperarForm.addEventListener("submit", async (e) => {
-
-    e.preventDefault();
-
-    const correo =
-      recuperarForm.correo.value.trim();
-
-    try {
-
-      const respuesta = await fetch("/recuperar-contrasena", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          correo: correo
-        })
-      });
-
-      const resultado = await respuesta.json();
-
-      if (resultado.ok) {
-
-        alert(resultado.mensaje);
-
-        recuperarForm.reset();
-
-      } else {
-
-        alert(resultado.mensaje);
-
-      }
-
-    } catch (error) {
-
-      console.error(
-        "Error al recuperar contraseña:",
-        error
-      );
-
-      alert(
-        "No fue posible procesar la solicitud. Inténtalo nuevamente."
-      );
-
-    }
-
-  });
-
-}
-
-/* =========================
-   IR A REGISTRO DESDE LOGIN
-   ========================= */
-
-const loginIrRegistro =
-  document.querySelector(".login-ir-registro");
-
-if (loginIrRegistro && loginModal && registroModal) {
-
-  loginIrRegistro.addEventListener("click", () => {
-
-    loginModal.classList.remove("activo");
-
-    registroModal.classList.add("activo");
-
-  });
-
-}
-
-/* =========================
-   FORMULARIO - INICIAR SESIÓN
-   ========================= */
-
-const loginForm = document.querySelector(".login-form");
-
-if (loginForm) {
-
-  loginForm.addEventListener("submit", async (e) => {
-
-    e.preventDefault();
-
-    const datos = {
-      correo: loginForm.correo.value,
-      contrasena: loginForm.contrasena.value
-    };
-
-    try {
-
-      const respuesta = await fetch("/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(datos)
-      });
-
-      const resultado = await respuesta.json();
-
-      if (resultado.ok) {
-
-        alert(
-          "¡Bienvenida, " +
-          resultado.cliente.nombre +
-          "!"
-        );
-
-        loginForm.reset();
-
-        loginModal.classList.remove("activo");
-
-      } else {
-
-        alert(resultado.mensaje);
-
-      }
-
-    } catch (error) {
-
-      console.error("Error al iniciar sesión:", error);
-
-      alert(
-        "No fue posible iniciar sesión. Inténtalo nuevamente."
-      );
-
-    }
-
-  });
-
-}
-
 // ========================================
 // CARRITO MINTTA
 // ========================================
@@ -526,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       const nombre = boton.dataset.producto;
-      const precio = Number(boton.dataset.precio);
+      const precio = boton.dataset.precio === "" ? null : Number(boton.dataset.precio);
       const talla = tallaSeleccionada.dataset.talla;
       const imagen = boton.dataset.imagen;
 
@@ -567,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Quitar el resaltado de la talla después de agregar
       tallaSeleccionada.classList.remove("selected");
 
-      alert("Producto agregado al carrito.");
+      // El contador y el acceso flotante al carrito se actualizan automáticamente.
 
     });
 
@@ -586,29 +183,45 @@ document.addEventListener("DOMContentLoaded", function () {
 // los botones +, -, y Eliminar.
 
 function actualizarContadorCarrito() {
-
-  const contador =
-    document.getElementById("contador-carrito");
-
-  if (!contador) {
-    return;
-  }
-
-  const carrito =
-    JSON.parse(localStorage.getItem("minttaCarrito")) || [];
-
+  const carrito = JSON.parse(localStorage.getItem("minttaCarrito")) || [];
   const cantidadTotal = carrito.reduce(function (total, item) {
-    return total + item.cantidad;
+    return total + Number(item.cantidad || 0);
   }, 0);
-
-  contador.textContent = cantidadTotal;
-
+  document.querySelectorAll("[data-cart-count]").forEach(function (contador) {
+    contador.textContent = cantidadTotal;
+  });
+  document.querySelectorAll(".cart-float").forEach(function (enlace) {
+    enlace.classList.toggle("is-visible", cantidadTotal > 0);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   actualizarContadorCarrito();
 });
 
+// Calcula el destino de una prenda según dónde aparece en la tienda.
+function obtenerEnlaceProducto(item) {
+  const nombre = String(item.nombre || "");
+  const imagen = String(item.imagen || "");
+  const normalizar = texto => texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const slugNombre = normalizar(nombre);
+  const novedades = {
+    "set-aveline": "producto-set-aveline",
+    "falda-terracota": "producto-falda-terracota",
+    "blusa-marceline": "producto-blusa-marceline",
+    "conjunto-reeve": "producto-conjunto-reeve"
+  };
+  if (novedades[slugNombre] || imagen.includes("/novedades/")) {
+    return "index.html#" + (novedades[slugNombre] || ("producto-" + slugNombre));
+  }
+  let categoria = item.categoria || "";
+  const rutaProducto = imagen.match(/\/productos\/([^/]+)\//i);
+  const rutaCategoria = imagen.match(/(?:^|\/)img\/([a-z-]+)\.(?:png|jpe?g|webp)$/i);
+  if (!categoria && rutaProducto) categoria = rutaProducto[1];
+  if (!categoria && rutaCategoria && rutaCategoria[1] !== "novedades") categoria = rutaCategoria[1];
+  if (categoria) return "categoria.html?slug=" + encodeURIComponent(categoria) + "&producto=" + encodeURIComponent(nombre);
+  return "catalogo.html";
+}
 // ========================================
 // MOSTRAR PRODUCTOS DEL CARRITO
 // ========================================
@@ -647,32 +260,33 @@ function mostrarCarrito() {
 
   carrito.forEach(function (item, indice) {
 
-    const subtotal = item.precio * item.cantidad;
+    const precioPendiente = item.precio === null || item.precio === undefined || item.precio === "" || !Number.isFinite(Number(item.precio));
+    const subtotal = precioPendiente ? null : Number(item.precio) * item.cantidad;
 
-    total += subtotal;
+    if (subtotal !== null) total += subtotal;
 
-    // Se crea el elemento del producto (antes faltaba esta línea)
+    // Enlace a la ubicación original de la prenda.
     const productoHTML = document.createElement("div");
     productoHTML.classList.add("carrito-producto");
+    const enlaceProducto = obtenerEnlaceProducto(item);
 
     productoHTML.innerHTML = `
       <div class="carrito-producto-imagen">
-        <img
-          src="${item.imagen || ''}"
-          alt="${item.nombre}"
-        >
+        <a class="carrito-producto-enlace" href="${enlaceProducto}" aria-label="Ver ${item.nombre} en la tienda">
+          <img src="${item.imagen || ''}" alt="${item.nombre}">
+        </a>
       </div>
 
       <div class="carrito-producto-info">
 
-        <h3>${item.nombre}</h3>
+        <h3><a class="carrito-producto-nombre" href="${enlaceProducto}">${item.nombre}</a></h3>
 
         <p>
           Talla: ${item.talla}
         </p>
 
         <p>
-          $ ${item.precio.toLocaleString("es-CO")}
+          $ ${precioPendiente ? "Por confirmar" : Number(item.precio).toLocaleString("es-CO")}
         </p>
 
       </div>
@@ -706,7 +320,7 @@ function mostrarCarrito() {
       <div class="carrito-subtotal">
 
         <strong>
-          $ ${subtotal.toLocaleString("es-CO")}
+          ${subtotal === null ? "Por confirmar" : "$ " + subtotal.toLocaleString("es-CO")}
         </strong>
 
         <button
@@ -724,8 +338,8 @@ function mostrarCarrito() {
 
   });
 
-  totalElemento.textContent =
-    "$ " + total.toLocaleString("es-CO");
+  const hayPreciosPendientes = carrito.some(function (item) { return item.precio === null || item.precio === undefined || item.precio === "" || !Number.isFinite(Number(item.precio)); });
+  totalElemento.textContent = hayPreciosPendientes ? "Por confirmar" : "$ " + total.toLocaleString("es-CO");
 
 }
 
@@ -976,17 +590,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     carrito.forEach(function (item) {
 
-      const subtotal = item.precio * item.cantidad;
-
-      total += subtotal;
+      const precioPendiente = item.precio === null || item.precio === undefined || item.precio === "" || !Number.isFinite(Number(item.precio));
+      const subtotal = precioPendiente ? null : Number(item.precio) * item.cantidad;
+      if (subtotal !== null) total += subtotal;
 
       productosTexto +=
         "• " + item.nombre + "\n" +
         "  Talla: " + item.talla + "\n" +
         "  Cantidad: " + item.cantidad + "\n" +
-        "  Precio: $ " + item.precio.toLocaleString("es-CO") + "\n" +
-        "  Subtotal: $ " + subtotal.toLocaleString("es-CO") + "\n\n";
-
+        "  Precio: " + (precioPendiente ? "Por confirmar" : "$ " + Number(item.precio).toLocaleString("es-CO")) + "\n" +
+        "  Subtotal: " + (subtotal === null ? "Por confirmar" : "$ " + subtotal.toLocaleString("es-CO")) + "\n\n";
     });
 
 
@@ -1007,7 +620,7 @@ document.addEventListener("DOMContentLoaded", function () {
       productosTexto +
 
       "━━━━━━━━━━━━━━━━━━\n" +
-      "*TOTAL: $ " + total.toLocaleString("es-CO") + "*\n" +
+      "*TOTAL: " + (carrito.some(function (item) { return item.precio === null || item.precio === undefined || item.precio === "" || !Number.isFinite(Number(item.precio)); }) ? "POR CONFIRMAR" : "$ " + total.toLocaleString("es-CO")) + "*\n" +
       "━━━━━━━━━━━━━━━━━━\n\n" +
 
       "📦 *DATOS DE ENTREGA*\n\n" +
@@ -1043,4 +656,105 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 
+});
+
+// Permite abrir una categoría tocando también su nombre, no solo la imagen.
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".categoria-contenedor").forEach(function (contenedor) {
+    contenedor.addEventListener("click", function (evento) {
+      if (evento.target.closest("a")) return;
+      const enlace = contenedor.querySelector("a.categoria");
+      if (enlace && enlace.href) window.location.href = enlace.href;
+    });
+  });
+});
+
+
+// Resalte táctil/clic en el nombre de la prenda.
+document.addEventListener("click", function (event) {
+  const nombre = event.target.closest(".nombre-producto-boton");
+  if (!nombre) return;
+  const activo = nombre.classList.toggle("nombre-seleccionado");
+  nombre.setAttribute("aria-pressed", activo ? "true" : "false");
+});
+
+
+// Confirmación visual inmediata de selección, añadido al carrito y CTA principal.
+document.addEventListener("pointerdown", function (event) {
+  const cta = event.target.closest(".hero a.btn-outline");
+  if (cta) cta.classList.add("is-pressed");
+}, true);
+
+document.addEventListener("click", function (event) {
+  const cta = event.target.closest(".hero a.btn-outline");
+  if (cta) {
+    cta.classList.add("is-pressed");
+    if (!cta.dataset.navigating) {
+      event.preventDefault();
+      cta.dataset.navigating = "true";
+      const destino = cta.href;
+      window.setTimeout(function () { window.location.href = destino; }, 180);
+    }
+  }
+
+  const botonAgregar = event.target.closest(".btn-agregar");
+  if (botonAgregar) {
+    const tarjeta = botonAgregar.closest(".producto");
+    const seleccion = tarjeta && tarjeta.querySelector(".talla.selected");
+    botonAgregar._minttaTallaAntes = seleccion ? seleccion.dataset.talla : "";
+    botonAgregar._minttaNombreAntes = botonAgregar.dataset.producto || "";
+  }
+
+  const talla = event.target.closest(".talla");
+  if (talla) {
+    const grupo = talla.closest(".producto");
+    if (grupo) {
+      grupo.querySelectorAll(".talla").forEach(function (otra) {
+        otra.setAttribute("aria-pressed", otra.classList.contains("selected") ? "true" : "false");
+      });
+    }
+  }
+}, true);
+
+document.addEventListener("click", function (event) {
+  const boton = event.target.closest(".btn-agregar");
+  if (!boton) return;
+  const tarjeta = boton.closest(".producto");
+  const tallaAntes = boton._minttaTallaAntes;
+  if (!tallaAntes) return;
+
+  const nombre = boton._minttaNombreAntes || boton.dataset.producto || (tarjeta.querySelector(".nombre-producto-boton") || {}).textContent || "Prenda";
+  window.setTimeout(function () {
+    const carrito = JSON.parse(localStorage.getItem("minttaCarrito") || "[]");
+    const agregado = carrito.some(function (item) {
+      return item.nombre === nombre && item.talla === tallaAntes;
+    });
+    if (!agregado) return;
+
+    const textoOriginal = boton.dataset.textoOriginal || boton.textContent.trim() || "Agregar al carrito";
+    boton.dataset.textoOriginal = textoOriginal;
+    boton.textContent = "¡Agregado al carrito!";
+    boton.classList.add("agregado-confirmado");
+    boton.setAttribute("aria-live", "polite");
+    if (boton._minttaReset) window.clearTimeout(boton._minttaReset);
+    boton._minttaReset = window.setTimeout(function () {
+      boton.textContent = textoOriginal;
+      boton.classList.remove("agregado-confirmado");
+    }, 1500);
+
+    let aviso = document.getElementById("mintta-toast");
+    if (!aviso) {
+      aviso = document.createElement("div");
+      aviso.id = "mintta-toast";
+      aviso.setAttribute("role", "status");
+      aviso.setAttribute("aria-live", "polite");
+      document.body.appendChild(aviso);
+    }
+    aviso.textContent = "✓  " + nombre + " se agregó al carrito";
+    aviso.classList.add("visible");
+    if (aviso._minttaReset) window.clearTimeout(aviso._minttaReset);
+    aviso._minttaReset = window.setTimeout(function () {
+      aviso.classList.remove("visible");
+    }, 2200);
+  }, 0);
 });
