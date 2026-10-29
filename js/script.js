@@ -677,3 +677,68 @@ document.addEventListener("click", function (event) {
   const activo = nombre.classList.toggle("nombre-seleccionado");
   nombre.setAttribute("aria-pressed", activo ? "true" : "false");
 });
+
+
+// Confirmación visual inmediata de selección, añadido al carrito y CTA principal.
+document.addEventListener("pointerdown", function (event) {
+  const cta = event.target.closest(".hero a.btn-outline");
+  if (cta) cta.classList.add("is-pressed");
+}, true);
+
+document.addEventListener("click", function (event) {
+  const cta = event.target.closest(".hero a.btn-outline");
+  if (cta) cta.classList.add("is-pressed");
+
+  const talla = event.target.closest(".talla");
+  if (talla) {
+    const grupo = talla.closest(".producto");
+    if (grupo) {
+      grupo.querySelectorAll(".talla").forEach(function (otra) {
+        otra.setAttribute("aria-pressed", otra.classList.contains("selected") ? "true" : "false");
+      });
+    }
+  }
+}, true);
+
+document.addEventListener("click", function (event) {
+  const boton = event.target.closest(".btn-agregar");
+  if (!boton) return;
+  const tarjeta = boton.closest(".producto");
+  const tallaSeleccionada = tarjeta && tarjeta.querySelector(".talla.selected");
+  if (!tallaSeleccionada) return;
+
+  const nombre = boton.dataset.producto || (tarjeta.querySelector(".nombre-producto-boton") || {}).textContent || "Prenda";
+  window.setTimeout(function () {
+    const carrito = JSON.parse(localStorage.getItem("minttaCarrito") || "[]");
+    const agregado = carrito.some(function (item) {
+      return item.nombre === nombre && item.talla === tallaSeleccionada.dataset.talla;
+    });
+    if (!agregado) return;
+
+    const textoOriginal = boton.dataset.textoOriginal || boton.textContent.trim() || "Agregar al carrito";
+    boton.dataset.textoOriginal = textoOriginal;
+    boton.textContent = "¡Agregado al carrito!";
+    boton.classList.add("agregado-confirmado");
+    boton.setAttribute("aria-live", "polite");
+    if (boton._minttaReset) window.clearTimeout(boton._minttaReset);
+    boton._minttaReset = window.setTimeout(function () {
+      boton.textContent = textoOriginal;
+      boton.classList.remove("agregado-confirmado");
+    }, 1500);
+
+    let aviso = document.getElementById("mintta-toast");
+    if (!aviso) {
+      aviso = document.createElement("div");
+      aviso.id = "mintta-toast";
+      aviso.setAttribute("role", "status");
+      aviso.setAttribute("aria-live", "polite");
+      document.body.appendChild(aviso);
+    }
+    aviso.textContent = "✓  " + nombre + " se agregó al carrito";
+    aviso.classList.add("visible");
+    if (aviso._minttaReset) window.clearTimeout(aviso._minttaReset);
+    aviso._minttaReset = window.setTimeout(function () {
+      aviso.classList.remove("visible");
+    }, 2200);
+  }, 0);
+});
