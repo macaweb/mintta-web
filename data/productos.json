@@ -1,0 +1,568 @@
+[
+  {
+    "id": 1,
+    "nombre": "Conjunto Verona",
+    "categoria": "conjuntos",
+    "categoriaNombre": "Conjuntos",
+    "precio": 159900,
+    "imagen": "/img/productos/conjuntos/conjunto-01.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 2,
+    "nombre": "Conjunto Siena",
+    "categoria": "conjuntos",
+    "categoriaNombre": "Conjuntos",
+    "precio": 169900,
+    "imagen": "/img/productos/conjuntos/conjunto-02.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 3,
+    "nombre": "Conjunto Roma",
+    "categoria": "conjuntos",
+    "categoriaNombre": "Conjuntos",
+    "precio": 149900,
+    "imagen": "/img/productos/conjuntos/conjunto-03.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 4,
+    "nombre": "Conjunto Emilia",
+    "categoria": "conjuntos",
+    "categoriaNombre": "Conjuntos",
+    "precio": 179900,
+    "imagen": "/img/productos/conjuntos/conjunto-04.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+
+
+
+  {
+    "id": 5,
+    "nombre": "Blusa Celeste",
+    "categoria": "blusas",
+    "categoriaNombre": "Blusas",
+    "precio": 89900,
+    "imagen": "/img/productos/blusas/blusa-01.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 6,
+    "nombre": "Blusa Isabella",
+    "categoria": "blusas",
+    "categoriaNombre": "Blusas",
+    "precio": 94900,
+    "imagen": "/img/productos/blusas/blusa-02.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 7,
+    "nombre": "Blusa Clara",
+    "categoria": "blusas",
+    "categoriaNombre": "Blusas",
+    "precio": 79900,
+    "imagen": "/img/productos/blusas/blusa-03.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 8,
+    "nombre": "Blusa Valentina",
+    "categoria": "blusas",
+    "categoriaNombre": "Blusas",
+    "precio": 99900,
+    "imagen": "/img/productos/blusas/blusa-04.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+
+
+
+  {
+    "id": 9,
+    "nombre": "Top Bianca",
+    "categoria": "tops",
+    "categoriaNombre": "Tops",
+    "precio": 69900,
+    "imagen": "/img/productos/tops/top-01.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 10,
+    "nombre": "Top Aurora",
+    "categoria": "tops",
+    "categoriaNombre": "Tops",
+    "precio": 74900,
+    "imagen": "/img/productos/tops/top-02.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 11,
+    "nombre": "Top Martina",
+    "categoria": "tops",
+    "categoriaNombre": "Tops",
+    "precio": 79900,
+    "imagen": "/img/productos/tops/top-03.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 12,
+    "nombre": "Top Olivia",
+    "categoria": "tops",
+    "categoriaNombre": "Tops",
+    "precio": 84900,
+    "imagen": "/img/productos/tops/top-04.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+
+
+
+  {
+    "id": 13,
+    "nombre": "Body Isabella",
+    "categoria": "bodies",
+    "categoriaNombre": "Bodies",
+    "precio": 99900,
+    "imagen": "/img/productos/bodies/body-01.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 14,
+    "nombre": "Body Aurora",
+    "categoria": "bodies",
+    "categoriaNombre": "Bodies",
+    "precio": 109900,
+    "imagen": "/img/productos/bodies/body-02.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 15,
+    "nombre": "Body Victoria",
+    "categoria": "bodies",
+    "categoriaNombre": "Bodies",
+    "precio": 119900,
+    "imagen": "/img/productos/bodies/body-03.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+  {
+    "id": 16,
+    "nombre": "Body Julieta",
+    "categoria": "bodies",
+    "categoriaNombre": "Bodies",
+    "precio": 109900,
+    "imagen": "/img/productos/bodies/body-04.jpg",
+    "tallas": ["S", "M", "L"]
+  },
+{
+  "id": 17,
+  "nombre": "Camisa Helena",
+  "categoria": "camisas",
+  "categoriaNombre": "Camisas",
+  "precio": 109900,
+  "imagen": "/img/productos/camisas/camisa-01.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 18,
+  "nombre": "Camisa Serena",
+  "categoria": "camisas",
+  "categoriaNombre": "Camisas",
+  "precio": 114900,
+  "imagen": "/img/productos/camisas/camisa-02.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 19,
+  "nombre": "Camisa Alma",
+  "categoria": "camisas",
+  "categoriaNombre": "Camisas",
+  "precio": 99900,
+  "imagen": "/img/productos/camisas/camisa-03.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 20,
+  "nombre": "Camisa Emilia",
+  "categoria": "camisas",
+  "categoriaNombre": "Camisas",
+  "precio": 119900,
+  "imagen": "/img/productos/camisas/camisa-04.jpg",
+  "tallas": ["S", "M", "L"]
+},
+
+
+{
+  "id": 21,
+  "nombre": "Corset Scarlett",
+  "categoria": "corsets",
+  "categoriaNombre": "Corsets",
+  "precio": 129900,
+  "imagen": "/img/productos/corsets/corset-01.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 22,
+  "nombre": "Corset Valeria",
+  "categoria": "corsets",
+  "categoriaNombre": "Corsets",
+  "precio": 139900,
+  "imagen": "/img/productos/corsets/corset-02.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 23,
+  "nombre": "Corset Rosalia",
+  "categoria": "corsets",
+  "categoriaNombre": "Corsets",
+  "precio": 134900,
+  "imagen": "/img/productos/corsets/corset-03.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 24,
+  "nombre": "Corset Beatriz",
+  "categoria": "corsets",
+  "categoriaNombre": "Corsets",
+  "precio": 144900,
+  "imagen": "/img/productos/corsets/corset-04.jpg",
+  "tallas": ["S", "M", "L"]
+},
+
+
+{
+  "id": 25,
+  "nombre": "Blazer Victoria",
+  "categoria": "blazers",
+  "categoriaNombre": "Blazers",
+  "precio": 189900,
+  "imagen": "/img/productos/blazers/blazer-01.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 26,
+  "nombre": "Blazer Audrey",
+  "categoria": "blazers",
+  "categoriaNombre": "Blazers",
+  "precio": 199900,
+  "imagen": "/img/productos/blazers/blazer-02.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 27,
+  "nombre": "Blazer Milano",
+  "categoria": "blazers",
+  "categoriaNombre": "Blazers",
+  "precio": 209900,
+  "imagen": "/img/productos/blazers/blazer-03.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 28,
+  "nombre": "Blazer Verona",
+  "categoria": "blazers",
+  "categoriaNombre": "Blazers",
+  "precio": 219900,
+  "imagen": "/img/productos/blazers/blazer-04.jpg",
+  "tallas": ["S", "M", "L"]
+},
+
+{
+  "id": 29,
+  "nombre": "Tejido Amelia",
+  "categoria": "tejidos",
+  "categoriaNombre": "Tejido",
+  "precio": 129900,
+  "imagen": "/img/productos/tejidos/tejido-01.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 30,
+  "nombre": "Tejido Clara",
+  "categoria": "tejidos",
+  "categoriaNombre": "Tejido",
+  "precio": 139900,
+  "imagen": "/img/productos/tejidos/tejido-02.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 31,
+  "nombre": "Tejido Emilia",
+  "categoria": "tejidos",
+  "categoriaNombre": "Tejido",
+  "precio": 149900,
+  "imagen": "/img/productos/tejidos/tejido-03.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 32,
+  "nombre": "Tejido Aurora",
+  "categoria": "tejidos",
+  "categoriaNombre": "Tejido",
+  "precio": 159900,
+  "imagen": "/img/productos/tejidos/tejido-04.jpg",
+  "tallas": ["S", "M", "L"]
+},
+
+
+{
+  "id": 33,
+  "nombre": "Gabán Victoria",
+  "categoria": "gabanes",
+  "categoriaNombre": "Gabanes",
+  "precio": 249900,
+  "imagen": "/img/productos/gabanes/gaban-01.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 34,
+  "nombre": "Gabán Siena",
+  "categoria": "gabanes",
+  "categoriaNombre": "Gabanes",
+  "precio": 259900,
+  "imagen": "/img/productos/gabanes/gaban-02.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 35,
+  "nombre": "Gabán Helena",
+  "categoria": "gabanes",
+  "categoriaNombre": "Gabanes",
+  "precio": 239900,
+  "imagen": "/img/productos/gabanes/gaban-03.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 36,
+  "nombre": "Gabán Roma",
+  "categoria": "gabanes",
+  "categoriaNombre": "Gabanes",
+  "precio": 269900,
+  "imagen": "/img/productos/gabanes/gaban-04.jpg",
+  "tallas": ["S", "M", "L"]
+},
+
+
+{
+  "id": 37,
+  "nombre": "Set Capri",
+  "categoria": "deportivo",
+  "categoriaNombre": "Deportivo",
+  "precio": 119900,
+  "imagen": "/img/productos/deportivo/deportivo-01.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 38,
+  "nombre": "Set Siena",
+  "categoria": "deportivo",
+  "categoriaNombre": "Deportivo",
+  "precio": 129900,
+  "imagen": "/img/productos/deportivo/deportivo-02.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 39,
+  "nombre": "Set Roma",
+  "categoria": "deportivo",
+  "categoriaNombre": "Deportivo",
+  "precio": 139900,
+  "imagen": "/img/productos/deportivo/deportivo-03.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 40,
+  "nombre": "Set Verona",
+  "categoria": "deportivo",
+  "categoriaNombre": "Deportivo",
+  "precio": 149900,
+  "imagen": "/img/productos/deportivo/deportivo-04.jpg",
+  "tallas": ["S", "M", "L"]
+},
+
+
+{
+  "id": 41,
+  "nombre": "Falda Aurora",
+  "categoria": "faldas",
+  "categoriaNombre": "Faldas",
+  "precio": 89900,
+  "imagen": "/img/productos/faldas/falda-01.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 42,
+  "nombre": "Falda Bianca",
+  "categoria": "faldas",
+  "categoriaNombre": "Faldas",
+  "precio": 99900,
+  "imagen": "/img/productos/faldas/falda-02.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 43,
+  "nombre": "Falda Olivia",
+  "categoria": "faldas",
+  "categoriaNombre": "Faldas",
+  "precio": 109900,
+  "imagen": "/img/productos/faldas/falda-03.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 44,
+  "nombre": "Falda Martina",
+  "categoria": "faldas",
+  "categoriaNombre": "Faldas",
+  "precio": 119900,
+  "imagen": "/img/productos/faldas/falda-04.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 45,
+  "nombre": "Short Capri",
+  "categoria": "shorts",
+  "categoriaNombre": "Shorts",
+  "precio": 89900,
+  "imagen": "/img/productos/shorts/short-01.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 46,
+  "nombre": "Short Riviera",
+  "categoria": "shorts",
+  "categoriaNombre": "Shorts",
+  "precio": 94900,
+  "imagen": "/img/productos/shorts/short-02.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 47,
+  "nombre": "Short Roma",
+  "categoria": "shorts",
+  "categoriaNombre": "Shorts",
+  "precio": 99900,
+  "imagen": "/img/productos/shorts/short-03.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 48,
+  "nombre": "Short Siena",
+  "categoria": "shorts",
+  "categoriaNombre": "Shorts",
+  "precio": 109900,
+  "imagen": "/img/productos/shorts/short-04.jpg",
+  "tallas": ["S", "M", "L"]
+},
+
+
+{
+  "id": 49,
+  "nombre": "Vestido Aurelia",
+  "categoria": "vestidos",
+  "categoriaNombre": "Vestidos",
+  "precio": 179900,
+  "imagen": "/img/productos/vestidos/vestido-01.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 50,
+  "nombre": "Vestido Valentina",
+  "categoria": "vestidos",
+  "categoriaNombre": "Vestidos",
+  "precio": 189900,
+  "imagen": "/img/productos/vestidos/vestido-02.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 51,
+  "nombre": "Vestido Elena",
+  "categoria": "vestidos",
+  "categoriaNombre": "Vestidos",
+  "precio": 199900,
+  "imagen": "/img/productos/vestidos/vestido-03.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 52,
+  "nombre": "Vestido Serena",
+  "categoria": "vestidos",
+  "categoriaNombre": "Vestidos",
+  "precio": 219900,
+  "imagen": "/img/productos/vestidos/vestido-04.jpg",
+  "tallas": ["S", "M", "L"]
+},
+
+
+{
+  "id": 53,
+  "nombre": "Playa Amalfi",
+  "categoria": "playa",
+  "categoriaNombre": "Playa",
+  "precio": 129900,
+  "imagen": "/img/productos/playa/playa-01.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 54,
+  "nombre": "Playa Capri",
+  "categoria": "playa",
+  "categoriaNombre": "Playa",
+  "precio": 139900,
+  "imagen": "/img/productos/playa/playa-02.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 55,
+  "nombre": "Playa Riviera",
+  "categoria": "playa",
+  "categoriaNombre": "Playa",
+  "precio": 149900,
+  "imagen": "/img/productos/playa/playa-03.jpg",
+  "tallas": ["S", "M", "L"]
+},
+{
+  "id": 56,
+  "nombre": "Playa Santorini",
+  "categoria": "playa",
+  "categoriaNombre": "Playa",
+  "precio": 159900,
+  "imagen": "/img/productos/playa/playa-04.jpg",
+  "tallas": ["S", "M", "L"]
+},
+
+
+{
+  "id": 57,
+  "nombre": "Collar Perla",
+  "categoria": "accesorios",
+  "categoriaNombre": "Accesorios",
+  "precio": 49900,
+  "imagen": "/img/productos/accesorios/accesorio-01.jpg",
+  "tallas": ["Única"]
+},
+{
+  "id": 58,
+  "nombre": "Aretes Aurora",
+  "categoria": "accesorios",
+  "categoriaNombre": "Accesorios",
+  "precio": 39900,
+  "imagen": "/img/productos/accesorios/accesorio-02.jpg",
+  "tallas": ["Única"]
+},
+{
+  "id": 59,
+  "nombre": "Pulsera Roma",
+  "categoria": "accesorios",
+  "categoriaNombre": "Accesorios",
+  "precio": 44900,
+  "imagen": "/img/productos/accesorios/accesorio-03.jpg",
+  "tallas": ["Única"]
+},
+{
+  "id": 60,
+  "nombre": "Set Verona",
+  "categoria": "accesorios",
+  "categoriaNombre": "Accesorios",
+  "precio": 69900,
+  "imagen": "/img/productos/accesorios/accesorio-04.jpg",
+  "tallas": ["Única"]
+}
+]

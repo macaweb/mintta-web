@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1791320204850,
+    "nombre": "Maria Camila",
+    "apellido": "Jaramillo",
+    "correo": "camilajaramilloa21@gmail.com",
+    "celular": "3022061132",
+    "contrasena": "831d606c1ff4cd3b74522885194fc0ded5f5be1e043a6a46e59b08896f452657",
+    "primeraCompra": true,
+    "descuentoPrimeraCompra": 5,
+    "tokenRecuperacion": "48f1a04cd75271366ed71a8742e822fed466b64651b2f5634cf7f916a6dccec7",
+    "tokenRecuperacionExpira": 1791412053051
+  },
+  {
+    "id": 1791410295463,
+    "nombre": "Maria Camila",
+    "apellido": "Jaramillo",
+    "correo": "macajaal21@gmail.com",
+    "celular": "3022061132",
+    "contrasena": "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5",
+    "primeraCompra": true,
+    "descuentoPrimeraCompra": 5,
+    "tokenRecuperacion": "1d5f846c85d2790528db4f4a7100361112e1b162fa3a5584f0f8572c393096a0",
+    "tokenRecuperacionExpira": 1791557374756
+  }
+]
