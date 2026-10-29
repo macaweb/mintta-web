@@ -689,6 +689,14 @@ document.addEventListener("click", function (event) {
   const cta = event.target.closest(".hero a.btn-outline");
   if (cta) cta.classList.add("is-pressed");
 
+  const botonAgregar = event.target.closest(".btn-agregar");
+  if (botonAgregar) {
+    const tarjeta = botonAgregar.closest(".producto");
+    const seleccion = tarjeta && tarjeta.querySelector(".talla.selected");
+    botonAgregar._minttaTallaAntes = seleccion ? seleccion.dataset.talla : "";
+    botonAgregar._minttaNombreAntes = botonAgregar.dataset.producto || "";
+  }
+
   const talla = event.target.closest(".talla");
   if (talla) {
     const grupo = talla.closest(".producto");
@@ -704,14 +712,14 @@ document.addEventListener("click", function (event) {
   const boton = event.target.closest(".btn-agregar");
   if (!boton) return;
   const tarjeta = boton.closest(".producto");
-  const tallaSeleccionada = tarjeta && tarjeta.querySelector(".talla.selected");
-  if (!tallaSeleccionada) return;
+  const tallaAntes = boton._minttaTallaAntes;
+  if (!tallaAntes) return;
 
-  const nombre = boton.dataset.producto || (tarjeta.querySelector(".nombre-producto-boton") || {}).textContent || "Prenda";
+  const nombre = boton._minttaNombreAntes || boton.dataset.producto || (tarjeta.querySelector(".nombre-producto-boton") || {}).textContent || "Prenda";
   window.setTimeout(function () {
     const carrito = JSON.parse(localStorage.getItem("minttaCarrito") || "[]");
     const agregado = carrito.some(function (item) {
-      return item.nombre === nombre && item.talla === tallaSeleccionada.dataset.talla;
+      return item.nombre === nombre && item.talla === tallaAntes;
     });
     if (!agregado) return;
 
