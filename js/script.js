@@ -597,7 +597,7 @@ document.addEventListener("DOMContentLoaded", function () {
       productosTexto +
 
       "━━━━━━━━━━━━━━━━━━\n" +
-      "*TOTAL: " + (carrito.some(function (item) { return item.precio === null || item.precio === undefined || item.precio === "" || !Number.isFinite(Number(item.precio)); }) ? "POR CONFIRMAR" : "$ " + total.toLocaleString("es-CO")) + "*\\n" +
+      "*TOTAL: " + (carrito.some(function (item) { return item.precio === null || item.precio === undefined || item.precio === "" || !Number.isFinite(Number(item.precio)); }) ? "POR CONFIRMAR" : "$ " + total.toLocaleString("es-CO")) + "*\n" +
       "━━━━━━━━━━━━━━━━━━\n\n" +
 
       "📦 *DATOS DE ENTREGA*\n\n" +
