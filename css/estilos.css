@@ -6243,3 +6243,63 @@ body.menu-abierto {
     background-position: 58% center;
   }
 }
+
+
+/* Mensaje renovado cuando la bolsa aún no tiene prendas */
+body.pagina-carrito #carrito-vacio p.carrito-vacio-sub {
+  max-width: 520px;
+  margin: 0 auto 28px;
+  color: var(--text-muted);
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: .01rem;
+}
+@media (max-width: 700px) {
+  body.pagina-carrito #carrito-vacio p.carrito-vacio-sub {
+    font-size: .9rem;
+    line-height: 1.6;
+  }
+}
+
+/* Acceso al catálogo disponible también cuando ya hay prendas en la bolsa */
+body.pagina-carrito #carrito-seguir-comprando {
+  width: 100%;
+  max-width: 900px;
+  margin: 24px auto 0;
+  text-align: left;
+}
+body.pagina-carrito #carrito-seguir-comprando a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 18px;
+  border: 1px solid var(--text);
+  border-radius: 2px;
+  color: var(--text);
+  background: transparent;
+  font-family: "Jost", sans-serif;
+  font-size: .76rem;
+  font-weight: 400;
+  letter-spacing: .07rem;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease;
+}
+body.pagina-carrito #carrito-seguir-comprando a:hover,
+body.pagina-carrito #carrito-seguir-comprando a:focus-visible {
+  color: #FFFFFF;
+  background: #000000;
+  border-color: #000000;
+}
+@media (max-width: 700px) {
+  body.pagina-carrito #carrito-seguir-comprando {
+    margin-top: 18px;
+    text-align: left;
+  }
+  body.pagina-carrito #carrito-seguir-comprando a {
+    min-height: 40px;
+    padding: 9px 14px;
+    font-size: .72rem;
+  }
+}
