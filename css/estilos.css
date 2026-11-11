@@ -6223,3 +6223,23 @@ body.menu-abierto {
     align-items: flex-start !important;
   }
 }
+
+
+/* Portada principal de Inicio: reducir altura vertical sin cambiar el ancho */
+@media (min-width: 769px) {
+  body:not(.pagina-carrito) .hero {
+    height: min(680px, 68vh) !important;
+    min-height: 500px !important;
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+@media (max-width: 768px) {
+  body:not(.pagina-carrito) .hero {
+    height: clamp(320px, 42svh, 380px) !important;
+    min-height: 0 !important;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-position: 58% center;
+  }
+}
