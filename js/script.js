@@ -37,7 +37,15 @@ document.addEventListener("DOMContentLoaded", () => {
      CERRAR CON X
      ========================= */
 
-  menuPanel.querySelectorAll(".menu-links a").forEach((enlace) => {\n    enlace.addEventListener("click", () => {\n      menuPanel.classList.remove("active");\n      menuOverlay.classList.remove("active");\n    });\n  });\n\n  menuClose.addEventListener("click", () => {
+  // Cerrar el menú al elegir cualquier destino, dejando que el enlace navegue.
+  menuPanel.querySelectorAll(".menu-links a").forEach((enlace) => {
+    enlace.addEventListener("click", () => {
+      menuPanel.classList.remove("active");
+      menuOverlay.classList.remove("active");
+    });
+  });
+
+  menuClose.addEventListener("click", () => {
 
     menuPanel.classList.remove("active");
     menuOverlay.classList.remove("active");
