@@ -6772,3 +6772,262 @@ body.pagina-carrito #carrito-resumen {
     margin-bottom: 24px;
   }
 }
+
+
+/* =========================================================
+   RENOVACIÓN VISUAL MINTTA — TARJETAS Y ACCIONES
+   ========================================================= */
+:root {
+  --mintta-ink: #171513;
+  --mintta-paper: #FAF6F0;
+  --mintta-sand: #E8DED1;
+}
+.productos,
+.categorias {
+  padding-top: clamp(34px, 5vw, 64px);
+}
+.page-header {
+  padding-bottom: clamp(24px, 3vw, 38px);
+}
+.page-header .eyebrow,
+.novedades .eyebrow,
+.categorias .eyebrow {
+  letter-spacing: .19rem !important;
+}
+.grid-productos {
+  column-gap: clamp(14px, 2.2vw, 28px) !important;
+  row-gap: clamp(28px, 3vw, 38px) !important;
+}
+.grid-productos .producto,
+.productos-nuevos .producto {
+  min-width: 0;
+  text-align: left;
+  padding: 0 0 12px;
+  background: transparent;
+  border: 0;
+}
+.grid-productos .producto-img,
+.grid-productos .producto-foto-wrap,
+.productos-nuevos .producto-foto-wrap {
+  overflow: hidden;
+  background: #EFE8DF;
+  border: 0;
+  margin-bottom: 13px;
+}
+.grid-productos .producto-img {
+  aspect-ratio: 3 / 4;
+  border-radius: 2px;
+}
+.grid-productos .producto-img img,
+.productos-nuevos .producto-imagen {
+  transition: transform .55s cubic-bezier(.2,.65,.3,1);
+}
+.grid-productos .producto:hover .producto-img img,
+.productos-nuevos .producto:hover .producto-imagen {
+  transform: scale(1.035);
+}
+.grid-productos .nombre-producto-boton,
+.productos-nuevos .nombre-producto-boton,
+.grid-productos .producto h3 {
+  display: block;
+  width: 100%;
+  margin: 0 0 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--mintta-ink);
+  font-family: "Jost", sans-serif;
+  font-size: .9rem !important;
+  font-weight: 400;
+  letter-spacing: .01rem;
+  line-height: 1.4;
+  text-align: left;
+  text-transform: none;
+}
+.grid-productos .precio,
+.productos-nuevos .precio {
+  margin: 0 0 12px;
+  color: #5F554B;
+  font-size: .82rem !important;
+  font-weight: 400;
+  text-align: left;
+}
+.grid-productos .tallas,
+.productos-nuevos .tallas {
+  justify-content: flex-start;
+  margin: 8px 0 13px;
+}
+.btn-agregar,
+.btn-outline,
+.ver-todo,
+.volver,
+#carrito-vacio a,
+#carrito-seguir-comprando a,
+.btn-continuar-pago,
+.btn-enviar-whatsapp,
+.mintta-confirmacion-acciones button,
+.registro-flotante-btn,
+.registro-form-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 17px !important;
+  border: 1px solid var(--mintta-ink) !important;
+  border-radius: 2px !important;
+  background: var(--mintta-ink) !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-family: "Jost", sans-serif !important;
+  font-size: .69rem !important;
+  font-weight: 500 !important;
+  letter-spacing: .075rem !important;
+  line-height: 1.25 !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-agregar:hover,
+.btn-agregar:focus-visible,
+.btn-agregar:active,
+.btn-outline:hover,
+.btn-outline:focus-visible,
+.btn-outline:active,
+.ver-todo:hover,
+.ver-todo:focus-visible,
+.ver-todo:active,
+.volver:hover,
+.volver:focus-visible,
+.volver:active,
+#carrito-vacio a:hover,
+#carrito-vacio a:focus-visible,
+#carrito-vacio a:active,
+#carrito-seguir-comprando a:hover,
+#carrito-seguir-comprando a:focus-visible,
+#carrito-seguir-comprando a:active,
+.btn-continuar-pago:hover,
+.btn-enviar-whatsapp:hover,
+.mintta-confirmacion-acciones button:hover,
+.registro-flotante-btn:hover,
+.registro-form-btn:hover {
+  background: #FFFFFF !important;
+  color: var(--mintta-ink) !important;
+  -webkit-text-fill-color: var(--mintta-ink) !important;
+  border-color: var(--mintta-ink) !important;
+}
+.btn-agregar:active,
+.ver-todo:active {
+  transform: translateY(1px);
+}
+.enlace-vista {
+  width: 100%;
+  margin-top: 3px;
+  text-align: center;
+}
+.productos-nuevos .producto {
+  width: 100%;
+}
+.productos-nuevos .producto-imagen {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+.productos-nuevos .nombre-producto-boton {
+  text-align: center;
+}
+.productos-nuevos .precio {
+  text-align: center;
+}
+.grid-categorias {
+  gap: clamp(18px, 2.6vw, 32px) !important;
+}
+.categoria-contenedor {
+  min-width: 0;
+}
+a.categoria {
+  aspect-ratio: 4 / 5;
+  border: 0;
+  border-radius: 2px;
+  background-color: #EDE5DC;
+  box-shadow: 0 5px 18px rgba(35,27,20,.045);
+}
+.categoria-contenedor span {
+  margin-top: 11px;
+  font-size: 1.16rem;
+  letter-spacing: .035rem;
+  text-transform: none;
+}
+.categoria-contenedor:hover span {
+  font-size: 1.2rem;
+}
+.categoria.pantalones {
+  background-image: url('../img/pantalones.png');
+  background-position: center;
+}
+.categoria.pijamas {
+  background-image: url('../img/pijamas.png');
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .productos {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .grid-productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 26px 13px !important;
+  }
+  .grid-productos .producto-img {
+    margin-bottom: 10px;
+  }
+  .grid-productos .nombre-producto-boton,
+  .productos-nuevos .nombre-producto-boton {
+    font-size: .82rem !important;
+  }
+  .grid-productos .precio,
+  .productos-nuevos .precio {
+    font-size: .76rem !important;
+  }
+  .grid-productos .btn-agregar,
+  .productos-nuevos .btn-agregar {
+    min-height: 38px;
+    padding: 9px 8px !important;
+    font-size: .63rem !important;
+    letter-spacing: .055rem !important;
+  }
+  .productos-nuevos {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px 13px !important;
+  }
+  .productos-nuevos .producto-foto-wrap {
+    margin-bottom: 10px;
+  }
+  .productos-nuevos .producto-imagen {
+    width: 100%;
+    height: auto;
+  }
+  .grid-categorias {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 23px 14px !important;
+  }
+  .categoria-contenedor span {
+    margin-top: 9px;
+    font-size: 1.02rem;
+  }
+  .ver-todo {
+    margin-top: 32px;
+  }
+}
+@media (hover: none) {
+  .btn-agregar:active,
+  .btn-outline:active,
+  .ver-todo:active,
+  .volver:active {
+    background: #FFFFFF !important;
+    color: var(--mintta-ink) !important;
+    -webkit-text-fill-color: var(--mintta-ink) !important;
+  }
+}
