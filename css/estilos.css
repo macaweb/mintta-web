@@ -6505,3 +6505,126 @@ body.pagina-carrito #carrito-resumen {
     font-size: .7rem;
   }
 }
+
+
+/* =========================================================
+   SISTEMA TIPOGRÁFICO MINTTA
+   Escala unificada para títulos, prendas, precios y controles
+   ========================================================= */
+:root {
+  --mintta-title: 2.15rem;
+  --mintta-section: 1.9rem;
+  --mintta-subtitle: .98rem;
+  --mintta-eyebrow: .68rem;
+  --mintta-product: .96rem;
+  --mintta-price: .84rem;
+  --mintta-size: .72rem;
+  --mintta-control: .70rem;
+  --mintta-body: .88rem;
+}
+.page-header h1 {
+  font-size: var(--mintta-title) !important;
+  line-height: 1.12 !important;
+}
+.novedades h2,
+.categorias h2,
+.promociones-home h2 {
+  font-size: var(--mintta-section) !important;
+  line-height: 1.15 !important;
+}
+.page-header .page-sub,
+.novedades .page-sub,
+.hero-subtitle {
+  font-size: var(--mintta-subtitle) !important;
+  line-height: 1.5 !important;
+}
+.eyebrow {
+  font-size: var(--mintta-eyebrow) !important;
+  letter-spacing: .16rem !important;
+  line-height: 1.4 !important;
+}
+.producto h3,
+.nombre-producto-boton,
+.producto-nuevo-card .nombre-producto-boton,
+.promo-card .promo-nombre,
+.producto-nuevo span {
+  font-size: var(--mintta-product) !important;
+  line-height: 1.35 !important;
+  letter-spacing: .015rem !important;
+}
+.precio,
+.producto-nuevo-card .precio,
+.promo-card .precio,
+.promo-card .precio-pendiente {
+  font-size: var(--mintta-price) !important;
+  line-height: 1.4 !important;
+}
+.talla,
+.producto-nuevo-card .talla,
+.grid-productos .producto .talla,
+.promo-card .talla {
+  font-size: var(--mintta-size) !important;
+}
+.btn-agregar,
+.btn-outline,
+.ver-todo,
+.menu-links > a,
+.menu-links .menu-catalogo > summary,
+.main-nav a,
+.icons a {
+  font-size: var(--mintta-control) !important;
+  line-height: 1.4 !important;
+}
+.volver,
+.footer .footer-col a,
+.footer .footer-col p,
+.footer .footer-social .social-item {
+  font-size: var(--mintta-body) !important;
+  line-height: 1.5 !important;
+}
+@media (max-width: 768px) {
+  :root {
+    --mintta-title: 1.82rem;
+    --mintta-section: 1.62rem;
+    --mintta-subtitle: .84rem;
+    --mintta-eyebrow: .61rem;
+    --mintta-product: .88rem;
+    --mintta-price: .78rem;
+    --mintta-size: .68rem;
+    --mintta-control: .66rem;
+    --mintta-body: .80rem;
+  }
+  .page-header {
+    padding-top: 42px !important;
+    padding-bottom: 16px !important;
+  }
+  .novedades h2,
+  .categorias h2,
+  .promociones-home h2 {
+    margin-bottom: 10px !important;
+  }
+  .page-header .page-sub,
+  .novedades .page-sub {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .producto h3,
+  .nombre-producto-boton,
+  .producto-nuevo-card .nombre-producto-boton,
+  .promo-card .promo-nombre {
+    line-height: 1.3 !important;
+  }
+  .precio,
+  .producto-nuevo-card .precio,
+  .promo-card .precio,
+  .promo-card .precio-pendiente {
+    margin-bottom: 9px;
+  }
+  .talla,
+  .producto-nuevo-card .talla,
+  .grid-productos .producto .talla,
+  .promo-card .talla {
+    font-size: .68rem !important;
+  }
+}
