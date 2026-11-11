@@ -5039,3 +5039,6 @@ a.ver-todo:visited:active {
   font-weight: 400 !important;
   text-decoration: none !important;
 }
+
+/* Asegurar que el enlace Ver más sea interactivo y quede por encima del fondo. */
+.promociones-home .promo-ver-mas { position:relative; z-index:2; pointer-events:auto; cursor:pointer; }
