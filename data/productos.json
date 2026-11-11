@@ -731,44 +731,52 @@
     "id": 57,
     "nombre": "Collar Perla",
     "categoria": "accesorios",
-    "categoriaNombre": "Accesorios",
+    "categoriaNombre": "Pantalones y jeans",
     "precio": 49900,
     "imagen": "/img/productos/accesorios/accesorio-01.jpg",
     "tallas": [
-      "Única"
+      "S",
+      "M",
+      "L"
     ]
   },
   {
     "id": 58,
     "nombre": "Aretes Aurora",
     "categoria": "accesorios",
-    "categoriaNombre": "Accesorios",
+    "categoriaNombre": "Pantalones y jeans",
     "precio": 39900,
     "imagen": "/img/productos/accesorios/accesorio-02.jpg",
     "tallas": [
-      "Única"
+      "S",
+      "M",
+      "L"
     ]
   },
   {
     "id": 59,
     "nombre": "Pulsera Roma",
     "categoria": "accesorios",
-    "categoriaNombre": "Accesorios",
+    "categoriaNombre": "Pantalones y jeans",
     "precio": 44900,
     "imagen": "/img/productos/accesorios/accesorio-03.jpg",
     "tallas": [
-      "Única"
+      "S",
+      "M",
+      "L"
     ]
   },
   {
     "id": 60,
     "nombre": "Set Verona",
     "categoria": "accesorios",
-    "categoriaNombre": "Accesorios",
+    "categoriaNombre": "Pantalones y jeans",
     "precio": 69900,
     "imagen": "/img/productos/accesorios/accesorio-04.jpg",
     "tallas": [
-      "Única"
+      "S",
+      "M",
+      "L"
     ]
   }
 ]
