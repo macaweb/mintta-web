@@ -6303,3 +6303,52 @@ body.pagina-carrito #carrito-seguir-comprando a:focus-visible {
     font-size: .72rem;
   }
 }
+
+
+/* Ajustes finales de la bolsa: mensaje limpio y espacios equilibrados */
+body.pagina-carrito #carrito-vacio {
+  padding: clamp(58px, 8vw, 88px) 20px clamp(64px, 8vw, 90px);
+}
+body.pagina-carrito #carrito-vacio p {
+  margin: 0 auto 30px;
+  max-width: 680px;
+  line-height: 1.16;
+}
+body.pagina-carrito #carrito-vacio a,
+body.pagina-carrito #carrito-seguir-comprando a {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+body.pagina-carrito #carrito-vacio a:active,
+body.pagina-carrito #carrito-vacio a:focus-visible,
+body.pagina-carrito #carrito-seguir-comprando a:active,
+body.pagina-carrito #carrito-seguir-comprando a:focus-visible {
+  color: #FFFFFF !important;
+  background: #000000 !important;
+  border-color: #000000 !important;
+}
+body.pagina-carrito #carrito-seguir-comprando {
+  margin: 22px auto 0;
+  max-width: 900px;
+}
+body.pagina-carrito #carrito-resumen {
+  margin-top: 22px;
+}
+@media (max-width: 700px) {
+  body.pagina-carrito #carrito-vacio {
+    padding: 52px 18px 64px;
+  }
+  body.pagina-carrito #carrito-vacio p {
+    margin-bottom: 26px;
+    font-size: clamp(2rem, 8vw, 2.35rem);
+  }
+  body.pagina-carrito #carrito-vacio a {
+    padding: 13px 26px;
+  }
+  body.pagina-carrito #carrito-seguir-comprando {
+    margin-top: 18px;
+  }
+  body.pagina-carrito #carrito-resumen {
+    margin-top: 18px;
+  }
+}
