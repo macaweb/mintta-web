@@ -5925,3 +5925,24 @@ body.menu-abierto {
     font-size: .75rem !important;
   }
 }
+
+
+/* El listado de Catálogo solo se desplaza verticalmente */
+.menu-catalogo-lista {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  touch-action: pan-y;
+  overscroll-behavior-x: none;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.menu-links .menu-catalogo-lista a {
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.menu-panel {
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+}
