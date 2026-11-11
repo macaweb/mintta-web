@@ -5,6 +5,7 @@ const root = __dirname;
 const output = path.join(root, "dist");
 const pages = [
   "index.html",
+  "promociones.html",
   "catalogo.html",
   "categoria.html",
   "carrito.html",
