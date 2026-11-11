@@ -6190,3 +6190,36 @@ body.menu-abierto {
   color: #111111 !important;
   text-shadow: -1px -1px 0 #25F4EE, 1px 1px 0 #FE2C55;
 }
+
+
+/* Alinear Contacto con toda su lista y desplazar el bloque ligeramente a la derecha */
+.footer .footer-inner > .footer-col:nth-child(3) {
+  padding-left: 18px !important;
+  text-align: left !important;
+}
+.footer .footer-inner > .footer-col:nth-child(3) h4 {
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+.footer .footer-inner > .footer-col:nth-child(3) .footer-social {
+  align-items: flex-start !important;
+  margin-left: 0 !important;
+}
+.footer .footer-inner > .footer-col:nth-child(3) .footer-social .social-item {
+  justify-content: flex-start !important;
+  width: 100%;
+  text-align: left !important;
+}
+@media (max-width: 768px) {
+  .footer .footer-inner > .footer-col:nth-child(3) {
+    padding-left: 12px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+  .footer .footer-inner > .footer-col:nth-child(3) h4 {
+    text-align: left !important;
+  }
+  .footer .footer-inner > .footer-col:nth-child(3) .footer-social {
+    align-items: flex-start !important;
+  }
+}
