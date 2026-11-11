@@ -5142,14 +5142,15 @@ body:not(.pagina-carrito) .hero-subtitle {
   color: #fff;
 }
 .mintta-btn-eliminar {
-  background: transparent;
-  color: var(--text-muted, #6B5F4F);
-  border-color: rgba(169, 130, 90, .5) !important;
+  background: #B42318;
+  color: #fff;
+  border-color: #B42318 !important;
 }
 .mintta-btn-eliminar:hover,
 .mintta-btn-eliminar:focus-visible {
-  background: var(--bg-alt, #F1EAE0);
-  color: var(--text, #211E1B);
+  background: #8F1D15;
+  border-color: #8F1D15 !important;
+  color: #fff;
 }
 @keyframes mintta-fondo-aparece {
   from { opacity: 0; }
