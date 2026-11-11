@@ -5054,3 +5054,111 @@ body:not(.pagina-carrito) .hero-subtitle {
   letter-spacing: .018em;
   color: #62584f !important;
 }
+
+
+
+/* ========================================
+   MODAL DE CONFIRMACIÓN · MINTTA
+   ======================================== */
+.mintta-modal-abierto {
+  overflow: hidden;
+}
+.mintta-confirmacion-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: rgba(33, 30, 27, .52);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: mintta-fondo-aparece .2s ease both;
+}
+.mintta-confirmacion {
+  width: min(100%, 420px);
+  padding: 34px 30px 28px;
+  background: var(--bg, #FAF6F0);
+  color: var(--text, #211E1B);
+  border: 1px solid rgba(169, 130, 90, .35);
+  border-radius: 5px;
+  box-shadow: 0 22px 70px rgba(33, 30, 27, .22);
+  text-align: center;
+  animation: mintta-tarjeta-aparece .24s ease both;
+}
+.mintta-confirmacion-detalle {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--accent, #A9825A);
+  font-family: 'Jost', sans-serif;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+}
+.mintta-confirmacion h2 {
+  margin: 0 0 12px;
+  color: var(--text, #211E1B);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 7vw, 2.45rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+.mintta-confirmacion p {
+  max-width: 320px;
+  margin: 0 auto 25px;
+  color: var(--text-muted, #6B5F4F);
+  font-family: 'Jost', sans-serif;
+  font-size: .91rem;
+  font-weight: 300;
+  line-height: 1.65;
+}
+.mintta-confirmacion-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mintta-confirmacion-acciones button {
+  width: 100%;
+  min-height: 47px;
+  padding: 12px 18px;
+  border: 1px solid var(--text, #211E1B);
+  border-radius: 3px;
+  font-family: 'Jost', sans-serif;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .045em;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.mintta-btn-conservar {
+  background: var(--text, #211E1B);
+  color: var(--bg, #FAF6F0);
+}
+.mintta-btn-conservar:hover,
+.mintta-btn-conservar:focus-visible {
+  background: var(--accent, #A9825A);
+  border-color: var(--accent, #A9825A);
+  color: #fff;
+}
+.mintta-btn-eliminar {
+  background: transparent;
+  color: var(--text-muted, #6B5F4F);
+  border-color: rgba(169, 130, 90, .5) !important;
+}
+.mintta-btn-eliminar:hover,
+.mintta-btn-eliminar:focus-visible {
+  background: var(--bg-alt, #F1EAE0);
+  color: var(--text, #211E1B);
+}
+@keyframes mintta-fondo-aparece {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes mintta-tarjeta-aparece {
+  from { opacity: 0; transform: translateY(9px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (max-width: 420px) {
+  .mintta-confirmacion { padding: 30px 22px 23px; }
+}
