@@ -6740,3 +6740,35 @@ body.pagina-carrito #carrito-resumen {
 .cart-top-link .cart-count[hidden] {
   display: none !important;
 }
+
+
+/* =========================================================
+   DETALLE VISUAL PARA LA BOLSA VACÍA
+   ========================================================= */
+
+#carrito-vacio .carrito-vacio-icono {
+  display: block;
+  margin: 0 auto 14px;
+  color: #B58A72;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+#carrito-vacio p {
+  max-width: 560px;
+  margin: 0 auto 28px;
+  font-size: 2rem;
+}
+
+@media (max-width: 700px) {
+  #carrito-vacio .carrito-vacio-icono {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+  }
+
+  #carrito-vacio p {
+    font-size: 1.65rem;
+    margin-bottom: 24px;
+  }
+}
