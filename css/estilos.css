@@ -7086,7 +7086,7 @@ body:not(.pagina-carrito) > #coleccion {
 }
 
 /* Identidad global MINTTA: botones negros, con excepciones rojas definidas */
-button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-eliminar):not(.talla),
+button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-eliminar):not(.talla):not(.nombre-producto-boton),
 .btn-outline,
 .ver-todo,
 .btn-agregar,
@@ -7101,7 +7101,7 @@ button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-elimin
 #carrito-resumen button,
 .mintta-confirmacion-acciones button,
 .mintta-btn-conservar,
-button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-eliminar):not(.talla):hover,
+button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-eliminar):not(.talla):not(.nombre-producto-boton):hover,
 .btn-outline:hover,
 .ver-todo:hover,
 .btn-agregar:hover,
@@ -7225,4 +7225,80 @@ button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-elimin
   .grid-catalogo .producto h3 { font-size: .82rem !important; }
   .grid-productos .producto .precio,
   .grid-catalogo .producto .precio { font-size: .74rem !important; }
+}
+
+
+/* Corrección global: los nombres de prendas son texto, nunca botones ni tarjetas */
+button.nombre-producto-boton,
+.nombre-producto-boton,
+.producto-nuevo-card .nombre-producto-boton,
+.grid-productos .producto .nombre-producto-boton,
+.grid-catalogo .producto .nombre-producto-boton,
+.promo-card .promo-nombre {
+  display: block !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 9px 0 4px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  font-family: "Jost", sans-serif !important;
+  font-size: .88rem !important;
+  font-weight: 400 !important;
+  letter-spacing: .01rem !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  cursor: default !important;
+  transform: none !important;
+}
+button.nombre-producto-boton:hover,
+button.nombre-producto-boton:focus,
+button.nombre-producto-boton:focus-visible,
+button.nombre-producto-boton:active,
+.nombre-producto-boton:hover,
+.nombre-producto-boton:focus,
+.nombre-producto-boton:focus-visible,
+.nombre-producto-boton:active,
+.nombre-producto-boton.nombre-seleccionado {
+  border: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  transform: none !important;
+  outline: 0 !important;
+}
+
+/* Ningún producto se presenta dentro de una tarjeta blanca */
+.grid-productos .producto,
+.grid-catalogo .producto,
+.productos-nuevos .producto,
+.producto-nuevo-card,
+.promo-card {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+@media (max-width: 768px) {
+  button.nombre-producto-boton,
+  .nombre-producto-boton,
+  .producto-nuevo-card .nombre-producto-boton,
+  .grid-productos .producto .nombre-producto-boton,
+  .grid-catalogo .producto .nombre-producto-boton,
+  .promo-card .promo-nombre {
+    font-size: .82rem !important;
+  }
 }
