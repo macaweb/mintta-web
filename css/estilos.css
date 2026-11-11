@@ -6001,3 +6001,18 @@ body.menu-abierto {
 .menu-links .menu-catalogo > summary::after {
   color: #8B735B;
 }
+
+
+/* Ajuste solicitado: Catálogo destacado y sin adornos en las otras secciones */
+.menu-links .menu-catalogo > summary {
+  font-size: .9rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .08rem !important;
+  text-transform: uppercase !important;
+  color: #51483F !important;
+  -webkit-text-fill-color: #51483F !important;
+}
+.menu-links > a:nth-of-type(2)::after,
+.menu-links > a:nth-of-type(3)::after {
+  content: none !important;
+}
