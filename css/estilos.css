@@ -6087,3 +6087,87 @@ body.menu-abierto {
 .footer-social a.social-item:hover {
   opacity: .72;
 }
+
+/* Distribución equilibrada del footer y alineación uniforme de redes */
+.footer .footer-inner {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr) !important;
+  align-items: start !important;
+  gap: 48px !important;
+  max-width: 1120px !important;
+}
+.footer .footer-col {
+  position: static !important;
+  float: none !important;
+  width: auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+.footer .footer-col h3,
+.footer .footer-col h4 {
+  position: static !important;
+  display: block !important;
+  margin: 0 0 18px !important;
+  text-align: left !important;
+  transform: none !important;
+}
+.footer .footer-social {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 13px !important;
+}
+.footer .footer-social .social-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 11px !important;
+  min-height: 24px;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+.footer .footer-social .social-item i {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex: 0 0 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  text-align: center !important;
+}
+@media (max-width: 768px) {
+  .footer .footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 28px 22px !important;
+  }
+  .footer .footer-inner > .footer-col:first-child {
+    grid-column: 1 / -1 !important;
+  }
+  .footer .footer-col h3,
+  .footer .footer-col h4 {
+    font-size: .82rem !important;
+    letter-spacing: .07rem !important;
+    margin-bottom: 13px !important;
+  }
+  .footer .footer-col a,
+  .footer .footer-col p,
+  .footer .footer-social .social-item {
+    font-size: .82rem !important;
+  }
+  .footer .footer-social .social-item i {
+    flex-basis: 18px !important;
+    width: 18px !important;
+    height: 18px !important;
+    font-size: 17px !important;
+  }
+}
+@media (max-width: 360px) {
+  .footer .footer-inner { gap: 24px 14px !important; }
+  .footer .footer-col a,
+  .footer .footer-col p,
+  .footer .footer-social .social-item { font-size: .76rem !important; }
+}
