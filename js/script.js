@@ -52,85 +52,48 @@ function mostrarConfirmacionEliminar(alConfirmar) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-
-
   const menuBtn = document.querySelector(".menu-btn");
   const menuPanel = document.querySelector(".menu-panel");
   const menuOverlay = document.querySelector(".menu-overlay");
   const menuClose = document.querySelector(".menu-close");
 
+  if (!menuBtn || !menuPanel || !menuOverlay || !menuClose) return;
 
-  // Verifica que exista el menú en la página
+  let scrollGuardado = 0;
 
-  if (!menuBtn || !menuPanel || !menuOverlay || !menuClose) {
-    return;
-  }
-
-
-
-  /* =========================
-     ABRIR MENÚ
-     ========================= */
-
-  menuBtn.addEventListener("click", () => {
-
+  const abrirMenu = () => {
+    scrollGuardado = window.scrollY || window.pageYOffset;
+    document.body.style.top = `-${scrollGuardado}px`;
+    document.body.classList.add("menu-abierto");
     menuPanel.classList.add("active");
     menuOverlay.classList.add("active");
+    menuBtn.setAttribute("aria-expanded", "true");
+  };
 
-  });
+  const cerrarMenu = () => {
+    menuPanel.classList.remove("active");
+    menuOverlay.classList.remove("active");
+    document.body.classList.remove("menu-abierto");
+    document.body.style.top = "";
+    menuBtn.setAttribute("aria-expanded", "false");
+    window.scrollTo(0, scrollGuardado);
+  };
 
+  menuBtn.addEventListener("click", abrirMenu);
 
-
-  /* =========================
-     CERRAR CON X
-     ========================= */
-
-  // Cerrar el menú al elegir cualquier destino, dejando que el enlace navegue.
+  // Al elegir una categoría o sección, se cierra el menú y se permite navegar.
   menuPanel.querySelectorAll(".menu-links a").forEach((enlace) => {
-    enlace.addEventListener("click", () => {
-      menuPanel.classList.remove("active");
-      menuOverlay.classList.remove("active");
-    });
+    enlace.addEventListener("click", cerrarMenu);
   });
 
-  menuClose.addEventListener("click", () => {
-
-    menuPanel.classList.remove("active");
-    menuOverlay.classList.remove("active");
-
-  });
-
-
-
-  /* =========================
-     CERRAR AL TOCAR AFUERA
-     ========================= */
-
-  menuOverlay.addEventListener("click", () => {
-
-    menuPanel.classList.remove("active");
-    menuOverlay.classList.remove("active");
-
-  });
-
-
-
-  /* =========================
-     CERRAR CON ESC
-     ========================= */
+  menuClose.addEventListener("click", cerrarMenu);
+  menuOverlay.addEventListener("click", cerrarMenu);
 
   document.addEventListener("keydown", (e) => {
-
-    if (e.key === "Escape") {
-
-      menuPanel.classList.remove("active");
-      menuOverlay.classList.remove("active");
-
+    if (e.key === "Escape" && menuPanel.classList.contains("active")) {
+      cerrarMenu();
     }
-
   });
-
-
 });
 
 // ========================================
