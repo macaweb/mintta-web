@@ -6352,3 +6352,10 @@ body.pagina-carrito #carrito-resumen {
     margin-top: 18px;
   }
 }
+
+
+/* Notificación de piezas añadidas: lenguaje coherente con "Tu selección" */
+#mintta-toast {
+  max-width: min( calc(100vw - 32px), 390px);
+  text-align: center;
+}
