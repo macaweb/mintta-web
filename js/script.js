@@ -416,6 +416,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
           carrito[indice].cantidad -= 1;
 
+        } else {
+
+          const confirmarEliminar = window.confirm(
+            "Esta prenda está en cantidad 1. ¿Deseas eliminarla de tu selección?"
+          );
+
+          if (confirmarEliminar) {
+            carrito.splice(indice, 1);
+          } else {
+            return;
+          }
+
         }
 
       }
