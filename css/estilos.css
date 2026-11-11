@@ -6033,3 +6033,9 @@ body.menu-abierto {
 .menu-links .menu-catalogo > summary {
   font-weight: 400 !important;
 }
+
+
+/* Imagen de portada para Pijamas: reutiliza la fotografía existente de Pijama Luna */
+.categoria.pijamas {
+  background-image: url('../img/novedades/set_aveline.png');
+}
