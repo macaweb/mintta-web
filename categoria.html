@@ -6,7 +6,7 @@
   <title>Catálogo por categoría — Mintta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilos.css?v=52">
+  <link rel="stylesheet" href="css/estilos.css?v=53">
 </head>
 <body>
   <header class="header">
@@ -120,7 +120,7 @@
     const nombre = nombres[slug] || "Catálogo";
     document.title = nombre + " — Mintta";
     document.getElementById("titulo-categoria").textContent = nombre;
-    document.getElementById("subtitulo-categoria").textContent = "Explora nuestra colección de " + nombre.toLowerCase() + ".";
+    document.getElementById("subtitulo-categoria").textContent = "Descubre las piezas de nuestra colección de " + nombre.toLowerCase() + ".";
     const grid = document.getElementById("grid-productos");
     try {
       const respuesta = await fetch("data/productos.json");
