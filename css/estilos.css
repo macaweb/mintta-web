@@ -6050,3 +6050,14 @@ body.menu-abierto {
   text-shadow: none !important;
   -webkit-text-stroke: 0 !important;
 }
+
+/* Tallas Mintta: tipografía normal tanto en estado disponible como seleccionado */
+.talla,
+.producto-nuevo-card .talla,
+.grid-productos .producto .talla,
+.promo-card .talla,
+.talla.selected,
+.producto-nuevo-card .talla.selected,
+.grid-productos .producto .talla.selected {
+  font-weight: 400 !important;
+}
