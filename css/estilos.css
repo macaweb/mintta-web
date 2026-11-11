@@ -6448,3 +6448,26 @@ body.pagina-carrito #carrito-resumen {
   color: #D92D20 !important;
 }
 
+
+
+/* Catálogo en celular: más aire entre prendas y tallas compactas */
+@media (max-width: 768px) {
+  .grid-productos,
+  .grid-catalogo {
+    row-gap: 30px !important;
+  }
+
+  .grid-productos .producto .tallas,
+  .grid-catalogo .producto .tallas {
+    gap: 7px !important;
+  }
+
+  .grid-productos .producto .talla,
+  .grid-catalogo .producto .talla {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    font-size: .72rem !important;
+    line-height: 1 !important;
+  }
+}
