@@ -5060,3 +5060,12 @@ a.ver-todo:visited:active {
   opacity: 1 !important;
   filter: none !important;
 }
+
+
+/* Subtítulo de portada: más delicado y diferenciado del titular. */
+body:not(.pagina-carrito) .hero-subtitle {
+  font-weight: 300 !important;
+  font-size: .96rem;
+  letter-spacing: .018em;
+  color: #62584f !important;
+}
