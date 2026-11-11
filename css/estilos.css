@@ -5026,3 +5026,16 @@ a.ver-todo:visited:active {
 
 /* Etiqueta de promoción con contraste para destacar sobre las prendas. */
 .promo-etiqueta { background:#7B3029; color:#FFF9F2; border-radius:3px; font-weight:500; box-shadow:0 2px 8px rgba(67,32,24,.14); }
+
+
+/* Nombres y precios de prendas con peso tipográfico regular en todo el sitio. */
+.nombre-producto-boton,
+.producto-nuevo-card .nombre-producto-boton,
+.grid-productos .producto .nombre-producto-boton,
+.producto-nuevo-card .precio,
+.grid-productos .producto .precio,
+.promo-card .promo-nombre,
+.promo-card .precio {
+  font-weight: 400 !important;
+  text-decoration: none !important;
+}
