@@ -4991,3 +4991,30 @@ a.ver-todo:visited:active {
   .faq-item summary { font-size:.88rem; padding:17px 30px 17px 2px; }
   .faq-item p { font-size:.84rem; }
 }
+
+
+/* Ajuste de promociones: prendas centradas como conjunto */
+.promociones-home .promo-grid {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(2, minmax(0, 300px));
+  justify-content: center;
+  gap: 24px;
+}
+.promociones-home .promo-card {
+  align-items: center;
+  text-align: center;
+}
+.promociones-home .promo-card .producto-foto-wrap {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .promociones-home .promo-grid {
+    max-width: 620px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    gap: 16px 12px;
+  }
+}
