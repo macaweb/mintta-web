@@ -7619,3 +7619,177 @@ body:not(.pagina-carrito) .hero a.btn-outline:focus-visible {
   .grid-categorias a.categoria:hover { background-size: 48px 64px !important; }
   .grid-categorias a.categoria span { font-size: .78rem !important; }
 }
+
+
+/* =========================================================
+   MINTTA — CATEGORÍAS EDITORIALES CON ZOOM Y PROFUNDIDAD
+   ========================================================= */
+.grid-categorias {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: clamp(14px, 2vw, 24px) !important;
+  max-width: 1240px !important;
+  margin: 34px auto 0 !important;
+  counter-reset: none !important;
+}
+.grid-categorias .categoria-contenedor {
+  overflow: hidden !important;
+  border-radius: 3px !important;
+  perspective: 1000px;
+  background: #E8DED1 !important;
+}
+.grid-categorias a.categoria {
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  position: relative !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  aspect-ratio: 3 / 4 !important;
+  overflow: hidden !important;
+  padding: 22px 18px !important;
+  border: 0 !important;
+  border-radius: 3px !important;
+  background-color: #E8DED1 !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% 100% !important;
+  box-shadow: 0 9px 24px rgba(33,30,27,.10) !important;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+  transition: transform .55s cubic-bezier(.2,.7,.2,1), background-size .75s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease !important;
+  -webkit-tap-highlight-color: transparent;
+}
+.grid-categorias a.categoria::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(20,17,14,0) 42%, rgba(20,17,14,.08) 57%, rgba(20,17,14,.72) 100%);
+  opacity: .92;
+  transition: opacity .45s ease, background-position .45s ease;
+}
+.grid-categorias a.categoria span {
+  position: relative !important;
+  z-index: 1;
+  display: block !important;
+  width: 100%;
+  margin: 0 !important;
+  color: #fff !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: clamp(1.35rem, 2vw, 2rem) !important;
+  font-weight: 500 !important;
+  letter-spacing: .045rem !important;
+  line-height: 1 !important;
+  text-align: left !important;
+  text-transform: uppercase !important;
+  text-shadow: 0 2px 12px rgba(0,0,0,.24);
+  transform: translateZ(28px);
+  transition: transform .45s cubic-bezier(.2,.7,.2,1), letter-spacing .45s ease !important;
+}
+.grid-categorias a.categoria span::before {
+  content: "EXPLORAR";
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,.84);
+  font-family: "Jost", sans-serif;
+  font-size: .58rem;
+  font-weight: 400;
+  letter-spacing: .2rem;
+}
+.grid-categorias a.categoria::after {
+  content: "↗";
+  position: absolute;
+  z-index: 2;
+  right: 16px;
+  bottom: 19px;
+  color: #fff;
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: .9;
+  transform: translateZ(34px);
+  transition: transform .4s ease, opacity .4s ease;
+}
+.grid-categorias a.categoria:hover {
+  background-size: 112% 112% !important;
+  box-shadow: 0 18px 34px rgba(33,30,27,.18) !important;
+  transform: perspective(1000px) rotateX(1.2deg) scale(1.025) !important;
+}
+.grid-categorias a.categoria:hover::before {
+  opacity: 1;
+}
+.grid-categorias a.categoria:hover span {
+  letter-spacing: .075rem !important;
+  transform: translate3d(0,-5px,34px);
+}
+.grid-categorias a.categoria:hover::after {
+  opacity: 1;
+  transform: translate3d(3px,-4px,38px);
+}
+.grid-categorias a.categoria:focus-visible {
+  outline: 3px solid #A9957C !important;
+  outline-offset: 4px;
+}
+.grid-categorias .categoria-contenedor > span { display: none !important; }
+
+/* Catálogo completo: tres columnas amplias en escritorio */
+.page-header + .categorias .grid-categorias {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(18px, 2.4vw, 30px) !important;
+}
+@media (max-width: 900px) {
+  .grid-categorias,
+  .page-header + .categorias .grid-categorias {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 15px !important;
+  }
+}
+@media (max-width: 768px) {
+  .grid-categorias,
+  .page-header + .categorias .grid-categorias {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+  }
+  .grid-categorias a.categoria {
+    aspect-ratio: 3 / 4 !important;
+    padding: 14px 11px !important;
+    background-size: 100% 100% !important;
+    box-shadow: 0 5px 15px rgba(33,30,27,.09) !important;
+  }
+  .grid-categorias a.categoria span {
+    font-size: clamp(1.05rem, 4.3vw, 1.35rem) !important;
+    letter-spacing: .025rem !important;
+  }
+  .grid-categorias a.categoria span::before {
+    margin-bottom: 6px;
+    font-size: .49rem;
+    letter-spacing: .15rem;
+  }
+  .grid-categorias a.categoria::after {
+    right: 10px;
+    bottom: 13px;
+    font-size: .85rem;
+  }
+  .grid-categorias a.categoria:active {
+    transform: scale(.965) !important;
+    box-shadow: 0 2px 7px rgba(33,30,27,.16) !important;
+  }
+}
+@media (hover: none) {
+  .grid-categorias a.categoria:hover {
+    transform: none !important;
+    background-size: 100% 100% !important;
+  }
+  .grid-categorias a.categoria:active span {
+    transform: translate3d(0,-3px,24px) !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .grid-categorias a.categoria,
+  .grid-categorias a.categoria span,
+  .grid-categorias a.categoria::after,
+  .grid-categorias a.categoria::before {
+    transition: none !important;
+  }
+}
