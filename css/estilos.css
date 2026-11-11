@@ -5238,3 +5238,103 @@ body:not(.pagina-carrito) .hero-subtitle {
     line-height: 1.55;
   }
 }
+
+
+/* Footer móvil: acabado editorial y compacto; escritorio sin cambios. */
+@media (max-width: 700px) {
+  .footer {
+    padding: 34px 22px 20px;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    max-width: 440px;
+    margin: 0 auto 18px;
+    text-align: left !important;
+  }
+
+  .footer-col {
+    width: 100%;
+    padding: 15px 0;
+    text-align: left !important;
+    border-bottom: 1px solid rgba(169, 130, 90, .22);
+  }
+
+  .footer-col:first-child { padding-top: 0; }
+  .footer-col:last-child { border-bottom: 0; padding-bottom: 13px; }
+
+  .footer-col h3,
+  .footer-col h4,
+  .footer-col p,
+  .footer-col a {
+    text-align: left !important;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .footer-col h3 {
+    margin: 0 0 3px;
+    font-size: 1.8rem;
+    letter-spacing: .2em;
+  }
+
+  .footer-col:first-child p {
+    color: #76695C;
+    font-size: .86rem;
+    letter-spacing: .015em;
+  }
+
+  .footer-col h4 {
+    margin: 0 0 8px;
+    color: #6F523A;
+    font-family: 'Jost', sans-serif;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+
+  .footer-col a:not(.footer-whatsapp) {
+    display: block;
+    width: fit-content;
+    margin-top: 5px;
+    color: #51463B;
+    font-size: .84rem;
+    line-height: 1.45;
+    text-decoration: none;
+  }
+
+  .footer-col a:not(.footer-whatsapp):active {
+    color: #A9825A;
+  }
+
+  .footer-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    width: fit-content;
+    color: #51463B;
+    font-size: .88rem;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+
+  .footer-whatsapp i {
+    color: #7B8B63;
+    font-size: 1.05rem;
+  }
+
+  .footer .copy {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 15px 0 0;
+    border-top: 1px solid rgba(169, 130, 90, .22);
+    color: #82776B;
+    text-align: center !important;
+    font-size: .68rem;
+    line-height: 1.5;
+    letter-spacing: .015em;
+  }
+}
