@@ -6016,3 +6016,13 @@ body.menu-abierto {
 .menu-links > a:nth-of-type(3)::after {
   content: none !important;
 }
+
+
+/* Igualar el peso visual de las cuatro opciones principales del menú */
+.menu-links > a:nth-of-type(1),
+.menu-links > a:nth-of-type(2),
+.menu-links > a:nth-of-type(3) {
+  font-size: .9rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .08rem !important;
+}
