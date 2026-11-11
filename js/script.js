@@ -253,6 +253,7 @@ function mostrarCarrito() {
   const seguirComprando = document.getElementById("carrito-seguir-comprando");
   const carritoResumen = document.getElementById("carrito-resumen");
   const totalElemento = document.getElementById("carrito-total");
+  const mensajeCarrito = document.getElementById("mensaje-carrito");
 
   // Si no estamos en la página del carrito, no hacemos nada
   if (!contenedor) {
@@ -260,6 +261,9 @@ function mostrarCarrito() {
   }
 
   const carrito = JSON.parse(localStorage.getItem("minttaCarrito")) || [];
+
+  // El mensaje introductorio solo aparece cuando hay prendas seleccionadas.
+  if (mensajeCarrito) mensajeCarrito.hidden = carrito.length === 0;
 
   // Carrito vacío
   if (carrito.length === 0) {
