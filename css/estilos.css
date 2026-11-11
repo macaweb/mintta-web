@@ -7138,9 +7138,3 @@ button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-elimin
   -webkit-text-fill-color: #fff !important;
 }
 
-
-/* Icono flotante de WhatsApp en su verde oficial */
-.whatsapp-btn .fa-whatsapp {
-  color: #25D366 !important;
-  -webkit-text-fill-color: #25D366 !important;
-}
