@@ -189,6 +189,7 @@ function actualizarContadorCarrito() {
   }, 0);
   document.querySelectorAll("[data-cart-count]").forEach(function (contador) {
     contador.textContent = cantidadTotal;
+    contador.hidden = cantidadTotal === 0;
   });
   document.querySelectorAll(".cart-float").forEach(function (enlace) {
     enlace.classList.toggle("is-visible", cantidadTotal > 0);
@@ -731,9 +732,9 @@ document.addEventListener("click", function (event) {
     });
     if (!agregado) return;
 
-    const textoOriginal = boton.dataset.textoOriginal || boton.textContent.trim() || "Agregar al carrito";
+    const textoOriginal = boton.dataset.textoOriginal || boton.textContent.trim() || "Agregar";
     boton.dataset.textoOriginal = textoOriginal;
-    boton.textContent = "¡Agregado al carrito!";
+    boton.textContent = "¡Agregado!";
     boton.classList.add("agregado-confirmado");
     boton.setAttribute("aria-live", "polite");
     if (boton._minttaReset) window.clearTimeout(boton._minttaReset);
