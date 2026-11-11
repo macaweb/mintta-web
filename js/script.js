@@ -789,7 +789,7 @@ document.addEventListener("click", function (event) {
       aviso.setAttribute("aria-live", "polite");
       document.body.appendChild(aviso);
     }
-    aviso.textContent = "✓  " + nombre + " se agregó al carrito";
+    aviso.textContent = "✓  " + nombre + " se añadió a tu selección";
     aviso.classList.add("visible");
     if (aviso._minttaReset) window.clearTimeout(aviso._minttaReset);
     aviso._minttaReset = window.setTimeout(function () {
