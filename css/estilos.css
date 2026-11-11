@@ -7084,3 +7084,56 @@ body:not(.pagina-carrito) > #coleccion {
     padding-bottom: 40px !important;
   }
 }
+
+/* Identidad global MINTTA: botones negros, con excepciones rojas definidas */
+button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-eliminar),
+.btn-outline,
+.ver-todo,
+.btn-agregar,
+.btn-vista,
+.volver,
+.btn-continuar-pago,
+.btn-enviar-whatsapp,
+.cart-float,
+.whatsapp-btn,
+#carrito-vacio a,
+#carrito-seguir-comprando a,
+#carrito-resumen button,
+.mintta-confirmacion-acciones button,
+.mintta-btn-conservar,
+.talla,
+.producto-nuevo-card .talla,
+.grid-productos .producto .talla,
+.grid-catalogo .producto .talla,
+.promo-card .talla {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+  -webkit-text-fill-color: #fff !important;
+}
+button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-eliminar):hover,
+.btn-outline:hover,
+.ver-todo:hover,
+.btn-agregar:hover,
+.btn-vista:hover,
+.volver:hover,
+.btn-continuar-pago:hover,
+.btn-enviar-whatsapp:hover,
+#carrito-vacio a:hover,
+#carrito-seguir-comprando a:hover,
+#carrito-resumen button:hover,
+.mintta-confirmacion-acciones button:hover,
+.mintta-btn-conservar:hover,
+.talla:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-color: #000 !important;
+  -webkit-text-fill-color: #fff !important;
+}
+.btn-eliminar,
+.mintta-btn-eliminar {
+  background-color: #D92D20 !important;
+  color: #fff !important;
+  border-color: #D92D20 !important;
+  -webkit-text-fill-color: #fff !important;
+}
