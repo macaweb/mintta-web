@@ -6,7 +6,7 @@
   <title>Catálogo por categoría — Mintta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilos.css?v=29">
+  <link rel="stylesheet" href="css/estilos.css?v=30">
 </head>
 <body>
   <header class="header">
@@ -39,10 +39,12 @@
   <aside class="menu-panel">
     <div class="menu-panel-header"><a class="menu-panel-logo" href="index.html">MINTTA</a><button class="menu-close" aria-label="Cerrar menú" type="button">×</button></div>
     <nav class="menu-links">
-    <a href="index.html#novedades">Nuevas piezas</a>
-    <a href="index.html#coleccion">Lo Más Vendido</a>
-    <a href="promociones.html">Promociones</a>
-    <a href="index.html#preguntas-frecuentes">Preguntas frecuentes</a>
+    <a href="./index.html">Inicio</a>
+    <a href="./catalogo.html">Catálogo</a>
+    <a href="./promociones.html">Promociones</a>
+    <a href="./index.html#novedades">Nuevas piezas</a>
+    <a href="./index.html#coleccion">Lo Más Vendido</a>
+    <a href="./index.html#preguntas-frecuentes">Preguntas frecuentes</a>
   </nav>
   </aside>
   <section class="page-header">
@@ -67,7 +69,7 @@
   <script src="js/script.js?v=4"></script>
   <script>
   document.addEventListener("DOMContentLoaded", async () => {
-    const nombres = {pantalones:"Pantalones",conjuntos:"Conjuntos",blusas:"Blusas",tops:"Tops",bodies:"Bodies",camisas:"Camisas",corsets:"Corsets",blazers:"Blazers",tejidos:"Tejidos",gabanes:"Gabanes",deportivo:"Deportivo",faldas:"Faldas",shorts:"Shorts",vestidos:"Vestidos",playa:"Playa",accesorios:"Accesorios"};
+    const nombres = {pantalones:"Pantalones",conjuntos:"Conjuntos",blusas:"Blusas",tops:"Tops",bodies:"Bodies",camisas:"Camisas",corsets:"Corsets",blazers:"Blazers",tejidos:"Tejidos",gabanes:"Gabanes",deportivo:"Deportivo",faldas:"Faldas",shorts:"Shorts",vestidos:"Vestidos",playa:"Playa",};
     const slug = new URLSearchParams(window.location.search).get("slug") || "conjuntos";
     const nombre = nombres[slug] || "Catálogo";
     document.title = nombre + " — Mintta";
