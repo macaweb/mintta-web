@@ -767,3 +767,15 @@ document.addEventListener("click", function (event) {
     }, 2200);
   }, 0);
 });
+
+
+// Navegación directa del botón "Ver más" de promociones.
+document.addEventListener("DOMContentLoaded", function () {
+  const verMasPromociones = document.querySelector(".promo-ver-mas");
+  if (!verMasPromociones) return;
+  verMasPromociones.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.assign("https://mintta-web.pages.dev/promociones.html");
+  });
+});
+
