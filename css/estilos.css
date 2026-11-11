@@ -6438,3 +6438,13 @@ body.pagina-carrito #carrito-resumen {
   font-size: .7rem !important;
 }
 
+/* Color de acento para las promociones */
+.promo-etiqueta {
+  background: #D92D20 !important;
+  color: #FFFFFF !important;
+}
+
+.menu-links > a:nth-of-type(1)::after {
+  color: #D92D20 !important;
+}
+
