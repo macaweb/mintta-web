@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
      CERRAR CON X
      ========================= */
 
-  menuClose.addEventListener("click", () => {
+  menuPanel.querySelectorAll(".menu-links a").forEach((enlace) => {\n    enlace.addEventListener("click", () => {\n      menuPanel.classList.remove("active");\n      menuOverlay.classList.remove("active");\n    });\n  });\n\n  menuClose.addEventListener("click", () => {
 
     menuPanel.classList.remove("active");
     menuOverlay.classList.remove("active");
