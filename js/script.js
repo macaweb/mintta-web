@@ -1,3 +1,51 @@
+
+/* ========================================
+   CONFIRMACIÓN PERSONALIZADA DE MINTTA
+   ======================================== */
+function mostrarConfirmacionEliminar(alConfirmar) {
+  const anterior = document.getElementById("mintta-confirmacion-overlay");
+  if (anterior) anterior.remove();
+
+  const overlay = document.createElement("div");
+  overlay.id = "mintta-confirmacion-overlay";
+  overlay.className = "mintta-confirmacion-overlay";
+  overlay.innerHTML = `
+    <section class="mintta-confirmacion" role="dialog" aria-modal="true" aria-labelledby="mintta-confirmacion-titulo" aria-describedby="mintta-confirmacion-texto">
+      <span class="mintta-confirmacion-detalle">MINTTA · TU SELECCIÓN</span>
+      <h2 id="mintta-confirmacion-titulo">¿Deseas retirar esta prenda?</h2>
+      <p id="mintta-confirmacion-texto">Esta es la última unidad que tienes seleccionada. Puedes conservarla o quitarla de tu selección.</p>
+      <div class="mintta-confirmacion-acciones">
+        <button type="button" class="mintta-btn-conservar">Conservar prenda</button>
+        <button type="button" class="mintta-btn-eliminar">Sí, eliminar</button>
+      </div>
+    </section>
+  `;
+
+  document.body.appendChild(overlay);
+  document.body.classList.add("mintta-modal-abierto");
+
+  const cerrar = function () {
+    overlay.remove();
+    document.body.classList.remove("mintta-modal-abierto");
+    document.removeEventListener("keydown", manejarEscape);
+  };
+
+  const manejarEscape = function (evento) {
+    if (evento.key === "Escape") cerrar();
+  };
+
+  overlay.querySelector(".mintta-btn-conservar").addEventListener("click", cerrar);
+  overlay.querySelector(".mintta-btn-eliminar").addEventListener("click", function () {
+    cerrar();
+    alConfirmar();
+  });
+  overlay.addEventListener("click", function (evento) {
+    if (evento.target === overlay) cerrar();
+  });
+  document.addEventListener("keydown", manejarEscape);
+  overlay.querySelector(".mintta-btn-conservar").focus();
+}
+
 /* =========================================================
    MENÚ LATERAL
    ========================================================= */
@@ -418,15 +466,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         } else {
 
-          const confirmarEliminar = window.confirm(
-            "Esta prenda está en cantidad 1. ¿Deseas eliminarla de tu selección?"
-          );
+          mostrarConfirmacionEliminar(function () {
+            const carritoActual =
+              JSON.parse(localStorage.getItem("minttaCarrito")) || [];
 
-          if (confirmarEliminar) {
-            carrito.splice(indice, 1);
-          } else {
-            return;
-          }
+            if (!carritoActual[indice]) return;
+
+            carritoActual.splice(indice, 1);
+            localStorage.setItem("minttaCarrito", JSON.stringify(carritoActual));
+            actualizarContadorCarrito();
+            mostrarCarrito();
+          });
+
+          return;
 
         }
 
