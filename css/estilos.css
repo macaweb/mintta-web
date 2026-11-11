@@ -7086,7 +7086,7 @@ body:not(.pagina-carrito) > #coleccion {
 }
 
 /* Identidad global MINTTA: botones negros, con excepciones rojas definidas */
-button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-eliminar),
+button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-eliminar):not(.talla),
 .btn-outline,
 .ver-todo,
 .btn-agregar,
@@ -7101,17 +7101,7 @@ button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-elimin
 #carrito-resumen button,
 .mintta-confirmacion-acciones button,
 .mintta-btn-conservar,
-.talla,
-.producto-nuevo-card .talla,
-.grid-productos .producto .talla,
-.grid-catalogo .producto .talla,
-.promo-card .talla {
-  background-color: #000 !important;
-  color: #fff !important;
-  border-color: #000 !important;
-  -webkit-text-fill-color: #fff !important;
-}
-button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-eliminar):hover,
+button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-eliminar):not(.talla):hover,
 .btn-outline:hover,
 .ver-todo:hover,
 .btn-agregar:hover,
@@ -7138,3 +7128,101 @@ button:not(.menu-btn):not(.menu-close):not(.mintta-btn-eliminar):not(.btn-elimin
   -webkit-text-fill-color: #fff !important;
 }
 
+
+
+/* Catálogo MINTTA: fichas limpias, sin tarjetas blancas */
+.grid-productos .producto,
+.grid-catalogo .producto {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 0 12px !important;
+}
+
+/* Nombres y precios con la misma tipografía sutil de Inicio */
+.grid-productos .producto .nombre-producto-boton,
+.grid-catalogo .producto .nombre-producto-boton,
+.grid-productos .producto h3,
+.grid-catalogo .producto h3 {
+  display: block !important;
+  width: 100% !important;
+  margin: 9px 0 4px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  font-family: "Jost", sans-serif !important;
+  font-size: .88rem !important;
+  font-weight: 400 !important;
+  letter-spacing: .01rem !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+  text-transform: none !important;
+}
+.grid-productos .producto .precio,
+.grid-catalogo .producto .precio {
+  margin: 0 0 10px !important;
+  color: #5F554B !important;
+  -webkit-text-fill-color: #5F554B !important;
+  font-family: "Jost", sans-serif !important;
+  font-size: .78rem !important;
+  font-weight: 400 !important;
+  text-align: left !important;
+}
+
+/* Tallas en recuadros claros, sin el estilo negro de los botones generales */
+.grid-productos .producto .talla,
+.grid-catalogo .producto .talla,
+.producto-nuevo-card .talla,
+.promo-card .talla {
+  width: 32px !important;
+  min-width: 32px !important;
+  height: 32px !important;
+  min-height: 32px !important;
+  padding: 0 !important;
+  border: 1px solid #B9A58D !important;
+  border-radius: 3px !important;
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  color: #5F554B !important;
+  -webkit-text-fill-color: #5F554B !important;
+  box-shadow: none !important;
+  font-family: "Jost", sans-serif !important;
+  font-size: .68rem !important;
+  font-weight: 400 !important;
+}
+.grid-productos .producto .talla:hover,
+.grid-catalogo .producto .talla:hover,
+.producto-nuevo-card .talla:hover,
+.promo-card .talla:hover {
+  background: #F5F0E9 !important;
+  background-color: #F5F0E9 !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  border-color: #A9957C !important;
+}
+.grid-productos .producto .talla.selected,
+.grid-catalogo .producto .talla.selected,
+.producto-nuevo-card .talla.selected,
+.promo-card .talla.selected {
+  background: #EDE5DA !important;
+  background-color: #EDE5DA !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  border-color: #A9957C !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+@media (max-width: 768px) {
+  .grid-productos .producto .nombre-producto-boton,
+  .grid-catalogo .producto .nombre-producto-boton,
+  .grid-productos .producto h3,
+  .grid-catalogo .producto h3 { font-size: .82rem !important; }
+  .grid-productos .producto .precio,
+  .grid-catalogo .producto .precio { font-size: .74rem !important; }
+}
