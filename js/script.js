@@ -13,9 +13,9 @@ function mostrarConfirmacionEliminar(alConfirmar) {
     <section class="mintta-confirmacion" role="dialog" aria-modal="true" aria-labelledby="mintta-confirmacion-titulo" aria-describedby="mintta-confirmacion-texto">
       <span class="mintta-confirmacion-detalle">MINTTA · TU SELECCIÓN</span>
       <h2 id="mintta-confirmacion-titulo">¿Deseas retirar esta prenda?</h2>
-      <p id="mintta-confirmacion-texto">Esta es la última unidad que tienes seleccionada. Puedes conservarla o quitarla de tu selección.</p>
+      <p id="mintta-confirmacion-texto">Es la última unidad seleccionada.</p>
       <div class="mintta-confirmacion-acciones">
-        <button type="button" class="mintta-btn-conservar">Conservar prenda</button>
+        <button type="button" class="mintta-btn-conservar">Mantener</button>
         <button type="button" class="mintta-btn-eliminar">Sí, eliminar</button>
       </div>
     </section>
