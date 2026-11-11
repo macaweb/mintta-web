@@ -250,6 +250,7 @@ function mostrarCarrito() {
 
   const contenedor = document.getElementById("carrito-contenido");
   const carritoVacio = document.getElementById("carrito-vacio");
+  const seguirComprando = document.getElementById("carrito-seguir-comprando");
   const carritoResumen = document.getElementById("carrito-resumen");
   const totalElemento = document.getElementById("carrito-total");
 
@@ -266,12 +267,14 @@ function mostrarCarrito() {
     contenedor.innerHTML = "";
 
     carritoVacio.style.display = "block";
+    if (seguirComprando) seguirComprando.style.display = "none";
     carritoResumen.style.display = "none";
 
     return;
   }
 
   carritoVacio.style.display = "none";
+  if (seguirComprando) seguirComprando.style.display = "block";
   carritoResumen.style.display = "block";
 
   let total = 0;
