@@ -6,7 +6,7 @@
   <title>Catálogo por categoría — Mintta</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/estilos.css?v=26">
+  <link rel="stylesheet" href="css/estilos.css?v=27">
 </head>
 <body>
   <header class="header">
@@ -41,7 +41,7 @@
     <nav class="menu-links">
     <a href="index.html#novedades">Nuevas piezas</a>
     <a href="index.html#coleccion">Lo Más Vendido</a>
-    <a href="index.html#guia-tallas">Guía de tallas</a>
+    <a href="index.html#promociones">Promociones</a>
     <a href="index.html#preguntas-frecuentes">Preguntas frecuentes</a>
   </nav>
   </aside>
@@ -67,7 +67,7 @@
   <script src="js/script.js?v=4"></script>
   <script>
   document.addEventListener("DOMContentLoaded", async () => {
-    const nombres = {conjuntos:"Conjuntos",blusas:"Blusas",tops:"Tops",bodies:"Bodies",camisas:"Camisas",corsets:"Corsets",blazers:"Blazers",tejidos:"Tejidos",gabanes:"Gabanes",deportivo:"Deportivo",faldas:"Faldas",shorts:"Shorts",vestidos:"Vestidos",playa:"Playa",accesorios:"Accesorios"};
+    const nombres = {pantalones:"Pantalones",conjuntos:"Conjuntos",blusas:"Blusas",tops:"Tops",bodies:"Bodies",camisas:"Camisas",corsets:"Corsets",blazers:"Blazers",tejidos:"Tejidos",gabanes:"Gabanes",deportivo:"Deportivo",faldas:"Faldas",shorts:"Shorts",vestidos:"Vestidos",playa:"Playa",accesorios:"Accesorios"};
     const slug = new URLSearchParams(window.location.search).get("slug") || "conjuntos";
     const nombre = nombres[slug] || "Catálogo";
     document.title = nombre + " — Mintta";
@@ -86,7 +86,7 @@
         card.className = "producto";
         const slugProducto = p.nombre.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
         card.id = "producto-" + slugProducto;
-        const imagen = "img/" + slug + ".png";
+        const imagen = p.imagen || ("img/" + slug + ".png");
         const precio = Number(p.precio || 0);
         card.innerHTML = '<div class="producto-img"><img src="' + imagen + '" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>' +
           '<button type="button" class="nombre-producto-boton" aria-pressed="false"></button><p class="precio"></p><div class="tallas"></div><button class="btn-agregar" type="button">Agregar al carrito</button>';
