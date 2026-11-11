@@ -6026,3 +6026,10 @@ body.menu-abierto {
   font-weight: 700 !important;
   letter-spacing: .08rem !important;
 }
+
+
+/* Menú principal sin negrita: todas las opciones con el mismo peso ligero */
+.menu-links > a,
+.menu-links .menu-catalogo > summary {
+  font-weight: 400 !important;
+}
