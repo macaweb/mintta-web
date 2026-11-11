@@ -770,57 +770,5 @@
     "tallas": [
       "Única"
     ]
-  },
-  {
-    "id": 61,
-    "nombre": "Pantalón Blue",
-    "categoria": "pantalones",
-    "categoriaNombre": "Pantalones",
-    "precio": 139900,
-    "imagen": "/img/productos/pantalones/pantalon-01.jpg",
-    "tallas": [
-      "S",
-      "M",
-      "L"
-    ]
-  },
-  {
-    "id": 62,
-    "nombre": "Pantalón Siena",
-    "categoria": "pantalones",
-    "categoriaNombre": "Pantalones",
-    "precio": 149900,
-    "imagen": "/img/productos/pantalones/pantalon-02.jpg",
-    "tallas": [
-      "S",
-      "M",
-      "L"
-    ]
-  },
-  {
-    "id": 63,
-    "nombre": "Pantalón Verona",
-    "categoria": "pantalones",
-    "categoriaNombre": "Pantalones",
-    "precio": 159900,
-    "imagen": "/img/productos/pantalones/pantalon-03.jpg",
-    "tallas": [
-      "S",
-      "M",
-      "L"
-    ]
-  },
-  {
-    "id": 64,
-    "nombre": "Jean Aurora",
-    "categoria": "pantalones",
-    "categoriaNombre": "Pantalones",
-    "precio": 169900,
-    "imagen": "/img/productos/pantalones/pantalon-04.jpg",
-    "tallas": [
-      "S",
-      "M",
-      "L"
-    ]
   }
 ]
