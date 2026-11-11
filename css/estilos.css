@@ -7805,3 +7805,14 @@ body:not(.pagina-carrito) .hero a.btn-outline:focus-visible {
 .grid-categorias a.categoria.is-opening span {
   transform: translate3d(0,-5px,34px) !important;
 }
+
+
+/* Ajuste visual: quitar flecha y palabra "Explorar" de las categorías */
+.grid-categorias a.categoria::after {
+  content: none !important;
+  display: none !important;
+}
+.grid-categorias a.categoria span::before {
+  content: none !important;
+  display: none !important;
+}
