@@ -5162,3 +5162,10 @@ body:not(.pagina-carrito) .hero-subtitle {
 @media (max-width: 420px) {
   .mintta-confirmacion { padding: 30px 22px 23px; }
 }
+
+/* Imagen de portada de la categoría Pantalones: ruta absoluta y caché renovada */
+.grid-categorias .categoria-contenedor > a.categoria.pantalones {
+  background-image: url('/img/pantalones.jpg?v=2') !important;
+  background-size: cover;
+  background-position: center;
+}
