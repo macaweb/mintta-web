@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lo Nuevo — Mintta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css?v=54">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">MINTTA</a>
+      <div class="main-nav">
+      <a href="index.html">Inicio</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="carrito.html" class="cart-top-link" id="enlace-carrito" aria-label="Ver bolsa de compras">
+        <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 8h14l1 13H4L5 8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M9 9V6a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        <span class="cart-label">Bolsa</span><span class="cart-count" data-cart-count hidden>0</span>
+      </a>
+      <button class="menu-btn" aria-label="Abrir menú" type="button"><span></span><span></span><span></span></button>
+    </div>
+    </div>
+  </header>
+
+<a href="carrito.html" class="cart-float" aria-label="Ir a la bolsa de compras">
+  <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 8h14l1 13H4L5 8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M9 9V6a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+  <span class="cart-float-label">Ver bolsa</span><span class="cart-count" data-cart-count hidden>0</span>
+</a>
+
+  <div class="menu-overlay"></div>
+  <aside class="menu-panel">
+    <div class="menu-panel-header"><a class="menu-panel-logo" href="index.html">MINTTA</a><button class="menu-close" aria-label="Cerrar menú" type="button">×</button></div>
+    <nav class="menu-links">
+      <a href="./promociones.html">Descuentos</a>
+      <a href="./index.html#novedades">Lo Nuevo</a>
+      <a href="./index.html#coleccion">Lo Más Vendido</a>
+      <details class="menu-catalogo">
+        <summary>Catálogo</summary>
+        <div class="menu-catalogo-lista">
+          <a href="./categoria.html?slug=conjuntos">Conjuntos</a>
+          <a href="./categoria.html?slug=blusas">Blusas</a>
+          <a href="./categoria.html?slug=tops">Tops</a>
+          <a href="./categoria.html?slug=bodies">Bodies</a>
+          <a href="./categoria.html?slug=camisas">Camisas</a>
+          <a href="./categoria.html?slug=corsets">Corsets</a>
+          <a href="./categoria.html?slug=blazers">Blazers</a>
+          <a href="./categoria.html?slug=tejidos">Tejido</a>
+          <a href="./categoria.html?slug=gabanes">Gabanes</a>
+          <a href="./categoria.html?slug=deportivo">Deportivo</a>
+          <a href="./categoria.html?slug=faldas">Faldas</a>
+          <a href="./categoria.html?slug=shorts">Shorts</a>
+          <a href="./categoria.html?slug=vestidos">Vestidos</a>
+          <a href="./categoria.html?slug=playa">Playa</a>
+          <a href="./categoria.html?slug=pantalones">Pantalones</a>
+          <a href="./categoria.html?slug=pijamas">Pijamas</a>
+        </div>
+      </details>
+    </nav>
+  </aside>
+
+  <section class="page-header">
+    <p class="eyebrow center">Recién llegadas</p>
+    <h1>Lo Nuevo</h1>
+    <p class="page-sub">Descubre las piezas que llegan para inspirar tu estilo.</p>
+  </section>
+  <section class="productos lo-nuevo-page" id="lo-nuevo-grid">
+    <div class="grid-productos">
+      <article class="producto" id="producto-set-aveline">
+        <a class="producto-img producto-nuevo-enlace" href="#producto-set-aveline" aria-label="Ver Set Aveline">
+          <img src="img/novedades/set_aveline.png" alt="Set Aveline" loading="lazy">
+        </a>
+        <h3 class="nombre-producto-boton">Set Aveline</h3>
+        <p class="precio">$ 159.900</p>
+        <div class="tallas" aria-label="Seleccionar talla para Set Aveline">
+          <button type="button" class="talla" data-talla="S">S</button>
+          <button type="button" class="talla" data-talla="M">M</button>
+          <button type="button" class="talla" data-talla="L">L</button>
+        </div>
+        <button class="btn-agregar" type="button" data-producto="Set Aveline" data-precio="159900" data-imagen="img/novedades/set_aveline.png">Agregar a la bolsa</button>
+      </article>
+      <article class="producto" id="producto-falda-terracota">
+        <a class="producto-img producto-nuevo-enlace" href="#producto-falda-terracota" aria-label="Ver Falda Terracota">
+          <img src="img/novedades/falda_terracota.png" alt="Falda Terracota" loading="lazy">
+        </a>
+        <h3 class="nombre-producto-boton">Falda Terracota</h3>
+        <p class="precio">$ 129.900</p>
+        <div class="tallas" aria-label="Seleccionar talla para Falda Terracota">
+          <button type="button" class="talla" data-talla="S">S</button>
+          <button type="button" class="talla" data-talla="M">M</button>
+          <button type="button" class="talla" data-talla="L">L</button>
+        </div>
+        <button class="btn-agregar" type="button" data-producto="Falda Terracota" data-precio="129900" data-imagen="img/novedades/falda_terracota.png">Agregar a la bolsa</button>
+      </article>
+      <article class="producto" id="producto-blusa-marceline">
+        <a class="producto-img producto-nuevo-enlace" href="#producto-blusa-marceline" aria-label="Ver Blusa Marceline">
+          <img src="img/novedades/blusa_marceline.png" alt="Blusa Marceline" loading="lazy">
+        </a>
+        <h3 class="nombre-producto-boton">Blusa Marceline</h3>
+        <p class="precio">$ 89.900</p>
+        <div class="tallas" aria-label="Seleccionar talla para Blusa Marceline">
+          <button type="button" class="talla" data-talla="S">S</button>
+          <button type="button" class="talla" data-talla="M">M</button>
+          <button type="button" class="talla" data-talla="L">L</button>
+        </div>
+        <button class="btn-agregar" type="button" data-producto="Blusa Marceline" data-precio="89900" data-imagen="img/novedades/blusa_marceline.png">Agregar a la bolsa</button>
+      </article>
+      <article class="producto" id="producto-conjunto-reeve">
+        <a class="producto-img producto-nuevo-enlace" href="#producto-conjunto-reeve" aria-label="Ver Conjunto Reeve">
+          <img src="img/novedades/conjunto_reeve.png" alt="Conjunto Reeve" loading="lazy">
+        </a>
+        <h3 class="nombre-producto-boton">Conjunto Reeve</h3>
+        <p class="precio">$ 179.900</p>
+        <div class="tallas" aria-label="Seleccionar talla para Conjunto Reeve">
+          <button type="button" class="talla" data-talla="S">S</button>
+          <button type="button" class="talla" data-talla="M">M</button>
+          <button type="button" class="talla" data-talla="L">L</button>
+        </div>
+        <button class="btn-agregar" type="button" data-producto="Conjunto Reeve" data-precio="179900" data-imagen="img/novedades/conjunto_reeve.png">Agregar a la bolsa</button>
+      </article>
+    </div>
+    <div class="volver-contenedor"><a href="index.html#novedades" class="volver">Volver al inicio</a></div>
+  </section>
+    <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>MINTTA</h3>
+        <p>Donde tu esencia cobra estilo.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Servicio al Cliente</h4>
+        <a href="politicas-envio.html">Políticas de envío</a>
+        <a href="politicas-devolucion.html">Políticas de devolución</a>
+        <a href="terminos-condiciones.html">Términos y condiciones</a>
+        <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <div class="footer-social">
+          <a class="social-item" href="https://wa.me/573022061132" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Mintta">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>+57 302 206 1132</span>
+          </a>
+          <a class="social-item" href="https://www.instagram.com/mintta_official/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Mintta">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i><span>@mintta_official</span>
+          </a>
+          <span class="social-item" aria-label="Facebook Mintta, enlace pendiente">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i><span>Mintta Official</span>
+          </span>
+          <span class="social-item" aria-label="TikTok Mintta, enlace pendiente">
+            <i class="fa-brands fa-tiktok" aria-hidden="true"></i><span>TikTok Mintta</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <p class="copy">&copy; 2026 Mintta. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/script.js?v=7"></script>
+</body>
+</html>
