@@ -726,57 +726,5 @@
       "M",
       "L"
     ]
-  },
-  {
-    "id": 57,
-    "nombre": "Collar Perla",
-    "categoria": "pantalones",
-    "categoriaNombre": "Pantalones",
-    "precio": 49900,
-    "imagen": "/img/pantalones.jpg",
-    "tallas": [
-      "S",
-      "M",
-      "L"
-    ]
-  },
-  {
-    "id": 58,
-    "nombre": "Aretes Aurora",
-    "categoria": "pantalones",
-    "categoriaNombre": "Pantalones",
-    "precio": 39900,
-    "imagen": "/img/pantalones.jpg",
-    "tallas": [
-      "S",
-      "M",
-      "L"
-    ]
-  },
-  {
-    "id": 59,
-    "nombre": "Pulsera Roma",
-    "categoria": "pantalones",
-    "categoriaNombre": "Pantalones",
-    "precio": 44900,
-    "imagen": "/img/pantalones.jpg",
-    "tallas": [
-      "S",
-      "M",
-      "L"
-    ]
-  },
-  {
-    "id": 60,
-    "nombre": "Set Verona",
-    "categoria": "pantalones",
-    "categoriaNombre": "Pantalones",
-    "precio": 69900,
-    "imagen": "/img/pantalones.jpg",
-    "tallas": [
-      "S",
-      "M",
-      "L"
-    ]
   }
 ]
