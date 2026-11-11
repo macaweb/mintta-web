@@ -6628,3 +6628,85 @@ body.pagina-carrito #carrito-resumen {
     font-size: .68rem !important;
   }
 }
+
+
+/* Ajuste visual final: tallas compactas y portada más vertical en móvil */
+.tallas {
+  gap: 7px !important;
+}
+.talla,
+.producto-nuevo-card .talla,
+.grid-productos .producto .talla,
+.grid-catalogo .producto .talla,
+.promo-card .talla {
+  width: 34px !important;
+  min-width: 34px !important;
+  height: 34px !important;
+  min-height: 34px !important;
+  font-size: .68rem !important;
+}
+@media (max-width: 768px) {
+  .tallas,
+  .producto-nuevo-card .tallas,
+  .grid-productos .producto .tallas,
+  .grid-catalogo .producto .tallas,
+  .promo-card .tallas {
+    gap: 6px !important;
+  }
+  .talla,
+  .producto-nuevo-card .talla,
+  .grid-productos .producto .talla,
+  .grid-catalogo .producto .talla,
+  .promo-card .talla {
+    width: 32px !important;
+    min-width: 32px !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    font-size: .66rem !important;
+  }
+
+  /* Recorte vertical: portada más alta, con el contenido bien agrupado */
+  body:not(.pagina-carrito) .hero {
+    height: clamp(410px, 72svh, 500px) !important;
+    min-height: 410px !important;
+    padding: 28px 18px 30px !important;
+    background-size: cover !important;
+    background-position: 62% center !important;
+  }
+  body:not(.pagina-carrito) .hero-text {
+    max-width: 88% !important;
+  }
+  body:not(.pagina-carrito) .hero h1 {
+    font-size: clamp(1.48rem, 5.8vw, 2rem) !important;
+    line-height: 1.08 !important;
+    margin-bottom: 15px !important;
+  }
+  body:not(.pagina-carrito) .hero-subtitle {
+    font-size: .86rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 19px !important;
+    max-width: 290px !important;
+  }
+  body:not(.pagina-carrito) .hero .btn-outline {
+    min-height: 44px !important;
+    padding: 11px 19px !important;
+    border: 1px solid #211E1B !important;
+    border-radius: 2px !important;
+    background: #211E1B !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    font-size: .69rem !important;
+    font-weight: 500 !important;
+    letter-spacing: .055rem !important;
+    box-shadow: 0 3px 10px rgba(33,30,27,.13);
+  }
+  body:not(.pagina-carrito) .hero .btn-outline:hover,
+  body:not(.pagina-carrito) .hero .btn-outline:focus-visible,
+  body:not(.pagina-carrito) .hero .btn-outline:active {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    box-shadow: 0 5px 14px rgba(0,0,0,.2);
+  }
+}
