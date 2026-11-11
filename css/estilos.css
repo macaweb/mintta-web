@@ -6171,3 +6171,22 @@ body.menu-abierto {
   .footer .footer-col p,
   .footer .footer-social .social-item { font-size: .76rem !important; }
 }
+
+/* Colores oficiales de cada red social en los iconos del footer */
+.footer .footer-social .social-item .fa-whatsapp {
+  color: #25D366 !important;
+}
+.footer .footer-social .social-item .fa-instagram {
+  background: linear-gradient(45deg, #FEDA75 0%, #FA7E1E 25%, #D62976 55%, #962FBF 75%, #4F5BD5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent !important;
+  color: #D62976 !important;
+}
+.footer .footer-social .social-item .fa-facebook-f {
+  color: #1877F2 !important;
+}
+.footer .footer-social .social-item .fa-tiktok {
+  color: #111111 !important;
+  text-shadow: -1px -1px 0 #25F4EE, 1px 1px 0 #FE2C55;
+}
