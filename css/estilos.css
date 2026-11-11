@@ -7037,3 +7037,34 @@ a.categoria {
     -webkit-text-fill-color: var(--mintta-ink) !important;
   }
 }
+
+
+/* Inicio: imágenes limpias y botones más próximos a las tarjetas */
+body:not(.pagina-carrito) .promociones-home .promo-card,
+body:not(.pagina-carrito) #novedades .producto-nuevo-card {
+  box-shadow: none !important;
+  filter: none !important;
+}
+body:not(.pagina-carrito) .promociones-home .producto-foto-wrap,
+body:not(.pagina-carrito) #novedades .producto-foto-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  margin-bottom: 8px !important;
+}
+body:not(.pagina-carrito) .promociones-home .producto-imagen,
+body:not(.pagina-carrito) #novedades .producto-imagen {
+  display: block;
+  box-shadow: none !important;
+  filter: none !important;
+}
+body:not(.pagina-carrito) .promociones-home .promo-ver-mas,
+body:not(.pagina-carrito) #novedades > .ver-todo {
+  margin-top: 14px !important;
+}
+@media (max-width: 768px) {
+  body:not(.pagina-carrito) .promociones-home .promo-ver-mas,
+  body:not(.pagina-carrito) #novedades > .ver-todo {
+    margin-top: 12px !important;
+  }
+}
