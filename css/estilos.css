@@ -7378,3 +7378,89 @@ button.nombre-producto-boton:active,
   width: 100% !important;
   margin: 9px 0 13px !important;
 }
+
+
+/* MINTTA — selección de tallas clara y con respuesta visual */
+.grid-productos .producto .talla,
+.grid-catalogo .producto .talla,
+.producto-nuevo-card .talla,
+.promo-card .talla {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  min-width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  padding: 0 !important;
+  border: 1.5px solid #8D7964 !important;
+  border-radius: 4px !important;
+  background: #FFFFFF !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  font-family: "Jost", sans-serif !important;
+  font-size: .72rem !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  box-shadow: 0 1px 2px rgba(33,30,27,.08) !important;
+  transition: background .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease !important;
+  -webkit-tap-highlight-color: transparent;
+}
+.grid-productos .producto .talla:hover,
+.grid-catalogo .producto .talla:hover,
+.producto-nuevo-card .talla:hover,
+.promo-card .talla:hover {
+  border-color: #211E1B !important;
+  background: #F1EAE0 !important;
+  color: #211E1B !important;
+  -webkit-text-fill-color: #211E1B !important;
+  box-shadow: 0 2px 5px rgba(33,30,27,.12) !important;
+}
+.grid-productos .producto .talla.selected,
+.grid-catalogo .producto .talla.selected,
+.producto-nuevo-card .talla.selected,
+.promo-card .talla.selected {
+  border: 1.5px solid #171513 !important;
+  background: #171513 !important;
+  background-color: #171513 !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-weight: 600 !important;
+  box-shadow: 0 3px 8px rgba(23,21,19,.24) !important;
+  transform: translateY(-2px) !important;
+}
+.grid-productos .producto .talla:focus-visible,
+.grid-catalogo .producto .talla:focus-visible,
+.producto-nuevo-card .talla:focus-visible,
+.promo-card .talla:focus-visible {
+  outline: 2px solid #A9825A !important;
+  outline-offset: 3px !important;
+}
+
+/* Descuentos y Lo Nuevo: nombre y precio centrados */
+.promo-card .promo-nombre,
+.promo-card .precio,
+.lo-nuevo-page .producto .nombre-producto-boton,
+.lo-nuevo-page .producto h3,
+.lo-nuevo-page .producto .precio,
+#novedades .producto-nuevo-card .nombre-producto-boton,
+#novedades .producto-nuevo-card h3,
+#novedades .producto-nuevo-card .precio {
+  width: 100% !important;
+  text-align: center !important;
+}
+.promo-card .promo-nombre,
+.lo-nuevo-page .producto .nombre-producto-boton,
+.lo-nuevo-page .producto h3,
+#novedades .producto-nuevo-card .nombre-producto-boton,
+#novedades .producto-nuevo-card h3 {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.promo-card .precio,
+.lo-nuevo-page .producto .precio,
+#novedades .producto-nuevo-card .precio {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
