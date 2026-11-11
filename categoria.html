@@ -68,7 +68,7 @@
   <script src="js/script.js?v=5"></script>
   <script>
   document.addEventListener("DOMContentLoaded", async () => {
-    const nombres = {pantalones:"Pantalones",conjuntos:"Conjuntos",blusas:"Blusas",tops:"Tops",bodies:"Bodies",camisas:"Camisas",corsets:"Corsets",blazers:"Blazers",tejidos:"Tejidos",gabanes:"Gabanes",deportivo:"Deportivo",faldas:"Faldas",shorts:"Shorts",vestidos:"Vestidos",playa:"Playa",};
+    const nombres = {accesorios:"Pantalones y jeans",conjuntos:"Conjuntos",blusas:"Blusas",tops:"Tops",bodies:"Bodies",camisas:"Camisas",corsets:"Corsets",blazers:"Blazers",tejidos:"Tejidos",gabanes:"Gabanes",deportivo:"Deportivo",faldas:"Faldas",shorts:"Shorts",vestidos:"Vestidos",playa:"Playa",};
     const slug = new URLSearchParams(window.location.search).get("slug") || "conjuntos";
     const nombre = nombres[slug] || "Catálogo";
     document.title = nombre + " — Mintta";
