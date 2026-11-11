@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promociones — Mintta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css?v=27">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">MINTTA</a>
+      <div class="main-nav">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html">Catálogo</a>
+        <a href="carrito.html" class="cart-top-link" id="enlace-carrito" aria-label="Ver carrito">
+          <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+          </svg>
+          <span class="cart-label">Carrito</span><span class="cart-count" data-cart-count>0</span>
+        </a>
+        <button class="menu-btn" aria-label="Abrir menú" type="button"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <a href="carrito.html" class="cart-float" aria-label="Ir al carrito de compras">
+    <svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 1.9-1.4L22 7H6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="10" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/>
+    </svg>
+    <span class="cart-float-label">Ver carrito</span><span class="cart-count" data-cart-count>0</span>
+  </a>
+  <div class="menu-overlay"></div>
+  <aside class="menu-panel">
+    <div class="menu-panel-header"><a class="menu-panel-logo" href="index.html">MINTTA</a><button class="menu-close" aria-label="Cerrar menú" type="button">×</button></div>
+    <nav class="menu-links">
+    <a href="index.html#novedades">Nuevas piezas</a>
+    <a href="index.html#coleccion">Lo Más Vendido</a>
+    <a href="index.html#promociones">Promociones</a>
+    <a href="index.html#preguntas-frecuentes">Preguntas frecuentes</a>
+  </nav>
+  </aside>
+  <section class="page-header">
+    <p class="eyebrow center">Selección especial</p>
+    <h1>Promociones</h1>
+    <p class="page-sub">Ocho piezas de muestra. Nombres e imágenes provisionales para reemplazar más adelante.</p>
+  </section>
+  <section class="productos">
+    <div class="grid-productos promo-grid promo-grid-completa">
+      <article class="producto producto-nuevo-card promo-card" id="promo-1">
+      <span class="promo-etiqueta">Promoción</span>
+      <div class="producto-foto-wrap"><img src="img/novedades/set_aveline.png" alt="Pijama Luna" class="producto-imagen" loading="lazy"></div>
+      <p class="nombre-producto-boton promo-nombre">Pijama Luna</p>
+      <p class="precio precio-pendiente">Precio especial por confirmar</p>
+      <div class="tallas" aria-label="Selecciona la talla de Pijama Luna">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div>
+      <button type="button" class="btn-agregar" data-producto="Pijama Luna" data-precio="" data-imagen="img/novedades/set_aveline.png">Agregar al carrito</button>
+    </article>
+<article class="producto producto-nuevo-card promo-card" id="promo-2">
+      <span class="promo-etiqueta">Promoción</span>
+      <div class="producto-foto-wrap"><img src="img/novedades/falda_terracota.png" alt="Blusa Terracota" class="producto-imagen" loading="lazy"></div>
+      <p class="nombre-producto-boton promo-nombre">Blusa Terracota</p>
+      <p class="precio precio-pendiente">Precio especial por confirmar</p>
+      <div class="tallas" aria-label="Selecciona la talla de Blusa Terracota">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div>
+      <button type="button" class="btn-agregar" data-producto="Blusa Terracota" data-precio="" data-imagen="img/novedades/falda_terracota.png">Agregar al carrito</button>
+    </article>
+<article class="producto producto-nuevo-card promo-card" id="promo-3">
+      <span class="promo-etiqueta">Promoción</span>
+      <div class="producto-foto-wrap"><img src="img/novedades/conjunto_reeve.png" alt="Pantalón Blue" class="producto-imagen" loading="lazy"></div>
+      <p class="nombre-producto-boton promo-nombre">Pantalón Blue</p>
+      <p class="precio precio-pendiente">Precio especial por confirmar</p>
+      <div class="tallas" aria-label="Selecciona la talla de Pantalón Blue">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div>
+      <button type="button" class="btn-agregar" data-producto="Pantalón Blue" data-precio="" data-imagen="img/novedades/conjunto_reeve.png">Agregar al carrito</button>
+    </article>
+<article class="producto producto-nuevo-card promo-card" id="promo-4">
+      <span class="promo-etiqueta">Promoción</span>
+      <div class="producto-foto-wrap"><img src="img/novedades/blusa_marceline.png" alt="Top Amatista" class="producto-imagen" loading="lazy"></div>
+      <p class="nombre-producto-boton promo-nombre">Top Amatista</p>
+      <p class="precio precio-pendiente">Precio especial por confirmar</p>
+      <div class="tallas" aria-label="Selecciona la talla de Top Amatista">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div>
+      <button type="button" class="btn-agregar" data-producto="Top Amatista" data-precio="" data-imagen="img/novedades/blusa_marceline.png">Agregar al carrito</button>
+    </article>
+<article class="producto producto-nuevo-card promo-card" id="promo-5">
+      <span class="promo-etiqueta">Promoción</span>
+      <div class="producto-foto-wrap"><img src="img/novedades/set_aveline.png" alt="Conjunto Nube" class="producto-imagen" loading="lazy"></div>
+      <p class="nombre-producto-boton promo-nombre">Conjunto Nube</p>
+      <p class="precio precio-pendiente">Precio especial por confirmar</p>
+      <div class="tallas" aria-label="Selecciona la talla de Conjunto Nube">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div>
+      <button type="button" class="btn-agregar" data-producto="Conjunto Nube" data-precio="" data-imagen="img/novedades/set_aveline.png">Agregar al carrito</button>
+    </article>
+<article class="producto producto-nuevo-card promo-card" id="promo-6">
+      <span class="promo-etiqueta">Promoción</span>
+      <div class="producto-foto-wrap"><img src="img/novedades/falda_terracota.png" alt="Falda Siena" class="producto-imagen" loading="lazy"></div>
+      <p class="nombre-producto-boton promo-nombre">Falda Siena</p>
+      <p class="precio precio-pendiente">Precio especial por confirmar</p>
+      <div class="tallas" aria-label="Selecciona la talla de Falda Siena">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div>
+      <button type="button" class="btn-agregar" data-producto="Falda Siena" data-precio="" data-imagen="img/novedades/falda_terracota.png">Agregar al carrito</button>
+    </article>
+<article class="producto producto-nuevo-card promo-card" id="promo-7">
+      <span class="promo-etiqueta">Promoción</span>
+      <div class="producto-foto-wrap"><img src="img/novedades/blusa_marceline.png" alt="Blusa Olivia" class="producto-imagen" loading="lazy"></div>
+      <p class="nombre-producto-boton promo-nombre">Blusa Olivia</p>
+      <p class="precio precio-pendiente">Precio especial por confirmar</p>
+      <div class="tallas" aria-label="Selecciona la talla de Blusa Olivia">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div>
+      <button type="button" class="btn-agregar" data-producto="Blusa Olivia" data-precio="" data-imagen="img/novedades/blusa_marceline.png">Agregar al carrito</button>
+    </article>
+<article class="producto producto-nuevo-card promo-card" id="promo-8">
+      <span class="promo-etiqueta">Promoción</span>
+      <div class="producto-foto-wrap"><img src="img/novedades/conjunto_reeve.png" alt="Set Riviera" class="producto-imagen" loading="lazy"></div>
+      <p class="nombre-producto-boton promo-nombre">Set Riviera</p>
+      <p class="precio precio-pendiente">Precio especial por confirmar</p>
+      <div class="tallas" aria-label="Selecciona la talla de Set Riviera">
+        <button type="button" class="talla" data-talla="S">S</button><button type="button" class="talla" data-talla="M">M</button><button type="button" class="talla" data-talla="L">L</button>
+      </div>
+      <button type="button" class="btn-agregar" data-producto="Set Riviera" data-precio="" data-imagen="img/novedades/conjunto_reeve.png">Agregar al carrito</button>
+    </article>
+    </div>
+    <div class="volver-contenedor"><a href="index.html#promociones" class="volver">Volver a promociones</a></div>
+  </section>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col"><h3>MINTTA</h3><p>Donde tu esencia cobra estilo.</p></div>
+      <div class="footer-col"><h4>Servicio al Cliente</h4><a href="politicas-envio.html">Políticas de envío</a><a href="politicas-devolucion.html">Políticas de devolución</a><a href="terminos-condiciones.html">Términos y condiciones</a></div>
+      <div class="footer-col"><h4>Contacto</h4><p>+57 302 206 1132</p></div>
+    </div>
+    <p class="copy">&copy; 2026 Mintta. Todos los derechos reservados.</p>
+  </footer>
+  <script src="js/script.js?v=4"></script>
+</body>
+</html>
