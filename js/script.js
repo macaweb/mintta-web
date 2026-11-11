@@ -801,3 +801,17 @@ document.addEventListener("click", function (event) {
     }, 2200);
   }, 0);
 });
+
+
+// Efecto de acercamiento al elegir una categoría en móvil y escritorio.
+document.addEventListener("click", function (event) {
+  const enlace = event.target.closest(".grid-categorias a.categoria");
+  if (!enlace || enlace.dataset.minttaOpening === "true") return;
+  event.preventDefault();
+  enlace.dataset.minttaOpening = "true";
+  enlace.classList.add("is-opening");
+  const destino = enlace.href;
+  window.setTimeout(function () {
+    window.location.href = destino;
+  }, 190);
+});
