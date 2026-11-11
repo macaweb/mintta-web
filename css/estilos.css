@@ -5046,3 +5046,17 @@ a.ver-todo:visited:active {
 
 /* El enlace de promociones debe quedar por encima de elementos decorativos. */
 .promociones-home a.promo-ver-mas { position: relative; z-index: 20; pointer-events: auto; cursor: pointer; }
+
+/* Botón de promociones: negro con texto blanco mientras se presiona. */
+.promociones-home a.promo-ver-mas:active,
+.promociones-home a.promo-ver-mas:focus,
+.promociones-home a.promo-ver-mas:focus-visible,
+.promociones-home a.promo-ver-mas.is-pressed {
+  background: #000 !important;
+  background-color: #000 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  border-color: #000 !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
