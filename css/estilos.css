@@ -6566,6 +6566,7 @@ body.pagina-carrito #carrito-resumen {
   font-size: var(--mintta-size) !important;
 }
 .btn-agregar,
+.btn-vista,
 .btn-outline,
 .ver-todo,
 .menu-links > a,
@@ -6858,6 +6859,7 @@ body.pagina-carrito #carrito-resumen {
   margin: 8px 0 13px;
 }
 .btn-agregar,
+.btn-vista,
 .btn-outline,
 .ver-todo,
 .volver,
@@ -6892,6 +6894,9 @@ body.pagina-carrito #carrito-resumen {
 .btn-agregar:hover,
 .btn-agregar:focus-visible,
 .btn-agregar:active,
+.btn-vista:hover,
+.btn-vista:focus-visible,
+.btn-vista:active,
 .btn-outline:hover,
 .btn-outline:focus-visible,
 .btn-outline:active,
@@ -7023,6 +7028,7 @@ a.categoria {
 }
 @media (hover: none) {
   .btn-agregar:active,
+  .btn-vista:active,
   .btn-outline:active,
   .ver-todo:active,
   .volver:active {
