@@ -5532,3 +5532,52 @@ body:not(.pagina-carrito) .hero-subtitle {
     text-align: center !important;
   }
 }
+
+
+/* Submenú desplegable de categorías dentro del menú lateral. */
+.menu-catalogo {
+  width: 100%;
+  color: var(--text);
+  font-family: 'Jost', sans-serif;
+}
+
+.menu-catalogo summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  transition: color .3s ease;
+}
+
+.menu-catalogo summary::-webkit-details-marker { display: none; }
+.menu-catalogo summary::after {
+  content: "+";
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.menu-catalogo[open] summary::after { content: "−"; }
+.menu-catalogo summary:hover { color: var(--accent); }
+
+.menu-catalogo-lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 14px;
+  padding: 16px 0 4px 12px;
+  border-left: 1px solid rgba(169, 130, 90, .35);
+  margin-top: 12px;
+}
+
+.menu-links .menu-catalogo-lista a {
+  display: block;
+  font-size: .75rem;
+  line-height: 1.35;
+  letter-spacing: .035rem;
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
