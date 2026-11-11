@@ -5022,3 +5022,7 @@ a.ver-todo:visited:active {
 
 /* Ocultar el contador de la bolsa cuando está vacío. */
 .cart-count[hidden] { display: none !important; }
+
+
+/* Etiqueta de promoción con contraste para destacar sobre las prendas. */
+.promo-etiqueta { background:#7B3029; color:#FFF9F2; border-radius:3px; font-weight:500; box-shadow:0 2px 8px rgba(67,32,24,.14); }
