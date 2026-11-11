@@ -6061,3 +6061,29 @@ body.menu-abierto {
 .grid-productos .producto .talla.selected {
   font-weight: 400 !important;
 }
+
+/* Redes sociales del pie de página */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.footer-social .social-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-family: "Jost", sans-serif;
+  font-size: .95rem;
+  font-weight: 400;
+}
+.footer-social .social-item i {
+  width: 18px;
+  font-size: 1.15rem;
+  text-align: center;
+}
+.footer-social a.social-item:hover {
+  opacity: .72;
+}
