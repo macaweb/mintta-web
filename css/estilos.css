@@ -5042,3 +5042,7 @@ a.ver-todo:visited:active {
 
 /* Asegurar que el enlace Ver más sea interactivo y quede por encima del fondo. */
 .promociones-home .promo-ver-mas { position:relative; z-index:2; pointer-events:auto; cursor:pointer; }
+
+
+/* El enlace de promociones debe quedar por encima de elementos decorativos. */
+.promociones-home a.promo-ver-mas { position: relative; z-index: 20; pointer-events: auto; cursor: pointer; }
