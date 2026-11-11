@@ -5018,3 +5018,7 @@ a.ver-todo:visited:active {
     gap: 16px 12px;
   }
 }
+
+
+/* Ocultar el contador de la bolsa cuando está vacío. */
+.cart-count[hidden] { display: none !important; }
