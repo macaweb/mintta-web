@@ -232,7 +232,7 @@ function obtenerEnlaceProducto(item) {
     "conjunto-reeve": "producto-conjunto-reeve"
   };
   if (novedades[slugNombre] || imagen.includes("/novedades/")) {
-    return "index.html#" + (novedades[slugNombre] || ("producto-" + slugNombre));
+    return "lo-nuevo.html#" + (novedades[slugNombre] || ("producto-" + slugNombre));
   }
   let categoria = item.categoria || "";
   const rutaProducto = imagen.match(/\/productos\/([^/]+)\//i);
