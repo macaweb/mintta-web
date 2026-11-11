@@ -5946,3 +5946,14 @@ body.menu-abierto {
   overflow-x: hidden;
   overscroll-behavior-x: none;
 }
+
+
+/* Ajustes de tipografía del menú: Catálogo al mismo peso y categorías en formato título */
+.menu-links .menu-catalogo > summary {
+  font-weight: 400 !important;
+  text-transform: none !important;
+}
+.menu-links .menu-catalogo-lista a {
+  text-transform: capitalize !important;
+  font-weight: 400 !important;
+}
