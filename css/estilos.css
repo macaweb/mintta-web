@@ -7068,3 +7068,19 @@ body:not(.pagina-carrito) #novedades > .ver-todo {
     margin-top: 12px !important;
   }
 }
+
+/* Inicio: distancia uniforme entre Descuentos, Nuevas Llegadas y Lo Más Vendido */
+body:not(.pagina-carrito) > #promociones,
+body:not(.pagina-carrito) > #novedades,
+body:not(.pagina-carrito) > #coleccion {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+@media (max-width: 768px) {
+  body:not(.pagina-carrito) > #promociones,
+  body:not(.pagina-carrito) > #novedades,
+  body:not(.pagina-carrito) > #coleccion {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+}
