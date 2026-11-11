@@ -5392,3 +5392,66 @@ body:not(.pagina-carrito) .hero-subtitle {
     text-align: center !important;
   }
 }
+
+
+/* Footer móvil: servicio a la derecha y contacto/redes a la izquierda. */
+@media (max-width: 700px) {
+  .footer-col:nth-child(2) {
+    text-align: right !important;
+    padding: 18px 2px;
+  }
+
+  .footer-col:nth-child(2) h4,
+  .footer-col:nth-child(2) a {
+    text-align: right !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  .footer-col:nth-child(3) {
+    text-align: left !important;
+    padding: 18px 2px 13px;
+  }
+
+  .footer-col:nth-child(3) h4,
+  .footer-col:nth-child(3) a {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .footer-col:nth-child(3) .footer-whatsapp {
+    display: flex;
+    width: fit-content;
+    justify-content: flex-start;
+  }
+
+  .footer-sociales {
+    margin-top: 17px;
+  }
+
+  .footer-sociales-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #6F523A;
+    font-family: 'Jost', sans-serif;
+    font-size: .69rem;
+    font-weight: 500;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+
+  .footer-sociales p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+    margin: 5px 0 0 !important;
+    color: #51463B;
+    font-size: .83rem;
+    line-height: 1.5;
+  }
+
+  .footer-sociales strong {
+    font-weight: 500;
+  }
+}
