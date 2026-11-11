@@ -730,10 +730,10 @@
   {
     "id": 57,
     "nombre": "Collar Perla",
-    "categoria": "accesorios",
-    "categoriaNombre": "Pantalones y jeans",
+    "categoria": "pantalones",
+    "categoriaNombre": "Pantalones",
     "precio": 49900,
-    "imagen": "/img/productos/accesorios/accesorio-01.jpg",
+    "imagen": "/img/pantalones.jpg",
     "tallas": [
       "S",
       "M",
@@ -743,10 +743,10 @@
   {
     "id": 58,
     "nombre": "Aretes Aurora",
-    "categoria": "accesorios",
-    "categoriaNombre": "Pantalones y jeans",
+    "categoria": "pantalones",
+    "categoriaNombre": "Pantalones",
     "precio": 39900,
-    "imagen": "/img/productos/accesorios/accesorio-02.jpg",
+    "imagen": "/img/pantalones.jpg",
     "tallas": [
       "S",
       "M",
@@ -756,10 +756,10 @@
   {
     "id": 59,
     "nombre": "Pulsera Roma",
-    "categoria": "accesorios",
-    "categoriaNombre": "Pantalones y jeans",
+    "categoria": "pantalones",
+    "categoriaNombre": "Pantalones",
     "precio": 44900,
-    "imagen": "/img/productos/accesorios/accesorio-03.jpg",
+    "imagen": "/img/pantalones.jpg",
     "tallas": [
       "S",
       "M",
@@ -769,10 +769,10 @@
   {
     "id": 60,
     "nombre": "Set Verona",
-    "categoria": "accesorios",
-    "categoriaNombre": "Pantalones y jeans",
+    "categoria": "pantalones",
+    "categoriaNombre": "Pantalones",
     "precio": 69900,
-    "imagen": "/img/productos/accesorios/accesorio-04.jpg",
+    "imagen": "/img/pantalones.jpg",
     "tallas": [
       "S",
       "M",
