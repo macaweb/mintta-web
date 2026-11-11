@@ -7464,3 +7464,33 @@ button.nombre-producto-boton:active,
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+
+/* CTA de portada: acabado editorial, limpio y sin flechas */
+body:not(.pagina-carrito) .hero a.btn-outline {
+  position: relative !important;
+  min-height: 46px !important;
+  padding: 12px 23px 13px !important;
+  border: 1px solid #211E1B !important;
+  border-bottom: 2px solid #C7B9A6 !important;
+  border-radius: 2px !important;
+  background: #211E1B !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  font-size: .70rem !important;
+  font-weight: 500 !important;
+  letter-spacing: .065rem !important;
+  text-decoration: none !important;
+  box-shadow: 0 3px 10px rgba(33,30,27,.12) !important;
+  transition: background .2s ease, box-shadow .2s ease, transform .2s ease !important;
+}
+body:not(.pagina-carrito) .hero a.btn-outline:hover,
+body:not(.pagina-carrito) .hero a.btn-outline:focus-visible {
+  background: #000000 !important;
+  border-color: #000000 !important;
+  border-bottom-color: #C7B9A6 !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  box-shadow: 0 5px 14px rgba(0,0,0,.18) !important;
+  transform: translateY(-1px);
+}
