@@ -5455,3 +5455,80 @@ body:not(.pagina-carrito) .hero-subtitle {
     font-weight: 500;
   }
 }
+
+
+/* Footer móvil: Servicio al Cliente y Contacto en dos columnas paralelas. */
+@media (max-width: 700px) {
+  .footer-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 18px;
+    row-gap: 0;
+    align-items: start;
+  }
+
+  .footer-inner > .footer-col:first-child {
+    grid-column: 1 / -1;
+    padding: 0 0 17px;
+    border-bottom: 1px solid rgba(169, 130, 90, .22);
+    text-align: left !important;
+  }
+
+  .footer-inner > .footer-col:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    min-width: 0;
+    padding: 17px 0 8px 2px;
+    border-bottom: 0;
+    text-align: left !important;
+  }
+
+  .footer-inner > .footer-col:nth-child(2) h4,
+  .footer-inner > .footer-col:nth-child(2) a {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+
+  .footer-inner > .footer-col:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+    min-width: 0;
+    padding: 17px 2px 8px 0;
+    border-bottom: 0;
+    text-align: right !important;
+  }
+
+  .footer-inner > .footer-col:nth-child(3) h4 {
+    text-align: right !important;
+  }
+
+  .footer-contacto-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+    width: 100%;
+    margin: 7px 0 0 !important;
+    color: #51463B;
+    font-size: .78rem;
+    line-height: 1.45;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-contacto-item i {
+    flex: 0 0 17px;
+    width: 17px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .footer-whatsapp i { color: #25D366; }
+  .footer-instagram i { color: #E4405F; }
+  .footer-facebook i { color: #1877F2; }
+
+  .footer .copy {
+    text-align: center !important;
+  }
+}
