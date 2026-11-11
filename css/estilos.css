@@ -689,11 +689,7 @@ color: var(--text);
 
 
 
-.categoria.accesorios {
 
-  background-image: url('../img/accesorios.png');
-
-}
 
 
 
@@ -4963,20 +4959,9 @@ a.ver-todo:visited:active {
   font-size:.85rem;
 }
 .categoria.pantalones {
-  background-image:linear-gradient(135deg,#E9E0D4 0%,#CFC0AD 48%,#EDE6DD 100%);
-  position:relative;
-}
-.categoria.pantalones::after {
-  content:"PANTALONES";
-  position:absolute;
-  inset:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#554432;
-  font-family:"Cormorant Garamond",serif;
-  font-size:clamp(1.2rem,3vw,2rem);
-  letter-spacing:.14rem;
+  background-image:url('../img/pantalones.jpg');
+  background-size:cover;
+  background-position:center;
 }
 @media(max-width:768px) {
   .promociones-home { padding:42px 14px 46px; }
