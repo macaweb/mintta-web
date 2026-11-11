@@ -6710,3 +6710,33 @@ body.pagina-carrito #carrito-resumen {
     box-shadow: 0 5px 14px rgba(0,0,0,.2);
   }
 }
+
+
+/* Contador de la bolsa: insignia roja superpuesta en la esquina del icono */
+.cart-top-link {
+  position: relative !important;
+  overflow: visible !important;
+}
+.cart-top-link .cart-count {
+  position: absolute !important;
+  top: -6px !important;
+  right: -9px !important;
+  z-index: 3 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 17px !important;
+  height: 17px !important;
+  padding: 0 4px !important;
+  border: 1.5px solid #FFFFFF !important;
+  border-radius: 999px !important;
+  background: #D92D20 !important;
+  color: #FFFFFF !important;
+  font-size: .62rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.16);
+}
+.cart-top-link .cart-count[hidden] {
+  display: none !important;
+}
