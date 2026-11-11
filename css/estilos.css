@@ -5338,3 +5338,57 @@ body:not(.pagina-carrito) .hero-subtitle {
     letter-spacing: .015em;
   }
 }
+
+
+/* Footer móvil: alineaciones alternadas para crear una composición equilibrada. */
+@media (max-width: 700px) {
+  .footer-inner {
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Marca: alineada a la izquierda para abrir la composición. */
+  .footer-col:first-child {
+    text-align: left !important;
+    padding-left: 2px;
+  }
+
+  /* Atención al cliente: bloque centrado y enlaces ordenados. */
+  .footer-col:nth-child(2) {
+    text-align: center !important;
+    padding: 18px 0;
+  }
+
+  .footer-col:nth-child(2) h4,
+  .footer-col:nth-child(2) a {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .footer-col:nth-child(2) a {
+    width: fit-content;
+  }
+
+  /* Contacto: alineado a la derecha, como cierre visual del contenido. */
+  .footer-col:nth-child(3) {
+    text-align: right !important;
+    padding-right: 2px;
+  }
+
+  .footer-col:nth-child(3) h4 {
+    text-align: right !important;
+  }
+
+  .footer-col:nth-child(3) .footer-whatsapp {
+    justify-content: flex-end;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+
+  /* Derechos reservados: centrados y separados del resto. */
+  .footer .copy {
+    text-align: center !important;
+  }
+}
