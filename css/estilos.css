@@ -5957,3 +5957,47 @@ body.menu-abierto {
   text-transform: capitalize !important;
   font-weight: 400 !important;
 }
+
+
+/* Identidad visual sutil para cada sección del menú principal */
+.menu-links > a:nth-of-type(1) {
+  color: #9A5145 !important;
+  -webkit-text-fill-color: #9A5145 !important;
+}
+.menu-links > a:nth-of-type(1)::after {
+  content: "%";
+  color: #9A5145;
+  font-size: .88em;
+  font-weight: 500;
+  margin-left: 9px;
+}
+
+.menu-links > a:nth-of-type(2) {
+  color: #71836A !important;
+  -webkit-text-fill-color: #71836A !important;
+}
+.menu-links > a:nth-of-type(2)::after {
+  content: "✦";
+  color: #71836A;
+  font-size: .82em;
+  margin-left: 9px;
+}
+
+.menu-links > a:nth-of-type(3) {
+  color: #A17B3D !important;
+  -webkit-text-fill-color: #A17B3D !important;
+}
+.menu-links > a:nth-of-type(3)::after {
+  content: "★";
+  color: #A17B3D;
+  font-size: .78em;
+  margin-left: 9px;
+}
+
+.menu-links .menu-catalogo > summary {
+  color: #51483F !important;
+  -webkit-text-fill-color: #51483F !important;
+}
+.menu-links .menu-catalogo > summary::after {
+  color: #8B735B;
+}
